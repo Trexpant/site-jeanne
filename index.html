@@ -703,36 +703,6 @@
     /* ─── UTILS ─── */
     svg { display: inline-block; vertical-align: middle; }
 
-    /* ═══════════════════════════════════════
-       EFEITOS MODERNOS DE ABERTURA E MOVIMENTO
-    ═══════════════════════════════════════ */
-
-    /* Cursor personalizado */
-    * { cursor: none !important; }
-    .cursor-dot {
-      position: fixed; z-index: 9999; pointer-events: none;
-      width: 8px; height: 8px;
-      background: var(--green);
-      border-radius: 50%;
-      transform: translate(-50%,-50%);
-      transition: transform .1s, background .2s, width .2s, height .2s;
-      mix-blend-mode: multiply;
-    }
-    .cursor-ring {
-      position: fixed; z-index: 9998; pointer-events: none;
-      width: 36px; height: 36px;
-      border: 1.5px solid var(--green);
-      border-radius: 50%;
-      transform: translate(-50%,-50%);
-      transition: transform .18s cubic-bezier(.25,.46,.45,.94), width .3s, height .3s, border-color .3s, opacity .3s;
-      opacity: .5;
-    }
-    body:has(a:hover) .cursor-dot,
-    body:has(button:hover) .cursor-dot { width: 12px; height: 12px; background: var(--gold); }
-    body:has(a:hover) .cursor-ring,
-    body:has(button:hover) .cursor-ring { width: 52px; height: 52px; border-color: var(--gold); opacity: .35; }
-    @media (hover: none) { .cursor-dot, .cursor-ring { display: none; } * { cursor: auto !important; } }
-
     /* ─── INTRO SCREEN ─── */
     #intro-screen {
       position: fixed; inset: 0; z-index: 1000;
@@ -939,10 +909,6 @@
   </style>
 </head>
 <body>
-
-<!-- Cursor personalizado -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- Barra de progresso de scroll -->
 <div id="scroll-progress"></div>
@@ -1672,22 +1638,6 @@
     document.querySelectorAll('#inicio .anim').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), 400 + i * 150);
     });
-  }
-
-  /* CURSOR */
-  const dot  = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  if (dot && ring) {
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-    });
-    (function animRing() {
-      rx += (mx - rx) * .12; ry += (my - ry) * .12;
-      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-      requestAnimationFrame(animRing);
-    })();
   }
 
   /* SCROLL PROGRESS */
