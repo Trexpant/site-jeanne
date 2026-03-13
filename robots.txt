@@ -1,0 +1,28 @@
+# robots.txt – Jeane Leite Fisioterapeuta
+# https://jeaneleite.com.br/
+
+# Permite todos os robôs de busca
+User-agent: *
+Allow: /
+
+# Localização do sitemap
+Sitemap: https://jeaneleite.com.br/sitemap.xml
+
+# Bots de IA (permitidos para indexação de conteúdo)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
