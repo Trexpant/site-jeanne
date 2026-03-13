@@ -1,12 +1,12 @@
 # robots.txt – Jeane Leite Fisioterapeuta
-# https://jeaneleite.com.br/
+# https://jeaneleitefisioterapeuta.vercel.app/
 
 # Permite todos os robôs de busca
 User-agent: *
 Allow: /
 
 # Localização do sitemap
-Sitemap: https://jeaneleite.com.br/sitemap.xml
+Sitemap: https://jeaneleitefisioterapeuta.vercel.app/sitemap.xml
 
 # Bots de IA (permitidos para indexação de conteúdo)
 User-agent: GPTBot
