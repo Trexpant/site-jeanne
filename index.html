@@ -12,6 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jeaneleite.com.br/" />
   <meta name="theme-color" content="#1a5f4a" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Open Graph (WhatsApp, Facebook) -->
   <meta property="og:type" content="website" />
@@ -30,30 +31,52 @@
   <meta name="twitter:description" content="Fisioterapia domiciliar humanizada na Tijuca e Zona Sul do Rio de Janeiro. Especialista em reabilitação vestibular. CREFITO 449534-F." />
   <meta name="twitter:image" content="https://jeaneleite.com.br/foto-jeane.jpg" />
 
-  <!-- Schema Markup: Negócio Local -->
+  <!-- Schema Markup: MedicalBusiness (substitui LocalBusiness — mais específico para profissionais de saúde) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://jeaneleite.com.br/",
+    "@type": ["MedicalBusiness", "LocalBusiness"],
+    "@id": "https://jeaneleite.com.br/#business",
     "name": "Jeane Leite Fisioterapeuta",
-    "description": "Fisioterapia domiciliar humanizada na Tijuca e Zona Sul do Rio de Janeiro. Especialista em reabilitação vestibular, tratamento de tonturas e vertigens.",
+    "legalName": "Jeane Leite Fisioterapeuta",
+    "description": "Fisioterapia domiciliar humanizada na Tijuca e Zona Sul do Rio de Janeiro. Especialista em reabilitação vestibular, tratamento de tonturas, vertigens e fisioterapia geriátrica. CREFITO 449534-F.",
     "url": "https://jeaneleite.com.br/",
     "telephone": "+55-21-96595-1820",
     "image": "https://jeaneleite.com.br/foto-jeane.jpg",
     "logo": "https://jeaneleite.com.br/logo.png",
     "priceRange": "$$",
     "currenciesAccepted": "BRL",
-    "paymentAccepted": "Cash, Credit Card, PIX",
+    "paymentAccepted": "Dinheiro, Cartão de Crédito, PIX",
+    "medicalSpecialty": [
+      "Physical Therapy",
+      "Geriatric Physical Therapy",
+      "Vestibular Rehabilitation",
+      "Orthopedic Physical Therapy"
+    ],
+    "availableService": [
+      { "@type": "MedicalTherapy", "name": "Fisioterapia Domiciliar" },
+      { "@type": "MedicalTherapy", "name": "Reabilitação Vestibular" },
+      { "@type": "MedicalTherapy", "name": "Tratamento de Vertigens e Tonturas" },
+      { "@type": "MedicalTherapy", "name": "Fisioterapia Geriátrica" },
+      { "@type": "MedicalTherapy", "name": "Reabilitação Ortopédica" },
+      { "@type": "MedicalTherapy", "name": "Avaliação Fisioterapêutica Domiciliar" }
+    ],
     "areaServed": [
-      { "@type": "Place", "name": "Tijuca, Rio de Janeiro, RJ" },
-      { "@type": "Place", "name": "Zona Sul, Rio de Janeiro, RJ" }
+      { "@type": "Place", "name": "Tijuca, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Zona Sul, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Botafogo, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Copacabana, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Ipanema, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Leblon, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Flamengo, Rio de Janeiro, RJ, Brasil" },
+      { "@type": "Place", "name": "Laranjeiras, Rio de Janeiro, RJ, Brasil" }
     ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Rio de Janeiro",
       "addressRegion": "RJ",
-      "addressCountry": "BR"
+      "addressCountry": "BR",
+      "addressCountryName": "Brasil"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -74,6 +97,10 @@
         "closes": "12:00"
       }
     ],
+    "employee": {
+      "@type": "Person",
+      "@id": "https://jeaneleite.com.br/#pessoa"
+    },
     "sameAs": [
       "https://instagram.com/jeaneleite.fisio",
       "https://wa.me/5521965951820"
@@ -81,16 +108,110 @@
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional License",
-      "name": "CREFITO 449534-F"
+      "name": "CREFITO 449534-F",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Conselho Regional de Fisioterapia e Terapia Ocupacional",
+        "alternateName": "CREFITO"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema Markup: Person (profissional identificável para IAs e Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://jeaneleite.com.br/#pessoa",
+    "name": "Jeane Leite",
+    "givenName": "Jeane",
+    "familyName": "Leite",
+    "jobTitle": "Fisioterapeuta",
+    "description": "Fisioterapeuta domiciliar especializada em reabilitação vestibular, tratamento de tonturas e vertigens, fisioterapia geriátrica e reabilitação ortopédica. Atende na Tijuca e Zona Sul do Rio de Janeiro. CREFITO 449534-F.",
+    "url": "https://jeaneleite.com.br/",
+    "image": "https://jeaneleite.com.br/foto-jeane.jpg",
+    "telephone": "+55-21-96595-1820",
+    "worksFor": {
+      "@type": "MedicalBusiness",
+      "@id": "https://jeaneleite.com.br/#business"
     },
-    "medicalSpecialty": "Physical Therapy",
-    "serviceType": [
-      "Fisioterapia Domiciliar",
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional License",
+        "name": "Registro CREFITO 449534-F",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Conselho Regional de Fisioterapia e Terapia Ocupacional",
+          "alternateName": "CREFITO"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Graduação em Fisioterapia"
+      }
+    ],
+    "knowsAbout": [
       "Reabilitação Vestibular",
-      "Tratamento de Vertigens e Tonturas",
+      "Tratamento de Vertigens",
+      "Tratamento de Tonturas",
+      "Fisioterapia Domiciliar",
       "Fisioterapia Geriátrica",
-      "Reabilitação Ortopédica"
+      "Reabilitação Ortopédica",
+      "Manobra de Epley",
+      "Exercícios de Cawthorne-Cooksey",
+      "Fisioterapia Neurológica",
+      "Prevenção de Quedas em Idosos"
+    ],
+    "areaServed": [
+      "Tijuca, Rio de Janeiro",
+      "Zona Sul, Rio de Janeiro",
+      "Botafogo", "Copacabana", "Ipanema", "Leblon",
+      "Flamengo", "Laranjeiras", "Humaitá", "Jardim Botânico"
+    ],
+    "sameAs": [
+      "https://instagram.com/jeaneleite.fisio"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <!-- Schema Markup: BreadcrumbList (ajuda IAs a entenderem a estrutura do site) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início",   "item": "https://jeaneleite.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://jeaneleite.com.br/#servicos" },
+      { "@type": "ListItem", "position": 3, "name": "Sobre",    "item": "https://jeaneleite.com.br/#sobre" },
+      { "@type": "ListItem", "position": 4, "name": "Blog",     "item": "https://jeaneleite.com.br/#blog" },
+      { "@type": "ListItem", "position": 5, "name": "Contato",  "item": "https://jeaneleite.com.br/#contato" }
     ]
+  }
+  </script>
+
+  <!-- Schema Markup: WebSite com Sitelinks Search (habilita caixa de busca no Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://jeaneleite.com.br/#site",
+    "name": "Jeane Leite Fisioterapeuta",
+    "url": "https://jeaneleite.com.br/",
+    "description": "Site oficial de Jeane Leite, fisioterapeuta domiciliar especialista em reabilitação vestibular na Tijuca e Zona Sul do Rio de Janeiro.",
+    "inLanguage": "pt-BR",
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jeaneleite.com.br/#pessoa"
+    }
   }
   </script>
 
@@ -906,6 +1027,319 @@
       font-size: .875rem; font-weight: 500;
     }
     .marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    /* ─── BLOG ─── */
+    #blog-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: #f7faf9;
+      overflow-y: auto;
+      display: none;
+      animation: blogSlideIn .45s cubic-bezier(.22,1,.36,1);
+    }
+    #blog-overlay.open { display: block; }
+    @keyframes blogSlideIn {
+      from { transform: translateY(40px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    .blog-topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(26,95,74,.08);
+      padding: .875rem 0;
+    }
+    .blog-topbar-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .blog-back {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--green); font-weight: 600; font-size: .9375rem;
+      background: none; border: none; cursor: pointer;
+      padding: .5rem .75rem; border-radius: .75rem;
+      transition: background .2s;
+    }
+    .blog-back:hover { background: var(--green-bg); }
+    .blog-back svg { width: 18px; height: 18px; }
+    .blog-topbar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.125rem; font-weight: 700; color: var(--green);
+    }
+    .blog-topbar-actions { display: flex; align-items: center; gap: .75rem; }
+
+    /* Hero do blog */
+    .blog-hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+      padding: 4rem 0 5rem; position: relative; overflow: hidden;
+    }
+    .blog-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .blog-hero-blob {
+      position: absolute; border-radius: 50%;
+      background: rgba(255,255,255,.05); filter: blur(40px);
+    }
+    .blog-hero-content { position: relative; z-index: 1; text-align: center; max-width: 680px; margin: 0 auto; }
+    .blog-hero-pill {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
+      color: rgba(255,255,255,.9); padding: .5rem 1.25rem;
+      border-radius: 999px; font-size: .8125rem; font-weight: 600;
+      margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,.2);
+    }
+    .blog-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem); color: white; margin-bottom: 1rem; line-height: 1.2;
+    }
+    .blog-hero p { color: rgba(255,255,255,.75); font-size: 1.0625rem; line-height: 1.7; }
+
+    /* Filtros de categoria */
+    .blog-filters {
+      max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .blog-cats { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .blog-cat-btn {
+      padding: .5rem 1.125rem; border-radius: 999px;
+      font-size: .875rem; font-weight: 500;
+      border: 1.5px solid rgba(26,95,74,.15);
+      background: white; color: var(--green-light);
+      cursor: pointer; transition: all .2s;
+    }
+    .blog-cat-btn:hover { border-color: var(--green); color: var(--green); }
+    .blog-cat-btn.active { background: var(--green); color: white; border-color: var(--green); }
+    .blog-search {
+      display: flex; align-items: center; gap: .5rem;
+      background: white; border: 1.5px solid rgba(26,95,74,.15);
+      border-radius: 999px; padding: .5rem 1.125rem;
+      transition: border-color .2s;
+    }
+    .blog-search:focus-within { border-color: var(--green); }
+    .blog-search svg { color: var(--green-light); width: 16px; height: 16px; flex-shrink: 0; }
+    .blog-search input {
+      border: none; outline: none; background: none;
+      font-size: .875rem; color: var(--green); width: 180px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .blog-search input::placeholder { color: rgba(61,107,90,.5); }
+
+    /* Grid de artigos */
+    .blog-grid-wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+    .blog-grid {
+      display: grid; gap: 1.75rem;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:640px)  { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:1024px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* Card de artigo */
+    .blog-card {
+      background: white; border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      overflow: hidden; cursor: pointer;
+      transition: all .35s cubic-bezier(.22,1,.36,1);
+      display: flex; flex-direction: column;
+      border: 1px solid rgba(26,95,74,.06);
+    }
+    .blog-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.12); transform: translateY(-5px); }
+    .blog-card-img {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover;
+      background: linear-gradient(135deg, var(--green-bg), #e0f0e8);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .blog-card-img-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .blog-card-cat {
+      position: absolute; top: .875rem; left: .875rem;
+      background: var(--green); color: white;
+      font-size: .6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+      padding: .3rem .75rem; border-radius: 999px;
+    }
+    .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .75rem; }
+    .blog-card-meta { display: flex; align-items: center; gap: .625rem; color: var(--green-light); font-size: .8125rem; }
+    .blog-card-meta svg { width: 14px; height: 14px; }
+    .blog-card-meta span + span::before { content: '·'; margin-right: .625rem; }
+    .blog-card-title { font-family: 'Playfair Display', serif; font-size: 1.125rem; color: var(--green); line-height: 1.35; }
+    .blog-card:hover .blog-card-title { color: var(--gold); }
+    .blog-card-excerpt { color: var(--green-light); font-size: .9rem; line-height: 1.65; flex: 1; }
+    .blog-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem; border-top: 1px solid rgba(26,95,74,.06);
+    }
+    .blog-card-read {
+      display: inline-flex; align-items: center; gap: .375rem;
+      color: var(--green); font-size: .875rem; font-weight: 600;
+      transition: gap .2s;
+    }
+    .blog-card:hover .blog-card-read { gap: .625rem; }
+    .blog-card-read svg { width: 14px; height: 14px; }
+    .blog-card-actions { display: flex; gap: .375rem; }
+    .blog-card-action-btn {
+      width: 30px; height: 30px; border-radius: 50%; border: none;
+      background: rgba(26,95,74,.06); color: var(--green-light);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .2s; font-size: .75rem;
+    }
+    .blog-card-action-btn:hover { background: rgba(26,95,74,.12); color: var(--green); }
+    .blog-card-action-btn.del:hover { background: rgba(220,50,50,.1); color: #dc3232; }
+    .blog-card-action-btn svg { width: 14px; height: 14px; }
+
+    /* Estado vazio */
+    .blog-empty {
+      grid-column: 1/-1; text-align: center; padding: 5rem 2rem;
+      color: var(--green-light);
+    }
+    .blog-empty-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--green-bg); margin: 0 auto 1.5rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .blog-empty-icon svg { width: 36px; height: 36px; color: var(--green); opacity: .4; }
+    .blog-empty h3 { font-size: 1.25rem; color: var(--green); margin-bottom: .5rem; }
+    .blog-empty p { font-size: .9375rem; margin-bottom: 1.5rem; }
+
+    /* Modal de criar/editar artigo */
+    .blog-modal-bg {
+      position: fixed; inset: 0; z-index: 600;
+      background: rgba(0,0,0,.5); backdrop-filter: blur(4px);
+      display: none; align-items: center; justify-content: center; padding: 1rem;
+    }
+    .blog-modal-bg.open { display: flex; }
+    .blog-modal {
+      background: white; border-radius: 1.75rem;
+      width: 100%; max-width: 680px; max-height: 92vh;
+      overflow-y: auto; box-shadow: 0 32px 80px rgba(0,0,0,.2);
+      animation: modalIn .35s cubic-bezier(.22,1,.36,1);
+    }
+    @keyframes modalIn {
+      from { transform: scale(.94) translateY(20px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .blog-modal-header {
+      padding: 1.75rem 2rem 0;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .blog-modal-header h2 { font-size: 1.375rem; color: var(--green); }
+    .blog-modal-close {
+      width: 36px; height: 36px; border-radius: 50%; border: none;
+      background: rgba(26,95,74,.08); color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background .2s; flex-shrink: 0;
+    }
+    .blog-modal-close:hover { background: rgba(26,95,74,.16); }
+    .blog-modal-close svg { width: 16px; height: 16px; }
+    .blog-modal-body { padding: 1.5rem 2rem 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: .5rem; }
+    .form-label { font-size: .875rem; font-weight: 600; color: var(--green); }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; padding: .75rem 1rem;
+      border: 1.5px solid rgba(26,95,74,.15);
+      border-radius: .875rem; outline: none;
+      font-family: 'DM Sans', sans-serif; font-size: .9375rem;
+      color: var(--green); background: white;
+      transition: border-color .2s;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--green); }
+    .form-textarea { min-height: 140px; resize: vertical; line-height: 1.65; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media(max-width:500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-hint { font-size: .8125rem; color: var(--green-light); }
+
+    /* Emoji picker */
+    .emoji-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .emoji-opt {
+      width: 40px; height: 40px; border-radius: .75rem; border: 1.5px solid rgba(26,95,74,.12);
+      background: white; font-size: 1.25rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .15s;
+    }
+    .emoji-opt:hover, .emoji-opt.selected { border-color: var(--green); background: var(--green-bg); }
+
+    .btn-submit {
+      display: flex; align-items: center; justify-content: center; gap: .625rem;
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      color: white; padding: 1rem 2rem; border-radius: 999px;
+      font-size: 1rem; font-weight: 600; border: none; cursor: pointer;
+      transition: all .25s; box-shadow: 0 4px 16px rgba(26,95,74,.2);
+      width: 100%;
+    }
+    .btn-submit:hover { box-shadow: 0 8px 24px rgba(26,95,74,.3); transform: translateY(-1px); }
+    .btn-submit svg { width: 18px; height: 18px; }
+
+    /* Modal de leitura do artigo */
+    .blog-read-bg {
+      position: fixed; inset: 0; z-index: 600;
+      background: rgba(0,0,0,.55); backdrop-filter: blur(4px);
+      display: none; align-items: flex-start; justify-content: center;
+      padding: 2rem 1rem; overflow-y: auto;
+    }
+    .blog-read-bg.open { display: flex; }
+    .blog-read-modal {
+      background: white; border-radius: 1.75rem;
+      width: 100%; max-width: 780px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.2);
+      animation: modalIn .35s cubic-bezier(.22,1,.36,1);
+      overflow: hidden; margin: auto;
+    }
+    .blog-read-cover {
+      width: 100%; aspect-ratio: 21/9; overflow: hidden;
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; position: relative;
+    }
+    .blog-read-cover img { width: 100%; height: 100%; object-fit: cover; }
+    .blog-read-cover-cat {
+      position: absolute; bottom: 1.25rem; left: 1.5rem;
+      background: rgba(0,0,0,.45); backdrop-filter: blur(8px);
+      color: white; font-size: .8125rem; font-weight: 700;
+      padding: .35rem .875rem; border-radius: 999px; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .blog-read-body { padding: 2.5rem; }
+    .blog-read-meta { display: flex; align-items: center; gap: .75rem; color: var(--green-light); font-size: .875rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+    .blog-read-meta svg { width: 15px; height: 15px; }
+    .blog-read-title { font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--green); line-height: 1.25; margin-bottom: 1.5rem; }
+    .blog-read-content { color: var(--green-light); font-size: 1.0625rem; line-height: 1.85; white-space: pre-wrap; }
+    .blog-read-footer {
+      padding: 1.5rem 2.5rem; border-top: 1px solid rgba(26,95,74,.08);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .blog-read-close-btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--green); color: white; padding: .75rem 1.5rem;
+      border-radius: 999px; font-weight: 600; font-size: .9375rem;
+      border: none; cursor: pointer; transition: all .2s;
+    }
+    .blog-read-close-btn:hover { background: var(--green-dark); }
+    .blog-share-wa {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #25d366; color: white; padding: .75rem 1.5rem;
+      border-radius: 999px; font-weight: 600; font-size: .9375rem;
+      text-decoration: none; transition: all .2s;
+    }
+    .blog-share-wa:hover { background: #1db954; }
+    .blog-share-wa svg { width: 18px; height: 18px; }
+
+    /* Novo artigo FAB */
+    .blog-fab {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 550;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: white; border: none; cursor: pointer;
+      box-shadow: 0 8px 24px rgba(201,162,39,.4);
+      display: none; align-items: center; justify-content: center;
+      transition: all .25s;
+    }
+    .blog-fab.show { display: flex; }
+    .blog-fab:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(201,162,39,.5); }
+    .blog-fab svg { width: 24px; height: 24px; }
   </style>
 </head>
 <body>
@@ -949,6 +1383,7 @@
         <a href="#galeria" onclick="scrollTo('#galeria');return false;">Galeria</a>
         <a href="#sobre" onclick="scrollTo('#sobre');return false;">Sobre</a>
         <a href="#faq" onclick="scrollTo('#faq');return false;">FAQ</a>
+        <a href="#blog" onclick="openBlog();return false;">Blog</a>
         <a href="#contato" onclick="scrollTo('#contato');return false;">Contato</a>
       </nav>
 
@@ -974,6 +1409,7 @@
         <a href="#galeria" onclick="scrollTo('#galeria');closeMobileMenu();return false;">Galeria</a>
         <a href="#sobre" onclick="scrollTo('#sobre');closeMobileMenu();return false;">Sobre</a>
         <a href="#faq" onclick="scrollTo('#faq');closeMobileMenu();return false;">FAQ</a>
+        <a href="#blog" onclick="openBlog();closeMobileMenu();return false;">Blog</a>
         <a href="#contato" onclick="scrollTo('#contato');closeMobileMenu();return false;">Contato</a>
         <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="ig-link">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -1752,5 +2188,442 @@
   /* ANO */
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- ═══════════════════════════════════════
+     BLOG – OVERLAY COMPLETO
+═══════════════════════════════════════ -->
+<div id="blog-overlay">
+
+  <!-- Topbar -->
+  <div class="blog-topbar">
+    <div class="blog-topbar-inner">
+      <button class="blog-back" onclick="closeBlog()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Voltar ao site
+      </button>
+      <span class="blog-topbar-title">Blog · Jeane Leite</span>
+      <div class="blog-topbar-actions">
+        <button class="btn-primary" onclick="openNewArticle()" style="padding:.5rem 1.25rem;font-size:.875rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          Novo artigo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero do blog -->
+  <div class="blog-hero">
+    <div class="blog-hero-blob" style="width:400px;height:400px;top:-10%;right:-5%;"></div>
+    <div class="blog-hero-blob" style="width:300px;height:300px;bottom:-15%;left:-5%;"></div>
+    <div class="container blog-hero-content">
+      <div class="blog-hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+        Conteúdo & Saúde
+      </div>
+      <h1>Dicas e informações sobre saúde e fisioterapia</h1>
+      <p>Artigos sobre bem-estar, reabilitação, prevenção e qualidade de vida, escritos com cuidado para você e sua família.</p>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <div class="blog-filters">
+    <div class="blog-cats" id="blogCats">
+      <button class="blog-cat-btn active" data-cat="todos" onclick="filterBlog('todos',this)">Todos</button>
+      <button class="blog-cat-btn" data-cat="Fisioterapia" onclick="filterBlog('Fisioterapia',this)">Fisioterapia</button>
+      <button class="blog-cat-btn" data-cat="Vertigens" onclick="filterBlog('Vertigens',this)">Vertigens</button>
+      <button class="blog-cat-btn" data-cat="Bem-estar" onclick="filterBlog('Bem-estar',this)">Bem-estar</button>
+      <button class="blog-cat-btn" data-cat="Geriátrico" onclick="filterBlog('Geriátrico',this)">Geriátrico</button>
+      <button class="blog-cat-btn" data-cat="Dicas" onclick="filterBlog('Dicas',this)">Dicas</button>
+    </div>
+    <div class="blog-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" placeholder="Buscar artigos..." id="blogSearchInput" oninput="searchBlog(this.value)" />
+    </div>
+  </div>
+
+  <!-- Grid de artigos -->
+  <div class="blog-grid-wrap">
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+</div>
+
+<!-- FAB novo artigo (visível no blog) -->
+<button class="blog-fab" id="blogFab" onclick="openNewArticle()">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+</button>
+
+<!-- ─── Modal: criar / editar artigo ─── -->
+<div class="blog-modal-bg" id="articleModalBg" onclick="if(event.target===this)closeArticleModal()">
+  <div class="blog-modal">
+    <div class="blog-modal-header">
+      <h2 id="modalTitle">Novo artigo</h2>
+      <button class="blog-modal-close" onclick="closeArticleModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="blog-modal-body">
+
+      <div class="form-group">
+        <label class="form-label">Título do artigo *</label>
+        <input type="text" class="form-input" id="artTitle" placeholder="Ex: Como prevenir dores nas costas no dia a dia" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Categoria *</label>
+          <select class="form-select" id="artCat">
+            <option value="Fisioterapia">Fisioterapia</option>
+            <option value="Vertigens">Vertigens</option>
+            <option value="Bem-estar">Bem-estar</option>
+            <option value="Geriátrico">Geriátrico</option>
+            <option value="Dicas">Dicas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tempo de leitura</label>
+          <input type="text" class="form-input" id="artTime" placeholder="Ex: 4 min" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Resumo (aparece no card) *</label>
+        <input type="text" class="form-input" id="artExcerpt" placeholder="Uma frase curta que desperta interesse..." />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Conteúdo completo *</label>
+        <textarea class="form-textarea" id="artContent" placeholder="Escreva o artigo completo aqui. Use linhas em branco para separar parágrafos..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">URL da imagem de capa</label>
+        <input type="text" class="form-input" id="artImg" placeholder="https://... (deixe vazio para usar emoji)" />
+        <span class="form-hint">Cole o link de uma imagem do Google, Unsplash, etc.</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Ícone do card (se não tiver imagem)</label>
+        <div class="emoji-row" id="emojiRow">
+          <button class="emoji-opt selected" data-emoji="🦴" onclick="selectEmoji(this)">🦴</button>
+          <button class="emoji-opt" data-emoji="🧠" onclick="selectEmoji(this)">🧠</button>
+          <button class="emoji-opt" data-emoji="💚" onclick="selectEmoji(this)">💚</button>
+          <button class="emoji-opt" data-emoji="🏃" onclick="selectEmoji(this)">🏃</button>
+          <button class="emoji-opt" data-emoji="🧘" onclick="selectEmoji(this)">🧘</button>
+          <button class="emoji-opt" data-emoji="👴" onclick="selectEmoji(this)">👴</button>
+          <button class="emoji-opt" data-emoji="💊" onclick="selectEmoji(this)">💊</button>
+          <button class="emoji-opt" data-emoji="🩺" onclick="selectEmoji(this)">🩺</button>
+          <button class="emoji-opt" data-emoji="⚡" onclick="selectEmoji(this)">⚡</button>
+          <button class="emoji-opt" data-emoji="🌿" onclick="selectEmoji(this)">🌿</button>
+        </div>
+      </div>
+
+      <input type="hidden" id="artEditId" value="" />
+      <button class="btn-submit" onclick="saveArticle()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Publicar artigo
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Modal: ler artigo ─── -->
+<div class="blog-read-bg" id="readModalBg" onclick="if(event.target===this)closeReadModal()">
+  <div class="blog-read-modal">
+    <div class="blog-read-cover" id="readCover"></div>
+    <div class="blog-read-body">
+      <div class="blog-read-meta" id="readMeta"></div>
+      <h2 class="blog-read-title" id="readTitle"></h2>
+      <div class="blog-read-content" id="readContent"></div>
+    </div>
+    <div class="blog-read-footer">
+      <button class="blog-read-close-btn" onclick="closeReadModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Voltar ao blog
+      </button>
+      <a id="readShareWa" href="#" target="_blank" class="blog-share-wa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+        Compartilhar no WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ═══ BLOG ENGINE ═══ */
+  const STORAGE_KEY = 'jl_blog_articles';
+  let blogArticles = [];
+  let currentFilter = 'todos';
+  let currentSearch = '';
+  let selectedEmoji = '🦴';
+
+  /* ─ Artigos padrão (aparecem na primeira visita) ─ */
+  const defaultArticles = [
+    {
+      id: 'default-1',
+      title: 'O que é reabilitação vestibular e para quem é indicada?',
+      cat: 'Vertigens',
+      excerpt: 'Entenda como esse tratamento pode eliminar tonturas e vertigens de forma segura e eficaz.',
+      content: `A reabilitação vestibular é uma modalidade fisioterapêutica especializada no tratamento de distúrbios do sistema vestibular — o sistema responsável pelo equilíbrio e pela orientação espacial do nosso corpo.\n\nQuem sente tontura ao levantar da cama, sensação de "cabeça girando", desequilíbrio ao andar ou enjoo em ambientes movimentados pode se beneficiar muito deste tratamento.\n\nComo funciona?\n\nPor meio de exercícios específicos e progressivos, a reabilitação vestibular estimula o sistema nervoso central a compensar as falhas do labirinto. Os exercícios de Cawthorne-Cooksey e a Manobra de Epley são exemplos clássicos utilizados no tratamento.\n\nResultados esperados:\n\n- Redução ou eliminação das tonturas\n- Melhora do equilíbrio e da coordenação\n- Retorno seguro às atividades do dia a dia\n- Diminuição do risco de quedas\n\nO tratamento é indoloro, seguro e pode ser realizado no conforto da sua casa. Se você sofre com tonturas frequentes, agende uma avaliação!`,
+      emoji: '🧠',
+      img: '',
+      date: new Date(Date.now() - 7 * 86400000).toISOString(),
+      readTime: '5 min'
+    },
+    {
+      id: 'default-2',
+      title: 'Fisioterapia domiciliar: 5 vantagens de se tratar em casa',
+      cat: 'Fisioterapia',
+      excerpt: 'Conforto, praticidade e resultados equivalentes aos de clínica. Veja por que mais pessoas estão optando pelo atendimento em casa.',
+      content: `Cada vez mais pacientes estão descobrindo os benefícios do atendimento fisioterapêutico domiciliar. Além da comodidade de não precisar sair de casa, há vantagens importantes para a recuperação.\n\n1. Conforto e familiaridade\nO ambiente doméstico reduz o estresse e a ansiedade, fatores que podem retardar a recuperação. Pacientes tendem a se sentir mais relaxados e colaborativos em casa.\n\n2. Sem deslocamento\nEspecialmente importante para quem tem mobilidade reduzida, dor intensa ou dificuldade de locomoção. Eliminar o esforço do deslocamento já é parte do tratamento.\n\n3. Atendimento individualizado\nNa fisioterapia domiciliar, você tem atenção exclusiva durante toda a sessão — sem filas, sem espera, sem divisão de atenção.\n\n4. Equipamentos adaptados\nOs equipamentos portáteis de qualidade garantem o mesmo resultado do atendimento em clínica, adaptados ao seu espaço.\n\n5. Evolução no ambiente real\nOs exercícios são praticados no ambiente onde você vive, tornando os resultados mais funcionais para o seu dia a dia.\n\nEstá pensando em iniciar um tratamento? Entre em contato pelo WhatsApp e agende sua avaliação!`,
+      emoji: '🏠',
+      img: '',
+      date: new Date(Date.now() - 3 * 86400000).toISOString(),
+      readTime: '4 min'
+    },
+    {
+      id: 'default-3',
+      title: 'Cuidados com a postura no trabalho remoto',
+      cat: 'Dicas',
+      excerpt: 'Dores nas costas, pescoço e ombros são queixa frequente de quem trabalha em casa. Veja como prevenir.',
+      content: `O trabalho remoto trouxe flexibilidade, mas também novos desafios para a saúde postural. Muitas pessoas improvisam estações de trabalho em sofás, camas ou mesas inadequadas — e o corpo sente.\n\nAs queixas mais comuns:\n- Dor cervical e no pescoço\n- Dor lombar\n- Tensão nos ombros e trapézio\n- Síndrome do túnel do carpo\n\nDicas práticas para o dia a dia:\n\n✅ Ajuste a altura da cadeira para que os pés fiquem apoiados no chão e os joelhos formem 90°.\n\n✅ O monitor deve estar na altura dos olhos — use suportes ou livros para elevá-lo se necessário.\n\n✅ Mantenha os ombros relaxados e os cotovelos próximos ao corpo ao digitar.\n\n✅ A cada 45-50 minutos, levante-se, alongue-se e caminhe por alguns minutos.\n\n✅ Faça alongamentos de pescoço, ombros e lombar ao longo do dia.\n\nSe as dores já estão presentes e persistentes, é hora de procurar um fisioterapeuta para avaliação e tratamento. Não espere a dor piorar!`,
+      emoji: '💻',
+      img: '',
+      date: new Date().toISOString(),
+      readTime: '3 min'
+    }
+  ];
+
+  /* ─ Carrega artigos do localStorage ─ */
+  function loadArticles() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      blogArticles = stored ? JSON.parse(stored) : [...defaultArticles];
+    } catch(e) {
+      blogArticles = [...defaultArticles];
+    }
+  }
+
+  /* ─ Salva no localStorage ─ */
+  function persistArticles() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(blogArticles)); } catch(e) {}
+  }
+
+  /* ─ Formata data ─ */
+  function fmtDate(iso) {
+    return new Date(iso).toLocaleDateString('pt-BR', { day:'2-digit', month:'long', year:'numeric' });
+  }
+
+  /* ─ Renderiza grid ─ */
+  function renderBlog() {
+    const grid = document.getElementById('blogGrid');
+    let list = [...blogArticles].sort((a,b) => new Date(b.date) - new Date(a.date));
+
+    if (currentFilter !== 'todos') list = list.filter(a => a.cat === currentFilter);
+    if (currentSearch.trim()) {
+      const q = currentSearch.toLowerCase();
+      list = list.filter(a =>
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q) ||
+        a.cat.toLowerCase().includes(q)
+      );
+    }
+
+    if (!list.length) {
+      grid.innerHTML = `
+        <div class="blog-empty">
+          <div class="blog-empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+          </div>
+          <h3>Nenhum artigo encontrado</h3>
+          <p>Tente outra categoria ou clique em "Novo artigo" para publicar.</p>
+          <button class="btn-primary" onclick="openNewArticle()" style="width:auto;padding:.75rem 1.75rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            Criar primeiro artigo
+          </button>
+        </div>`;
+      return;
+    }
+
+    grid.innerHTML = list.map(a => `
+      <div class="blog-card" onclick="readArticle('${a.id}')">
+        <div class="blog-card-img">
+          ${a.img
+            ? `<img src="${a.img}" alt="${a.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'blog-card-img-placeholder\\'>${a.emoji||'📄'}</div>'" />`
+            : `<div class="blog-card-img-placeholder">${a.emoji || '📄'}</div>`
+          }
+          <span class="blog-card-cat">${a.cat}</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <span>${fmtDate(a.date)}</span>
+            ${a.readTime ? `<span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;width:13px;height:13px;margin-right:2px"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+              ${a.readTime}
+            </span>` : ''}
+          </div>
+          <h3 class="blog-card-title">${a.title}</h3>
+          <p class="blog-card-excerpt">${a.excerpt}</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-card-read">
+            Ler artigo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+          <div class="blog-card-actions" onclick="event.stopPropagation()">
+            <button class="blog-card-action-btn" title="Editar" onclick="editArticle('${a.id}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+            </button>
+            <button class="blog-card-action-btn del" title="Excluir" onclick="deleteArticle('${a.id}')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /* ─ Abrir / fechar blog ─ */
+  function openBlog() {
+    loadArticles();
+    renderBlog();
+    document.getElementById('blog-overlay').classList.add('open');
+    document.getElementById('blogFab').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBlog() {
+    document.getElementById('blog-overlay').classList.remove('open');
+    document.getElementById('blogFab').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  /* ─ Filtros e busca ─ */
+  function filterBlog(cat, btn) {
+    currentFilter = cat;
+    document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderBlog();
+  }
+  function searchBlog(q) {
+    currentSearch = q;
+    renderBlog();
+  }
+
+  /* ─ Modal de artigo ─ */
+  function openNewArticle() {
+    document.getElementById('modalTitle').textContent = 'Novo artigo';
+    document.getElementById('artTitle').value = '';
+    document.getElementById('artExcerpt').value = '';
+    document.getElementById('artContent').value = '';
+    document.getElementById('artImg').value = '';
+    document.getElementById('artTime').value = '';
+    document.getElementById('artCat').value = 'Fisioterapia';
+    document.getElementById('artEditId').value = '';
+    selectEmoji(document.querySelector('.emoji-opt[data-emoji="🦴"]'));
+    document.getElementById('articleModalBg').classList.add('open');
+  }
+  function closeArticleModal() {
+    document.getElementById('articleModalBg').classList.remove('open');
+  }
+  function selectEmoji(btn) {
+    document.querySelectorAll('.emoji-opt').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedEmoji = btn.dataset.emoji;
+  }
+
+  function saveArticle() {
+    const title   = document.getElementById('artTitle').value.trim();
+    const excerpt = document.getElementById('artExcerpt').value.trim();
+    const content = document.getElementById('artContent').value.trim();
+    const cat     = document.getElementById('artCat').value;
+    const img     = document.getElementById('artImg').value.trim();
+    const readTime= document.getElementById('artTime').value.trim();
+    const editId  = document.getElementById('artEditId').value;
+
+    if (!title || !excerpt || !content) {
+      alert('Por favor, preencha título, resumo e conteúdo.'); return;
+    }
+
+    if (editId) {
+      const idx = blogArticles.findIndex(a => a.id === editId);
+      if (idx > -1) {
+        blogArticles[idx] = { ...blogArticles[idx], title, excerpt, content, cat, img, readTime, emoji: selectedEmoji };
+      }
+    } else {
+      blogArticles.unshift({
+        id: 'art-' + Date.now(),
+        title, excerpt, content, cat, img, readTime,
+        emoji: selectedEmoji,
+        date: new Date().toISOString()
+      });
+    }
+
+    persistArticles();
+    renderBlog();
+    closeArticleModal();
+  }
+
+  /* ─ Editar artigo ─ */
+  function editArticle(id) {
+    const a = blogArticles.find(x => x.id === id);
+    if (!a) return;
+    document.getElementById('modalTitle').textContent = 'Editar artigo';
+    document.getElementById('artTitle').value   = a.title;
+    document.getElementById('artExcerpt').value = a.excerpt;
+    document.getElementById('artContent').value = a.content;
+    document.getElementById('artImg').value     = a.img || '';
+    document.getElementById('artTime').value    = a.readTime || '';
+    document.getElementById('artCat').value     = a.cat;
+    document.getElementById('artEditId').value  = a.id;
+    const emojiBtn = document.querySelector(`.emoji-opt[data-emoji="${a.emoji}"]`);
+    if (emojiBtn) selectEmoji(emojiBtn);
+    else { document.querySelectorAll('.emoji-opt').forEach(b => b.classList.remove('selected')); }
+    document.getElementById('articleModalBg').classList.add('open');
+  }
+
+  /* ─ Excluir artigo ─ */
+  function deleteArticle(id) {
+    if (!confirm('Excluir este artigo permanentemente?')) return;
+    blogArticles = blogArticles.filter(a => a.id !== id);
+    persistArticles();
+    renderBlog();
+  }
+
+  /* ─ Ler artigo completo ─ */
+  function readArticle(id) {
+    const a = blogArticles.find(x => x.id === id);
+    if (!a) return;
+
+    const cover = document.getElementById('readCover');
+    cover.innerHTML = a.img
+      ? `<img src="${a.img}" alt="${a.title}" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'>${a.emoji||'📄'}</span>'" />`
+      : `<span style="font-size:4rem">${a.emoji || '📄'}</span>`;
+    cover.insertAdjacentHTML('beforeend', `<span class="blog-read-cover-cat">${a.cat}</span>`);
+
+    document.getElementById('readMeta').innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+      <span>${fmtDate(a.date)}</span>
+      ${a.readTime ? `<span style="display:flex;align-items:center;gap:.3rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>${a.readTime} de leitura</span>` : ''}
+    `;
+    document.getElementById('readTitle').textContent   = a.title;
+    document.getElementById('readContent').textContent = a.content;
+
+    const waText = encodeURIComponent(`Olá! Encontrei esse artigo interessante sobre "${a.title}" no site da Jeane Leite Fisioterapeuta 🌿 https://jeaneleite.com.br`);
+    document.getElementById('readShareWa').href = `https://wa.me/?text=${waText}`;
+
+    document.getElementById('readModalBg').classList.add('open');
+  }
+  function closeReadModal() {
+    document.getElementById('readModalBg').classList.remove('open');
+  }
+
+  /* ─ Fechar modais com ESC ─ */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeReadModal();
+      closeArticleModal();
+    }
+  });
+</script>
+
 </body>
 </html>
