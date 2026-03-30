@@ -223,6 +223,22 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Qual o valor de uma sessão de fisioterapia domiciliar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O valor de cada sessão varia conforme o tipo de tratamento, a frequência e a localização do atendimento na Tijuca ou Zona Sul do Rio de Janeiro. Para um orçamento personalizado, entre em contato pelo WhatsApp (21) 96595-1820. Aceito pagamento em dinheiro, cartão de crédito e PIX."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O plano de saúde cobre a fisioterapia domiciliar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do plano. Alguns convênios cobrem fisioterapia domiciliar mediante prescrição médica, mas cobertura e número de sessões variam. O melhor caminho é verificar diretamente com seu plano. Caso não haja cobertura, o atendimento particular é realizado com pagamento em dinheiro, cartão ou PIX."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Quais bairros do Rio de Janeiro você atende?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -252,8 +268,66 @@
           "@type": "Answer",
           "text": "O agendamento é feito pelo WhatsApp (21) 96595-1820 ou pelo Instagram @jeaneleite.fisio. Atendimento de segunda a sexta das 8h às 18h e sábados das 8h ao meio-dia."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "A fisioterapia domiciliar tem o mesmo resultado que a clínica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O atendimento domiciliar tem a mesma qualidade técnica do atendimento em clínica, com equipamentos portáteis de alta qualidade. O ambiente familiar reduz ansiedade e tensão muscular, favorecendo a recuperação — muitos pacientes evoluem mais rápido em casa."
+        }
       }
     ]
+  }
+  </script>
+
+  <!-- Schema Markup: Service com informações de preço (sinaliza ao Google que o site tem conteúdo de precificação) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fisioterapia Domiciliar",
+    "description": "Atendimento fisioterapêutico domiciliar personalizado na Tijuca e Zona Sul do Rio de Janeiro. Inclui avaliação, plano de tratamento e sessões em domicílio.",
+    "provider": {
+      "@type": "Person",
+      "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Rio de Janeiro"
+    },
+    "serviceType": "Fisioterapia Domiciliar",
+    "termsOfService": "Pagamento por sessão ou pacote. Aceito dinheiro, cartão de crédito e PIX.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "BRL",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "BRL",
+        "description": "Valor por sessão de fisioterapia domiciliar na Tijuca e Zona Sul do Rio de Janeiro. Entre em contato para orçamento personalizado.",
+        "eligibleRegion": {
+          "@type": "Place",
+          "name": "Tijuca e Zona Sul, Rio de Janeiro, RJ, Brasil"
+        }
+      },
+      "availability": "https://schema.org/InStock",
+      "availableDeliveryMethod": "https://schema.org/OnSitePickup",
+      "seller": {
+        "@type": "Person",
+        "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
+      }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Fisioterapia Domiciliar",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Avaliação Fisioterapêutica Domiciliar" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sessão de Fisioterapia Domiciliar" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reabilitação Vestibular Domiciliar" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fisioterapia Geriátrica Domiciliar" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reabilitação Ortopédica Domiciliar" } }
+      ]
+    }
   }
   </script>
 
@@ -1981,6 +2055,30 @@
         </div>
       </div>
 
+      <div class="faq-item anim" style="animation-delay:.3s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3 itemprop="name">Qual o valor de uma sessão de fisioterapia domiciliar?</h3>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-answer-inner" itemprop="text">
+            O valor de cada sessão varia conforme o tipo de tratamento, a frequência e a localização do atendimento na Tijuca ou Zona Sul do Rio de Janeiro. Para passar um orçamento preciso e personalizado para o seu caso, entre em contato pelo WhatsApp — o atendimento inicial é feito por avaliação, sem compromisso. Aceito pagamento em dinheiro, cartão de crédito e PIX.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item anim" style="animation-delay:.35s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3 itemprop="name">O plano de saúde cobre a fisioterapia domiciliar?</h3>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div class="faq-answer-inner" itemprop="text">
+            Depende do seu plano. Alguns convênios cobrem fisioterapia domiciliar mediante prescrição médica — mas a cobertura, o número de sessões e as condições variam muito. O melhor caminho é verificar diretamente com o seu plano. Caso não haja cobertura, o atendimento particular é realizado com pagamento em dinheiro, cartão ou PIX.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -2357,6 +2455,80 @@
 
   /* ─ Artigos padrão (aparecem na primeira visita) ─ */
   const defaultArticles = [
+    {
+      id: 'preco-fisio-dom',
+      title: 'Qual o valor de uma sessão de fisioterapia domiciliar? Tudo o que você precisa saber',
+      cat: 'Fisioterapia',
+      excerpt: 'Entenda o que influencia o preço, se o convênio cobre e como avaliar se o investimento vale a pena para o seu caso.',
+      content: `Se você pesquisou "qual o valor de uma sessão de fisioterapia domiciliar", provavelmente já decidiu que quer o serviço — agora só precisa entender o que esperar financeiramente. Este artigo responde essa e outras perguntas relacionadas com transparência.
+
+POR QUE O PREÇO VARIA?
+
+O valor de uma sessão de fisioterapia domiciliar não é tabelado no Brasil. Ele varia por alguns fatores principais:
+
+Tipo de tratamento: uma sessão de reabilitação vestibular, por exemplo, tem complexidade diferente de uma sessão de fortalecimento muscular pós-cirúrgico. Tratamentos mais especializados podem ter valor diferente.
+
+Localização: o deslocamento do profissional é parte do serviço. Bairros mais distantes ou de difícil acesso podem impactar o valor final. Na Tijuca e Zona Sul do Rio de Janeiro, a logística é planejada para atender com eficiência.
+
+Frequência e pacote: muitos profissionais oferecem condições diferenciadas para pacotes com frequência semanal fixa — o que também é benéfico para a continuidade do tratamento.
+
+Duração da sessão: sessões de 45 minutos têm valor diferente de sessões de 1 hora de atendimento exclusivo.
+
+O QUE ESTÁ INCLUÍDO NO VALOR?
+
+Diferente do que muitos pensam, na fisioterapia domiciliar o valor da sessão geralmente já inclui:
+
+✔ O deslocamento do profissional até sua casa
+✔ Todos os equipamentos terapêuticos necessários
+✔ A avaliação e reavaliação contínua
+✔ O plano de tratamento personalizado
+✔ As orientações e exercícios para casa
+✔ O tempo integral de atendimento — sem divisão com outros pacientes
+
+Ou seja: quando você compara com o atendimento em clínica, é preciso considerar que na clínica você ainda paga pelo deslocamento, estacionamento ou transporte, e muitas vezes divide o tempo do profissional com outros pacientes.
+
+VALE MAIS A PENA DO QUE PARECE
+
+Veja a comparação prática:
+
+Clínica convencional:
+- Valor da sessão (aparentemente menor)
+- + Transporte (Uber, ônibus, gasolina, estacionamento)
+- + Tempo de deslocamento (ida e volta)
+- + Desgaste físico para quem está em recuperação
+- = Custo real frequentemente maior do que parece
+
+Fisioterapia domiciliar:
+- Valor da sessão (inclui deslocamento do profissional)
+- + Zero custo adicional de transporte
+- + Zero desgaste do deslocamento
+- + 100% do tempo do profissional dedicado a você
+- = Custo-benefício real muitas vezes superior
+
+O PLANO DE SAÚDE COBRE?
+
+Essa é uma das dúvidas mais frequentes. A resposta depende do seu plano:
+
+Planos que podem cobrir: alguns convênios cobrem fisioterapia domiciliar quando há prescrição médica e o paciente tem diagnóstico que justifica o atendimento em domicílio (limitação grave de mobilidade, pós-operatório imediato, etc.). A ANS determina cobertura mínima para fisioterapia, mas não especifica o formato domiciliar para todos os casos.
+
+O que fazer: ligue para a central do seu convênio e pergunte especificamente: "Meu plano cobre fisioterapia domiciliar? Quais os requisitos? Preciso de guia ou autorização prévia?" Tenha em mãos a CID (código do diagnóstico) do seu médico.
+
+Se o plano não cobrir: o atendimento particular é realizado com pagamento em dinheiro, cartão de crédito ou PIX, por sessão ou em pacote.
+
+COMO RECEBER UM ORÇAMENTO PERSONALIZADO?
+
+O valor exato depende da avaliação do seu caso — tipo de tratamento necessário, frequência recomendada e localização. Por isso, a melhor forma de saber é entrar em contato pelo WhatsApp.
+
+Na conversa inicial, você pode explicar sua situação e receber uma proposta clara, sem surpresas. Não há taxa para a consulta de orçamento.
+
+Atendo na Tijuca e Zona Sul do Rio de Janeiro.
+WhatsApp: (21) 96595-1820
+CREFITO 449534-F`,
+      emoji: '💰',
+      img: '',
+      date: new Date().toISOString(),
+      readTime: '6 min'
+    },
     {
       id: 'fisio-dom-1',
       title: 'Como funciona a fisioterapia domiciliar: tudo o que você precisa saber antes de começar',
