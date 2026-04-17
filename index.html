@@ -1,3101 +1,634 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Equilíbrio | Fisioterapia e Pilates</title>
+    <meta name="description"
+        content="Clínica Equilíbrio - Especialistas em Fisioterapia, Pilates e Estética. Tratamento para dores, pós-operatório, AVC e hérnia de disco.">
 
-  <!-- SEO Primário Otimizado -->
-  <title>Jeane Leite | Fisioterapeuta Domiciliar na Tijuca e Zona Sul RJ</title>
-  <meta name="description" content="Fisioterapeuta domiciliar especialista em reabilitação vestibular, vertigens, tonturas e fisioterapia geriátrica na Tijuca e Zona Sul do Rio de Janeiro. Atendimento humanizado em domicílio." />
-  <meta name="keywords" content="fisioterapeuta domiciliar Tijuca, reabilitação vestibular Rio, tratamento de vertigem Zona Sul, fisioterapia em casa RJ, Jeane Leite Fisioterapeuta, CREFITO 449534-F" />
-  <meta name="author" content="Jeane Leite" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://jeaneleitefisioterapeuta.vercel.app/" />
-  <meta name="theme-color" content="#1a5f4a" />
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph & Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Jeane Leite | Fisioterapeuta Domiciliar na Tijuca e Zona Sul RJ" />
-  <meta property="og:description" content="Fisioterapeuta especialista em reabilitação vestibular e tratamento de tonturas. Atendimento domiciliar humanizado no RJ." />
-  <meta property="og:image" content="https://jeaneleitefisioterapeuta.vercel.app/foto-jeane.jpg" />
-
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Schema Markup Aprimorado -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Jeane Leite Fisioterapia Domiciliar",
-    "description": "Fisioterapia domiciliar especializada em reabilitação vestibular, vertigens, tonturas e fisioterapia geriátrica na Tijuca e Zona Sul do Rio de Janeiro.",
-    "url": "https://jeaneleitefisioterapeuta.vercel.app/",
-    "telephone": "+55-21-96595-1820",
-    "address": { "@type": "PostalAddress", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "50"
-    },
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Professional License",
-      "name": "CREFITO 449534-F"
-    }
-  }
-  </script>
-
-  <style>
-    :root {
-      --green: #0f4c39;
-      --green-dark: #0a3326;
-      --green-mid: #2d8b6b;
-      --green-light: #eaf2ef;
-      --green-bg: #f5faf8;
-      --gold: #b8860b;
-      --gold-light: #d4b43a;
-      --white: #ffffff;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--green-bg); color: #333; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--green); }
-
-    /* Glassmorphism Cards & Containers */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    
-    .service-card, .contact-card, .faq-item {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    /* Header */
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all .4s ease; padding: 1.25rem 0; }
-    header.scrolled { background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--green); color: white;
-      padding: 0.8rem 1.8rem; border-radius: 50px;
-      font-weight: 600; text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(15, 76, 57, 0.2); }
-
-    /* Seções principais */
-    section { padding: 6rem 0; }
-
-    /* Hero */
-    #inicio { min-height: 90vh; display: flex; align-items: center; background: linear-gradient(135deg, #f0faf5 0%, #e8f5f0 100%); }
-    .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; }
-    
-    /* Blog (estilo mantido, refinado) */
-    #blog-overlay { position: fixed; inset: 0; z-index: 500; background: var(--bg); display: none; overflow-y: auto; }
-    #blog-overlay.open { display: block; }
-
-    /* Utilities */
-    .anim { opacity: 0; }
-    .anim.visible { animation: fadeUp .8s ease forwards; }
-    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-
-    /* (Restante do seu CSS original de Layout e Animações foi preservado aqui para garantir funcionalidade) */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-  </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Primário -->
-  <title>Jeane Leite Fisioterapeuta Domiciliar – Tijuca e Zona Sul RJ</title>
-  <meta name="description" content="Jeane Leite fisioterapeuta domiciliar na Tijuca e Zona Sul – RJ. Especialista em reabilitação vestibular, tonturas e vertigens. CREFITO 449534-F." />
-  <meta name="keywords" content="fisioterapeuta domiciliar Tijuca, fisioterapeuta Zona Sul Rio de Janeiro, reabilitação vestibular RJ, tratamento tontura vertigem Rio, fisioterapia em casa RJ, fisioterapeuta domiciliar Rio de Janeiro, CREFITO 449534-F, Jeane Leite fisioterapeuta" />
-  <meta name="author" content="Jeane Leite" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://jeaneleitefisioterapeuta.vercel.app/" />
-  <meta name="theme-color" content="#1a5f4a" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-  <!-- Open Graph (WhatsApp, Facebook) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jeaneleitefisioterapeuta.vercel.app/" />
-  <meta property="og:title" content="Jeane Leite Fisioterapeuta Domiciliar – Tijuca e Zona Sul RJ" />
-  <meta property="og:description" content="Jeane Leite fisioterapeuta domiciliar na Tijuca e Zona Sul – RJ. Especialista em reabilitação vestibular, tonturas e vertigens. CREFITO 449534-F." />
-  <meta property="og:image" content="https://jeaneleitefisioterapeuta.vercel.app/foto-jeane.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="Jeane Leite Fisioterapeuta" />
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Jeane Leite Fisioterapeuta Domiciliar – Tijuca e Zona Sul RJ" />
-  <meta name="twitter:description" content="Jeane Leite fisioterapeuta domiciliar na Tijuca e Zona Sul – RJ. Especialista em reabilitação vestibular, tonturas e vertigens. CREFITO 449534-F." />
-  <meta name="twitter:image" content="https://jeaneleitefisioterapeuta.vercel.app/foto-jeane.jpg" />
-
-  <!-- Schema Markup: MedicalBusiness (substitui LocalBusiness — mais específico para profissionais de saúde) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "LocalBusiness"],
-    "@id": "https://jeaneleitefisioterapeuta.vercel.app/#business",
-    "name": "Jeane Leite Fisioterapeuta",
-    "legalName": "Jeane Leite Fisioterapeuta",
-    "description": "Fisioterapia domiciliar humanizada na Tijuca e Zona Sul do Rio de Janeiro. Especialista em reabilitação vestibular, tratamento de tonturas, vertigens e fisioterapia geriátrica. CREFITO 449534-F.",
-    "url": "https://jeaneleitefisioterapeuta.vercel.app/",
-    "telephone": "+55-21-96595-1820",
-    "image": "https://jeaneleitefisioterapeuta.vercel.app/foto-jeane.jpg",
-    "logo": "https://jeaneleitefisioterapeuta.vercel.app/logo.png",
-    "priceRange": "$$",
-    "currenciesAccepted": "BRL",
-    "paymentAccepted": "Dinheiro, Cartão de Crédito, PIX",
-    "medicalSpecialty": [
-      "Physical Therapy",
-      "Geriatric Physical Therapy",
-      "Vestibular Rehabilitation",
-      "Orthopedic Physical Therapy"
-    ],
-    "availableService": [
-      { "@type": "MedicalTherapy", "name": "Fisioterapia Domiciliar" },
-      { "@type": "MedicalTherapy", "name": "Reabilitação Vestibular" },
-      { "@type": "MedicalTherapy", "name": "Tratamento de Vertigens e Tonturas" },
-      { "@type": "MedicalTherapy", "name": "Fisioterapia Geriátrica" },
-      { "@type": "MedicalTherapy", "name": "Reabilitação Ortopédica" },
-      { "@type": "MedicalTherapy", "name": "Avaliação Fisioterapêutica Domiciliar" }
-    ],
-    "areaServed": [
-      { "@type": "Place", "name": "Tijuca, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Zona Sul, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Botafogo, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Copacabana, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Ipanema, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Leblon, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Flamengo, Rio de Janeiro, RJ, Brasil" },
-      { "@type": "Place", "name": "Laranjeiras, Rio de Janeiro, RJ, Brasil" }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "addressCountry": "BR",
-      "addressCountryName": "Brasil"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -22.9268,
-      "longitude": -43.2345
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "12:00"
-      }
-    ],
-    "employee": {
-      "@type": "Person",
-      "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
-    },
-    "sameAs": [
-      "https://instagram.com/jeaneleite.fisio",
-      "https://wa.me/5521965951820"
-    ],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Professional License",
-      "name": "CREFITO 449534-F",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Conselho Regional de Fisioterapia e Terapia Ocupacional",
-        "alternateName": "CREFITO"
-      }
-    }
-  }
-  </script>
-
-  <!-- Schema Markup: Person (profissional identificável para IAs e Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa",
-    "name": "Jeane Leite",
-    "givenName": "Jeane",
-    "familyName": "Leite",
-    "jobTitle": "Fisioterapeuta",
-    "description": "Fisioterapeuta domiciliar especializada em reabilitação vestibular, tratamento de tonturas e vertigens, fisioterapia geriátrica e reabilitação ortopédica. Atende na Tijuca e Zona Sul do Rio de Janeiro. CREFITO 449534-F.",
-    "url": "https://jeaneleitefisioterapeuta.vercel.app/",
-    "image": "https://jeaneleitefisioterapeuta.vercel.app/foto-jeane.jpg",
-    "telephone": "+55-21-96595-1820",
-    "worksFor": {
-      "@type": "MedicalBusiness",
-      "@id": "https://jeaneleitefisioterapeuta.vercel.app/#business"
-    },
-    "hasCredential": [
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional License",
-        "name": "Registro CREFITO 449534-F",
-        "recognizedBy": {
-          "@type": "Organization",
-          "name": "Conselho Regional de Fisioterapia e Terapia Ocupacional",
-          "alternateName": "CREFITO"
+    <style>
+        :root {
+            --primary: #A8D5BA;
+            --primary-dark: #8abf9f;
+            --primary-light: #e0f2e7;
+            --text-dark: #2C3E33;
+            --text-light: #6A8A76;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --transition: all 0.3s ease;
         }
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "degree",
-        "name": "Graduação em Fisioterapia"
-      }
-    ],
-    "knowsAbout": [
-      "Reabilitação Vestibular",
-      "Tratamento de Vertigens",
-      "Tratamento de Tonturas",
-      "Fisioterapia Domiciliar",
-      "Fisioterapia Geriátrica",
-      "Reabilitação Ortopédica",
-      "Manobra de Epley",
-      "Exercícios de Cawthorne-Cooksey",
-      "Fisioterapia Neurológica",
-      "Prevenção de Quedas em Idosos"
-    ],
-    "areaServed": [
-      "Tijuca, Rio de Janeiro",
-      "Zona Sul, Rio de Janeiro",
-      "Botafogo", "Copacabana", "Ipanema", "Leblon",
-      "Flamengo", "Laranjeiras", "Humaitá", "Jardim Botânico"
-    ],
-    "sameAs": [
-      "https://instagram.com/jeaneleite.fisio"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "addressCountry": "BR"
-    }
-  }
-  </script>
 
-  <!-- Schema Markup: BreadcrumbList (ajuda IAs a entenderem a estrutura do site) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Início",   "item": "https://jeaneleitefisioterapeuta.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://jeaneleitefisioterapeuta.vercel.app/#servicos" },
-      { "@type": "ListItem", "position": 3, "name": "Sobre",    "item": "https://jeaneleitefisioterapeuta.vercel.app/#sobre" },
-      { "@type": "ListItem", "position": 4, "name": "Blog",     "item": "https://jeaneleitefisioterapeuta.vercel.app/#blog" },
-      { "@type": "ListItem", "position": 5, "name": "Contato",  "item": "https://jeaneleitefisioterapeuta.vercel.app/#contato" }
-    ]
-  }
-  </script>
-
-  <!-- Schema Markup: WebSite com Sitelinks Search (habilita caixa de busca no Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://jeaneleitefisioterapeuta.vercel.app/#site",
-    "name": "Jeane Leite Fisioterapeuta",
-    "url": "https://jeaneleitefisioterapeuta.vercel.app/",
-    "description": "Site oficial de Jeane Leite, fisioterapeuta domiciliar especialista em reabilitação vestibular na Tijuca e Zona Sul do Rio de Janeiro.",
-    "inLanguage": "pt-BR",
-    "publisher": {
-      "@type": "Person",
-      "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
-    }
-  }
-  </script>
-
-  <!-- Schema Markup: FAQ (Rich Snippets) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qual o valor de uma sessão de fisioterapia domiciliar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O valor de cada sessão varia conforme o tipo de tratamento, a frequência e a localização do atendimento na Tijuca ou Zona Sul do Rio de Janeiro. Para um orçamento personalizado, entre em contato pelo WhatsApp (21) 96595-1820. Aceito pagamento em dinheiro, cartão de crédito e PIX."
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "O plano de saúde cobre a fisioterapia domiciliar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depende do plano. Alguns convênios cobrem fisioterapia domiciliar mediante prescrição médica, mas cobertura e número de sessões variam. O melhor caminho é verificar diretamente com seu plano. Caso não haja cobertura, o atendimento particular é realizado com pagamento em dinheiro, cartão ou PIX."
+
+        html {
+            scroll-behavior: smooth;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Quais bairros do Rio de Janeiro você atende?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Atendo domiciliarmente na Tijuca e em toda a Zona Sul do Rio de Janeiro, incluindo Botafogo, Flamengo, Laranjeiras, Copacabana, Ipanema, Leblon, Lagoa, Jardim Botânico e Humaitá."
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            background-color: #fafdfb;
+            line-height: 1.6;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "O que é reabilitação vestibular?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A reabilitação vestibular é um tratamento fisioterapêutico especializado para pessoas que sofrem de tonturas, vertigens e desequilíbrio. Por meio de exercícios específicos, ajuda o cérebro a se adaptar e reduzir ou eliminar esses sintomas."
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Como funciona o atendimento domiciliar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O atendimento domiciliar é realizado na sua casa com toda a estrutura e equipamentos necessários. Após agendamento pelo WhatsApp, a fisioterapeuta realiza uma avaliação completa e elabora um plano de tratamento personalizado, tudo no conforto do seu lar."
+
+        /* Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Como agendar uma consulta?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O agendamento é feito pelo WhatsApp (21) 96595-1820 ou pelo Instagram @jeaneleite.fisio. Atendimento de segunda a sexta das 8h às 18h e sábados das 8h ao meio-dia."
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "A fisioterapia domiciliar tem o mesmo resultado que a clínica?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. O atendimento domiciliar tem a mesma qualidade técnica do atendimento em clínica, com equipamentos portáteis de alta qualidade. O ambiente familiar reduz ansiedade e tensão muscular, favorecendo a recuperação — muitos pacientes evoluem mais rápido em casa."
+
+        .logo span {
+            color: var(--text-dark);
         }
-      }
-    ]
-  }
-  </script>
 
-  <!-- Schema Markup: Service com informações de preço (sinaliza ao Google que o site tem conteúdo de precificação) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Fisioterapia Domiciliar",
-    "description": "Atendimento fisioterapêutico domiciliar personalizado na Tijuca e Zona Sul do Rio de Janeiro. Inclui avaliação, plano de tratamento e sessões em domicílio.",
-    "provider": {
-      "@type": "Person",
-      "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Rio de Janeiro"
-    },
-    "serviceType": "Fisioterapia Domiciliar",
-    "termsOfService": "Pagamento por sessão ou pacote. Aceito dinheiro, cartão de crédito e PIX.",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "BRL",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "priceCurrency": "BRL",
-        "description": "Valor por sessão de fisioterapia domiciliar na Tijuca e Zona Sul do Rio de Janeiro. Entre em contato para orçamento personalizado.",
-        "eligibleRegion": {
-          "@type": "Place",
-          "name": "Tijuca e Zona Sul, Rio de Janeiro, RJ, Brasil"
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
         }
-      },
-      "availability": "https://schema.org/InStock",
-      "availableDeliveryMethod": "https://schema.org/OnSitePickup",
-      "seller": {
-        "@type": "Person",
-        "@id": "https://jeaneleitefisioterapeuta.vercel.app/#pessoa"
-      }
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços de Fisioterapia Domiciliar",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Avaliação Fisioterapêutica Domiciliar" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sessão de Fisioterapia Domiciliar" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reabilitação Vestibular Domiciliar" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fisioterapia Geriátrica Domiciliar" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reabilitação Ortopédica Domiciliar" } }
-      ]
-    }
-  }
-  </script>
 
-  <!-- Performance: preload fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --green: #1a5f4a;
-      --green-dark: #144d3b;
-      --green-mid: #2d8b6b;
-      --green-light: #3d6b5a;
-      --green-bg: #e8f5f0;
-      --gold: #c9a227;
-      --gold-light: #d4b43a;
-      --white: #ffffff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--green-bg);
-      color: var(--green);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* ─── HEADER ─── */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      transition: all .4s ease;
-      padding: 1.25rem 0;
-    }
-    header.scrolled {
-      background: rgba(255,255,255,.97);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 2px 24px rgba(26,95,74,.08);
-      padding: .75rem 0;
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      text-decoration: none;
-    }
-    .logo-img {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,.12);
-    }
-    .logo-img img { width: 100%; height: 100%; object-fit: cover; }
-    .logo-text { display: none; }
-    @media(min-width:640px){ .logo-text { display: block; } }
-    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--green); line-height: 1.2; }
-    .logo-sub { font-size: .75rem; font-weight: 500; color: var(--gold); }
-
-    nav { display: none; }
-    @media(min-width:1024px){
-      nav {
-        display: flex;
-        align-items: center;
-        gap: .25rem;
-        background: rgba(255,255,255,.55);
-        backdrop-filter: blur(12px);
-        border-radius: 999px;
-        padding: .375rem;
-        box-shadow: 0 1px 8px rgba(0,0,0,.06);
-      }
-      nav a {
-        padding: .5rem 1.25rem;
-        border-radius: 999px;
-        font-size: .875rem;
-        font-weight: 500;
-        color: var(--green-light);
-        text-decoration: none;
-        transition: all .2s;
-      }
-      nav a:hover { background: white; color: var(--green); }
-    }
-
-    .header-cta { display: none; }
-    @media(min-width:768px){
-      .header-cta {
-        display: flex;
-        align-items: center;
-        gap: .75rem;
-      }
-    }
-    .btn-ig {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737);
-      display: flex; align-items: center; justify-content: center;
-      color: white;
-      transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,.15);
-    }
-    .btn-ig:hover { transform: scale(1.1); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: linear-gradient(135deg, var(--green), var(--green-mid));
-      color: white;
-      padding: .625rem 1.5rem;
-      border-radius: 999px;
-      font-size: .875rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: none; cursor: pointer;
-      transition: all .25s;
-      box-shadow: 0 4px 16px rgba(26,95,74,.2);
-    }
-    .btn-primary:hover { background: linear-gradient(135deg, var(--green-dark), var(--green)); box-shadow: 0 6px 24px rgba(26,95,74,.3); }
-
-    /* mobile menu */
-    .hamburger {
-      display: flex; align-items: center; justify-content: center;
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,.85);
-      border-radius: 50%;
-      border: none; cursor: pointer;
-      color: var(--green);
-      box-shadow: 0 1px 6px rgba(0,0,0,.1);
-    }
-    @media(min-width:1024px){ .hamburger { display: none; } }
-    .mobile-menu {
-      display: none;
-      margin-top: 1rem;
-      background: rgba(255,255,255,.97);
-      backdrop-filter: blur(20px);
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,.1);
-      padding: 1.5rem;
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu nav { display: flex; flex-direction: column; gap: .25rem; background: none; backdrop-filter: none; padding: 0; border-radius: 0; box-shadow: none; }
-    .mobile-menu nav a { display: block; padding: .75rem 1rem; border-radius: .75rem; }
-    .mobile-menu nav a:hover { background: var(--green-bg); }
-    .mobile-menu .ig-link { display: flex; align-items: center; gap: .5rem; color: #833ab4; font-weight: 500; padding: .75rem 1rem; border-radius: .75rem; text-decoration: none; }
-    .mobile-menu .ig-link:hover { background: #f8f0f8; }
-    .mobile-menu .btn-primary { width: 100%; justify-content: center; margin-top: 1rem; padding: 1rem; }
-
-    /* ─── HERO ─── */
-    #inicio {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 6rem 0 4rem;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #f0faf5 0%, #e8f5f0 40%, #f5f0e8 100%);
-    }
-    .hero-blob-1 { position: absolute; top: -10%; right: -5%; width: 600px; height: 600px; background: rgba(26,95,74,.04); border-radius: 50%; filter: blur(60px); }
-    .hero-blob-2 { position: absolute; bottom: -10%; left: -5%; width: 500px; height: 500px; background: rgba(201,162,39,.04); border-radius: 50%; filter: blur(60px); }
-    .hero-grid {
-      position: absolute; inset: 0; opacity: .03;
-      background-image: linear-gradient(var(--green) 1px, transparent 1px), linear-gradient(90deg, var(--green) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: center;
-      position: relative; z-index: 1;
-    }
-    @media(min-width:1024px){
-      .hero-inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
-      .hero-content { order: 1; }
-      .hero-photo { order: 2; }
-    }
-    .hero-content { text-align: center; }
-    @media(min-width:1024px){ .hero-content { text-align: left; } }
-
-    .badge-crefito {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(8px);
-      color: var(--green);
-      padding: .625rem 1.25rem;
-      border-radius: 999px;
-      font-size: .875rem; font-weight: 600;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,.08);
-    }
-    .badge-crefito svg { color: var(--gold); }
-
-    h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; color: var(--green); line-height: 1.15; margin-bottom: 1.5rem; }
-    .h1-highlight { color: var(--gold); position: relative; }
-    .h1-highlight::after { content:''; position: absolute; bottom: .3em; left: 0; right: 0; height: .4em; background: rgba(201,162,39,.2); border-radius: 999px; z-index: -1; }
-
-    .hero-desc { font-size: 1.1rem; color: var(--green-light); line-height: 1.7; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
-    @media(min-width:1024px){ .hero-desc { margin-left: 0; } }
-
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2.5rem; }
-    @media(min-width:1024px){ .hero-btns { justify-content: flex-start; } }
-
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: .5rem;
-      border: 2px solid var(--green);
-      color: var(--green);
-      padding: .9rem 2rem;
-      border-radius: 999px;
-      font-size: 1rem; font-weight: 600;
-      text-decoration: none;
-      transition: all .25s;
-      background: transparent;
-      cursor: pointer;
-    }
-    .btn-outline:hover { background: var(--green); color: white; }
-    .btn-primary-lg {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--green);
-      color: white;
-      padding: .9rem 2rem;
-      border-radius: 999px;
-      font-size: 1rem; font-weight: 600;
-      text-decoration: none;
-      border: none; cursor: pointer;
-      transition: all .25s;
-      box-shadow: 0 8px 32px rgba(26,95,74,.2);
-    }
-    .btn-primary-lg:hover { background: var(--green-dark); box-shadow: 0 12px 40px rgba(26,95,74,.3); transform: translateY(-2px); }
-
-    .hero-tags { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
-    @media(min-width:1024px){ .hero-tags { justify-content: flex-start; } }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(8px);
-      padding: .625rem 1rem;
-      border-radius: 999px;
-      font-size: .8125rem; font-weight: 500;
-      color: var(--green);
-      box-shadow: 0 2px 8px rgba(0,0,0,.06);
-    }
-    .hero-tag svg { color: var(--gold); }
-
-    /* photo side */
-    .hero-photo { position: relative; }
-    .photo-wrapper { position: relative; }
-    .photo-glow { position: absolute; inset: -1rem; background: linear-gradient(135deg, rgba(26,95,74,.08), rgba(201,162,39,.08)); border-radius: 2.5rem; filter: blur(16px); }
-    .photo-frame {
-      position: relative;
-      border-radius: 2.5rem;
-      overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,.15);
-    }
-    .photo-frame img { width: 100%; height: 500px; object-fit: cover; display: block; }
-    @media(min-width:1024px){ .photo-frame img { height: 600px; } }
-    .photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,95,74,.3), transparent); }
-
-    .float-badge {
-      position: absolute;
-      background: rgba(255,255,255,.95);
-      backdrop-filter: blur(12px);
-      border-radius: 1.25rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,.12);
-      padding: 1rem 1.25rem;
-      display: flex; align-items: center; gap: .875rem;
-    }
-    .float-badge-icon {
-      width: 48px; height: 48px;
-      border-radius: .875rem;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .float-badge-text p:first-child { font-size: .8125rem; color: var(--green-light); }
-    .float-badge-text p:last-child { font-size: .9375rem; font-weight: 700; color: var(--green); }
-
-    .badge-specialty { bottom: -1.5rem; left: -1.5rem; }
-    .badge-formation { top: 2rem; right: -1.5rem; }
-    @media(max-width:640px){
-      .badge-specialty { bottom: -1rem; left: 0.5rem; }
-      .badge-formation { display: none; }
-    }
-
-    /* ─── SERVICES ─── */
-    #servicos {
-      padding: 5rem 0 7rem;
-      background: linear-gradient(135deg, #f0faf5, #e8f5f0);
-      position: relative; overflow: hidden;
-    }
-    .section-blob-1 { position: absolute; top: 5rem; right: 0; width: 288px; height: 288px; background: rgba(255,255,255,.5); border-radius: 50%; filter: blur(40px); }
-    .section-blob-2 { position: absolute; bottom: 5rem; left: 0; width: 384px; height: 384px; background: rgba(26,95,74,.04); border-radius: 50%; filter: blur(40px); }
-
-    .section-header { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
-    .section-pill {
-      display: inline-block;
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(8px);
-      color: var(--green);
-      padding: .5rem 1.25rem;
-      border-radius: 999px;
-      font-size: .875rem; font-weight: 600;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,.06);
-    }
-    .section-title { font-size: clamp(1.75rem, 4vw, 3rem); color: var(--green); margin-bottom: 1.25rem; line-height: 1.2; }
-    .section-desc { color: var(--green-light); font-size: 1.0625rem; line-height: 1.7; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media(min-width:640px){ .services-grid { grid-template-columns: 1fr 1fr; } }
-    @media(min-width:1024px){ .services-grid { grid-template-columns: repeat(3, 1fr); } }
-
-    .service-card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,.06);
-      transition: all .4s ease;
-      position: relative; overflow: hidden;
-      cursor: default;
-    }
-    .service-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,.1); transform: translateY(-6px); }
-    .service-card-bg { position: absolute; inset: 0; opacity: 0; transition: opacity .4s; }
-    .service-card:hover .service-card-bg { opacity: 1; }
-    .service-icon {
-      width: 64px; height: 64px;
-      border-radius: 1rem;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,.12);
-      transition: transform .4s;
-      position: relative;
-    }
-    .service-card:hover .service-icon { transform: scale(1.1); }
-    .service-icon svg { width: 32px; height: 32px; color: white; }
-    .service-card h3 { font-size: 1.1875rem; color: var(--green); margin-bottom: 1rem; transition: color .3s; position: relative; }
-    .service-card:hover h3 { color: var(--gold); }
-    .service-card p { color: var(--green-light); line-height: 1.7; font-size: .9375rem; position: relative; }
-    .service-corner { position: absolute; bottom: -2rem; right: -2rem; width: 96px; height: 96px; border-radius: 50%; opacity: .08; transition: transform .6s; }
-    .service-card:hover .service-corner { transform: scale(1.5); }
-
-    /* ─── GALLERY ─── */
-    #galeria { padding: 5rem 0 7rem; background: white; position: relative; overflow: hidden; }
-    #galeria::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 8rem; background: linear-gradient(to bottom, var(--green-bg), transparent); }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media(min-width:768px){ .gallery-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 4px 24px rgba(0,0,0,.08);
-      transition: box-shadow .4s;
-    }
-    .gallery-item:hover { box-shadow: 0 16px 48px rgba(0,0,0,.15); }
-    .gallery-item-img { aspect-ratio: 16/10; overflow: hidden; }
-    .gallery-item-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; display: block; }
-    .gallery-item:hover .gallery-item-img img { transform: scale(1.08); }
-    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,95,74,.9), rgba(26,95,74,.15), transparent); opacity: 0; transition: opacity .4s; }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; transform: translateY(1rem); opacity: 0; transition: all .4s; }
-    .gallery-item:hover .gallery-info { transform: translateY(0); opacity: 1; }
-    .gallery-cat { display: inline-block; background: var(--gold); color: white; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin-bottom: .75rem; }
-    .gallery-info h3 { color: white; font-size: 1.1875rem; margin-bottom: .25rem; }
-    .gallery-info p { color: rgba(255,255,255,.75); font-size: .875rem; }
-    .gallery-zoom { position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; background: rgba(255,255,255,.2); backdrop-filter: blur(8px); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s; }
-    .gallery-item:hover .gallery-zoom { opacity: 1; }
-    .gallery-zoom svg { color: white; width: 20px; height: 20px; }
-
-    /* lightbox */
-    .lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.96); display: flex; align-items: center; justify-content: center; display: none; }
-    .lightbox.open { display: flex; }
-    .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 48px; height: 48px; background: rgba(255,255,255,.1); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; z-index: 10; transition: background .2s; }
-    .lightbox-close:hover { background: rgba(255,255,255,.2); }
-    .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; background: rgba(255,255,255,.1); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; z-index: 10; transition: background .2s; }
-    .lightbox-prev { left: 1.5rem; }
-    .lightbox-next { right: 1.5rem; }
-    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,.2); }
-    .lightbox-content { max-width: 900px; width: 100%; padding: 0 5rem; text-align: center; }
-    .lightbox-content img { max-width: 100%; max-height: 75vh; object-fit: contain; border-radius: 1rem; display: block; margin: 0 auto; }
-    .lightbox-caption { margin-top: 1rem; }
-    .lightbox-caption h3 { color: white; font-size: 1.25rem; }
-    .lightbox-caption p { color: rgba(255,255,255,.6); font-size: .9375rem; margin-top: .25rem; }
-
-    /* ─── SOBRE ─── */
-    #sobre { padding: 5rem 0 7rem; background: white; position: relative; overflow: hidden; }
-    #sobre .blob-tl { position: absolute; top: 0; right: 0; width: 500px; height: 500px; background: var(--green-bg); border-radius: 50%; filter: blur(60px); transform: translate(25%, -50%); }
-    #sobre .blob-br { position: absolute; bottom: 0; left: 0; width: 400px; height: 400px; background: rgba(201,162,39,.04); border-radius: 50%; filter: blur(60px); transform: translate(-25%, 50%); }
-
-    .sobre-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
-    @media(min-width:1024px){ .sobre-grid { grid-template-columns: 1fr 1fr; gap: 5rem; } }
-
-    .sobre-photo-wrap { position: relative; }
-    .sobre-photo-inner { position: relative; }
-    .sobre-photo-deco-1 { position: absolute; top: -1.5rem; left: -1.5rem; width: 8rem; height: 8rem; background: rgba(201,162,39,.18); border-radius: 50%; filter: blur(20px); }
-    .sobre-photo-deco-2 { position: absolute; bottom: -1.5rem; right: -1.5rem; width: 10rem; height: 10rem; background: rgba(26,95,74,.08); border-radius: 50%; filter: blur(20px); }
-    .sobre-frame { position: relative; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,.12); }
-    .sobre-frame img { width: 100%; height: 500px; object-fit: cover; display: block; }
-    @media(min-width:1024px){ .sobre-frame img { height: 600px; } }
-    .sobre-frame-overlay { position: absolute; inset: 0; background: linear-gradient(to top right, rgba(26,95,74,.1), transparent); }
-
-    .sobre-badge-dedicada { bottom: -2rem; right: 2rem; }
-    .sobre-badge-formacao { top: 2rem; left: -1.5rem; }
-    @media(max-width:640px){
-      .sobre-badge-dedicada { bottom: -1rem; right: 1rem; }
-      .sobre-badge-formacao { display: none; }
-    }
-
-    .sobre-pill { display: inline-block; background: rgba(26,95,74,.08); color: var(--green); padding: .5rem 1.25rem; border-radius: 999px; font-size: .875rem; font-weight: 600; margin-bottom: 1rem; }
-    .sobre-name { font-size: clamp(2rem, 4vw, 3rem); color: var(--green); margin-bottom: .5rem; }
-    .sobre-role { color: var(--gold); font-weight: 600; font-size: 1.0625rem; margin-bottom: 1.75rem; }
-    .sobre-text { color: var(--green-light); font-size: 1.0625rem; line-height: 1.75; margin-bottom: 2rem; }
-    .sobre-text p + p { margin-top: 1rem; }
-
-    .diferenciais { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
-    .diferencial { display: flex; align-items: flex-start; gap: .75rem; }
-    .diferencial svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; }
-    .diferencial span { font-size: .875rem; font-weight: 500; color: var(--green); }
-
-    .sobre-tags { display: flex; flex-wrap: wrap; gap: .75rem; }
-    .sobre-tag { display: flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); padding: .625rem 1rem; border-radius: 999px; font-size: .8125rem; font-weight: 500; color: var(--green); box-shadow: 0 2px 8px rgba(0,0,0,.06); border: 1px solid rgba(26,95,74,.08); }
-    .sobre-tag svg { color: var(--gold); width: 16px; height: 16px; }
-
-    /* ─── CONTACT ─── */
-    #contato { padding: 5rem 0 7rem; background: linear-gradient(135deg, #f0faf5, #e8f5f0); position: relative; overflow: hidden; }
-    #contato::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 8rem; background: linear-gradient(to bottom, white, transparent); }
-
-    .contato-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
-    @media(min-width:1024px){ .contato-grid { grid-template-columns: 1fr 1fr; } }
-
-    .contact-card {
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,.1);
-    }
-    .contact-card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-    .contact-card-icon { width: 56px; height: 56px; border-radius: 1rem; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .contact-card-icon svg { width: 28px; height: 28px; color: white; }
-    .contact-card-label { color: rgba(255,255,255,.7); font-size: .875rem; }
-    .contact-card-value { color: white; font-size: 1.375rem; font-weight: 700; }
-    .contact-card-btn {
-      display: flex; align-items: center; justify-content: center; gap: .625rem;
-      width: 100%; background: white;
-      padding: 1rem;
-      border-radius: .875rem;
-      font-weight: 600; font-size: .9375rem;
-      text-decoration: none;
-      transition: all .25s;
-    }
-    .card-whatsapp { background: linear-gradient(135deg, var(--green), var(--green-mid)); }
-    .card-whatsapp .contact-card-btn { color: var(--green); }
-    .card-whatsapp .contact-card-btn:hover { background: var(--gold); color: white; }
-    .card-instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737); }
-    .card-instagram .contact-card-btn { color: #833ab4; }
-    .card-instagram .contact-card-btn:hover { background: var(--gold); color: white; }
-
-    .info-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-    .info-card { background: white; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
-    .info-card-icon { width: 48px; height: 48px; border-radius: .875rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
-    .info-card-icon svg { width: 24px; height: 24px; }
-    .info-card-label { font-size: .8125rem; color: var(--green-light); margin-bottom: .25rem; }
-    .info-card-value { font-weight: 700; color: var(--green); font-size: .9375rem; }
-
-    .crefito-card { background: white; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-top: 1rem; display: flex; align-items: center; gap: 1rem; }
-    .crefito-icon { width: 48px; height: 48px; background: rgba(26,95,74,.08); border-radius: .875rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .crefito-icon svg { width: 24px; height: 24px; color: var(--green); }
-    .crefito-label { font-size: .8125rem; color: var(--green-light); }
-    .crefito-value { font-weight: 700; color: var(--green); font-size: 1.25rem; }
-
-    /* CTA card */
-    .cta-card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,.08);
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .cta-card::before { content:''; position: absolute; top: -5rem; right: -5rem; width: 10rem; height: 10rem; background: rgba(201,162,39,.08); border-radius: 50%; filter: blur(20px); }
-    .cta-card::after { content:''; position: absolute; bottom: -5rem; left: -5rem; width: 10rem; height: 10rem; background: rgba(26,95,74,.04); border-radius: 50%; filter: blur(20px); }
-    .cta-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 24px rgba(201,162,39,.3); position: relative; }
-    .cta-icon svg { width: 40px; height: 40px; color: white; }
-    .cta-card h3 { font-size: 1.5rem; color: var(--green); margin-bottom: 1rem; position: relative; }
-    .cta-card p { color: var(--green-light); line-height: 1.7; margin-bottom: 2rem; font-size: .9375rem; position: relative; }
-    .cta-btns { display: flex; flex-direction: column; gap: .75rem; position: relative; }
-    .cta-btn-wa { display: flex; align-items: center; justify-content: center; gap: .625rem; padding: 1rem; border-radius: .875rem; background: linear-gradient(135deg, var(--green), var(--green-mid)); color: white; font-weight: 600; text-decoration: none; transition: all .25s; }
-    .cta-btn-wa:hover { box-shadow: 0 8px 24px rgba(26,95,74,.3); transform: translateY(-1px); }
-    .cta-btn-phone { display: flex; align-items: center; justify-content: center; gap: .625rem; padding: 1rem; border-radius: .875rem; border: 2px solid var(--gold); color: var(--gold); font-weight: 600; text-decoration: none; transition: all .25s; }
-    .cta-btn-phone:hover { background: var(--gold); color: white; }
-    .cta-btn-ig { display: flex; align-items: center; justify-content: center; gap: .625rem; padding: 1rem; border-radius: .875rem; background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737); color: white; font-weight: 600; text-decoration: none; transition: all .25s; }
-    .cta-btn-ig:hover { box-shadow: 0 8px 24px rgba(253,29,29,.3); transform: translateY(-1px); }
-
-    /* ─── FAQ ─── */
-    #faq { padding: 5rem 0 7rem; background: var(--green-bg); position: relative; overflow: hidden; }
-    #faq::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 8rem; background: linear-gradient(to bottom, white, transparent); }
-    .faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; position: relative; z-index: 1; }
-    .faq-item { background: white; border-radius: 1.25rem; box-shadow: 0 2px 16px rgba(0,0,0,.06); overflow: hidden; transition: box-shadow .3s; }
-    .faq-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,.1); }
-    .faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 2rem; cursor: pointer; user-select: none; }
-    .faq-question h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--green); margin: 0; flex: 1; }
-    .faq-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--green-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .3s, transform .3s; }
-    .faq-icon svg { color: var(--green); width: 16px; height: 16px; transition: transform .3s; }
-    .faq-item.open .faq-icon { background: var(--green); }
-    .faq-item.open .faq-icon svg { color: white; transform: rotate(45deg); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s; }
-    .faq-item.open .faq-answer { max-height: 300px; }
-    .faq-answer-inner { padding: 0 2rem 1.5rem; color: var(--green-light); line-height: 1.75; font-size: .9375rem; border-top: 1px solid rgba(26,95,74,.08); padding-top: 1rem; }
-
-    /* ─── FOOTER ─── */
-    footer { background: linear-gradient(135deg, var(--green), var(--green-dark)); color: white; position: relative; overflow: hidden; }
-    footer::before { content:''; position: absolute; top: 0; right: 0; width: 384px; height: 384px; background: rgba(255,255,255,.04); border-radius: 50%; filter: blur(40px); transform: translate(50%, -50%); }
-    footer::after { content:''; position: absolute; bottom: 0; left: 0; width: 288px; height: 288px; background: rgba(201,162,39,.08); border-radius: 50%; filter: blur(40px); transform: translate(-50%, 50%); }
-    .footer-inner { padding: 4rem 0; position: relative; z-index: 1; }
-    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
-    @media(min-width:768px){ .footer-grid { grid-template-columns: repeat(3, 1fr); } }
-    .footer-brand { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-    .footer-logo { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,.1); ring: 2px solid rgba(255,255,255,.2); }
-    .footer-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; }
-    .footer-brand-sub { color: var(--gold); font-size: .875rem; font-weight: 500; }
-    .footer-tagline { color: rgba(255,255,255,.6); font-size: .875rem; max-width: 280px; line-height: 1.6; }
-    .footer-section { text-align: center; }
-    .footer-section h4 { font-family: 'Playfair Display', serif; font-size: 1.0625rem; font-weight: 700; margin-bottom: 1rem; }
-    .footer-info-list { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
-    .footer-info-list li { display: flex; align-items: center; justify-content: center; gap: .5rem; color: rgba(255,255,255,.65); font-size: .875rem; }
-    .footer-info-list li svg { color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; }
-    .footer-social { text-align: center; }
-    @media(min-width:768px){ .footer-social { text-align: right; } }
-    .footer-social h4 { font-family: 'Playfair Display', serif; font-size: 1.0625rem; font-weight: 700; margin-bottom: 1rem; }
-    .social-links { display: flex; align-items: center; justify-content: center; gap: .75rem; }
-    @media(min-width:768px){ .social-links { justify-content: flex-end; } }
-    .social-link-ig { width: 44px; height: 44px; background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: transform .2s, box-shadow .2s; }
-    .social-link-wa { width: 44px; height: 44px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: transform .2s, box-shadow .2s; }
-    .social-link-ig:hover, .social-link-wa:hover { transform: scale(1.1); box-shadow: 0 4px 16px rgba(0,0,0,.25); }
-    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,.1); margin-top: 3rem; padding-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-    @media(min-width:768px){ .footer-divider { flex-direction: row; justify-content: space-between; } }
-    .footer-copy { color: rgba(255,255,255,.45); font-size: .875rem; text-align: center; }
-    .footer-made { display: flex; align-items: center; gap: .375rem; color: rgba(255,255,255,.45); font-size: .875rem; }
-    .footer-made svg { width: 16px; height: 16px; color: var(--gold); fill: var(--gold); }
-
-    /* ─── ANIMATIONS ─── */
-    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-    .anim { opacity: 0; }
-    .anim.visible { animation: fadeUp .6s ease forwards; }
-
-    /* ─── UTILS ─── */
-    svg { display: inline-block; vertical-align: middle; }
-
-    /* ─── INTRO SCREEN ─── */
-    #intro-screen {
-      position: fixed; inset: 0; z-index: 1000;
-      background: var(--green-dark);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    #intro-screen.hide {
-      animation: introExit .9s cubic-bezier(.76,0,.24,1) forwards;
-      animation-delay: .1s;
-    }
-    @keyframes introExit {
-      0%   { clip-path: inset(0 0 0 0); opacity: 1; }
-      100% { clip-path: inset(0 0 100% 0); opacity: 0; pointer-events: none; }
-    }
-
-    .intro-logo-wrap {
-      display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
-      animation: introLogoIn .8s cubic-bezier(.22,1,.36,1) both;
-    }
-    @keyframes introLogoIn {
-      from { opacity: 0; transform: translateY(30px) scale(.9); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .intro-logo-circle {
-      width: 90px; height: 90px; border-radius: 50%;
-      background: rgba(255,255,255,.1);
-      border: 2px solid rgba(255,255,255,.2);
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
-    .intro-logo-circle img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
-    .intro-ring {
-      position: absolute; inset: -10px;
-      border: 1.5px solid rgba(201,162,39,.4);
-      border-radius: 50%;
-      animation: introRingSpin 3s linear infinite;
-    }
-    .intro-ring-2 {
-      position: absolute; inset: -20px;
-      border: 1px solid rgba(201,162,39,.2);
-      border-radius: 50%;
-      border-top-color: transparent;
-      animation: introRingSpin 4s linear infinite reverse;
-    }
-    @keyframes introRingSpin { to { transform: rotate(360deg); } }
-    .intro-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem; font-weight: 700;
-      color: white; text-align: center;
-    }
-    .intro-sub { color: var(--gold); font-size: .9rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
-    .intro-bar {
-      margin-top: 3rem;
-      width: 160px; height: 2px;
-      background: rgba(255,255,255,.1);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .intro-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--gold), var(--green-mid));
-      border-radius: 999px;
-      animation: introBarFill 1.6s cubic-bezier(.4,0,.2,1) forwards;
-    }
-    @keyframes introBarFill { from { width: 0; } to { width: 100%; } }
-
-    /* Partículas de fundo no intro */
-    .intro-particles { position: absolute; inset: 0; overflow: hidden; }
-    .intro-particle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,.04);
-      animation: introFloat linear infinite;
-    }
-
-    /* ─── HERO ANIMAÇÕES ─── */
-    .hero-line {
-      position: absolute; background: var(--green);
-      opacity: .06;
-      transform-origin: left center;
-    }
-    .hero-line-h { height: 1px; width: 100%; animation: lineGrow 1.4s cubic-bezier(.22,1,.36,1) both; }
-    .hero-line-v { width: 1px; height: 100%; animation: lineGrowV 1.4s cubic-bezier(.22,1,.36,1) both; }
-    @keyframes lineGrow   { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    @keyframes lineGrowV  { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-
-    /* Texto split reveal */
-    .split-word {
-      display: inline-block;
-      overflow: hidden;
-      vertical-align: bottom;
-    }
-    .split-word span {
-      display: inline-block;
-      transform: translateY(110%);
-      opacity: 0;
-    }
-    .split-word span.revealed {
-      animation: wordReveal .7s cubic-bezier(.22,1,.36,1) forwards;
-    }
-    @keyframes wordReveal {
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    /* Foto parallax */
-    .photo-parallax { will-change: transform; }
-
-    /* Floating orbs contínuos */
-    .orb {
-      position: absolute; border-radius: 50%;
-      pointer-events: none;
-      animation: orbFloat ease-in-out infinite;
-    }
-    @keyframes orbFloat {
-      0%,100% { transform: translateY(0) translateX(0) scale(1); }
-      33%      { transform: translateY(-20px) translateX(8px) scale(1.04); }
-      66%      { transform: translateY(12px) translateX(-10px) scale(.97); }
-    }
-
-    /* Cards 3D tilt */
-    .service-card { transform-style: preserve-3d; }
-    .service-card .service-tilt-shine {
-      position: absolute; inset: 0;
-      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.12), transparent 60%);
-      border-radius: inherit;
-      opacity: 0;
-      transition: opacity .3s;
-      pointer-events: none;
-    }
-    .service-card:hover .service-tilt-shine { opacity: 1; }
-
-    /* Contadores animados na seção Sobre */
-    .stats-row {
-      display: flex; gap: 2rem; margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .stat-item { text-align: center; }
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem; font-weight: 800;
-      color: var(--green); line-height: 1;
-      display: block;
-    }
-    .stat-label { font-size: .8125rem; color: var(--green-light); font-weight: 500; margin-top: .25rem; }
-    .stat-suffix { color: var(--gold); }
-
-    /* Scroll progress bar */
-    #scroll-progress {
-      position: fixed; top: 0; left: 0; right: 0;
-      height: 2px; z-index: 200;
-      background: linear-gradient(90deg, var(--gold), var(--green-mid));
-      transform-origin: left;
-      transform: scaleX(0);
-      transition: transform .1s linear;
-    }
-
-    /* Seção Sobre: animação de entrada dos textos */
-    .slide-in-left {
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    .slide-in-left.visible {
-      animation: slideInLeft .8s cubic-bezier(.22,1,.36,1) forwards;
-    }
-    @keyframes slideInLeft {
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .slide-in-right {
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    .slide-in-right.visible {
-      animation: slideInRight .8s cubic-bezier(.22,1,.36,1) forwards;
-    }
-    @keyframes slideInRight {
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    /* FAQ: linha decorativa */
-    .faq-item.open .faq-question { background: linear-gradient(to right, rgba(26,95,74,.03), transparent); }
-
-    /* Marquee strip */
-    .marquee-strip {
-      background: var(--green);
-      padding: .875rem 0;
-      overflow: hidden;
-      position: relative;
-    }
-    .marquee-track {
-      display: flex; gap: 3rem;
-      width: max-content;
-      animation: marquee 22s linear infinite;
-    }
-    .marquee-strip:hover .marquee-track { animation-play-state: paused; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-item {
-      display: flex; align-items: center; gap: .75rem;
-      white-space: nowrap;
-      color: rgba(255,255,255,.75);
-      font-size: .875rem; font-weight: 500;
-    }
-    .marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-    /* ─── BLOG ─── */
-    #blog-overlay {
-      position: fixed; inset: 0; z-index: 500;
-      background: #f7faf9;
-      overflow-y: auto;
-      display: none;
-      animation: blogSlideIn .45s cubic-bezier(.22,1,.36,1);
-    }
-    #blog-overlay.open { display: block; }
-    @keyframes blogSlideIn {
-      from { transform: translateY(40px); opacity: 0; }
-      to   { transform: translateY(0);    opacity: 1; }
-    }
-
-    .blog-topbar {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(255,255,255,.97);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(26,95,74,.08);
-      padding: .875rem 0;
-    }
-    .blog-topbar-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    }
-    .blog-back {
-      display: inline-flex; align-items: center; gap: .5rem;
-      color: var(--green); font-weight: 600; font-size: .9375rem;
-      background: none; border: none; cursor: pointer;
-      padding: .5rem .75rem; border-radius: .75rem;
-      transition: background .2s;
-    }
-    .blog-back:hover { background: var(--green-bg); }
-    .blog-back svg { width: 18px; height: 18px; }
-    .blog-topbar-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.125rem; font-weight: 700; color: var(--green);
-    }
-    .blog-topbar-actions { display: flex; align-items: center; gap: .75rem; }
-
-    /* Hero do blog */
-    .blog-hero {
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
-      padding: 4rem 0 5rem; position: relative; overflow: hidden;
-    }
-    .blog-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .blog-hero-blob {
-      position: absolute; border-radius: 50%;
-      background: rgba(255,255,255,.05); filter: blur(40px);
-    }
-    .blog-hero-content { position: relative; z-index: 1; text-align: center; max-width: 680px; margin: 0 auto; }
-    .blog-hero-pill {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
-      color: rgba(255,255,255,.9); padding: .5rem 1.25rem;
-      border-radius: 999px; font-size: .8125rem; font-weight: 600;
-      margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,.2);
-    }
-    .blog-hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem); color: white; margin-bottom: 1rem; line-height: 1.2;
-    }
-    .blog-hero p { color: rgba(255,255,255,.75); font-size: 1.0625rem; line-height: 1.7; }
-
-    /* Filtros de categoria */
-    .blog-filters {
-      max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 0;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-    }
-    .blog-cats { display: flex; gap: .5rem; flex-wrap: wrap; }
-    .blog-cat-btn {
-      padding: .5rem 1.125rem; border-radius: 999px;
-      font-size: .875rem; font-weight: 500;
-      border: 1.5px solid rgba(26,95,74,.15);
-      background: white; color: var(--green-light);
-      cursor: pointer; transition: all .2s;
-    }
-    .blog-cat-btn:hover { border-color: var(--green); color: var(--green); }
-    .blog-cat-btn.active { background: var(--green); color: white; border-color: var(--green); }
-    .blog-search {
-      display: flex; align-items: center; gap: .5rem;
-      background: white; border: 1.5px solid rgba(26,95,74,.15);
-      border-radius: 999px; padding: .5rem 1.125rem;
-      transition: border-color .2s;
-    }
-    .blog-search:focus-within { border-color: var(--green); }
-    .blog-search svg { color: var(--green-light); width: 16px; height: 16px; flex-shrink: 0; }
-    .blog-search input {
-      border: none; outline: none; background: none;
-      font-size: .875rem; color: var(--green); width: 180px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .blog-search input::placeholder { color: rgba(61,107,90,.5); }
-
-    /* Grid de artigos */
-    .blog-grid-wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-    .blog-grid {
-      display: grid; gap: 1.75rem;
-      grid-template-columns: 1fr;
-    }
-    @media(min-width:640px)  { .blog-grid { grid-template-columns: 1fr 1fr; } }
-    @media(min-width:1024px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
-
-    /* Card de artigo */
-    .blog-card {
-      background: white; border-radius: 1.5rem;
-      box-shadow: 0 2px 16px rgba(0,0,0,.06);
-      overflow: hidden; cursor: pointer;
-      transition: all .35s cubic-bezier(.22,1,.36,1);
-      display: flex; flex-direction: column;
-      border: 1px solid rgba(26,95,74,.06);
-    }
-    .blog-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.12); transform: translateY(-5px); }
-    .blog-card-img {
-      width: 100%; aspect-ratio: 16/9; object-fit: cover;
-      background: linear-gradient(135deg, var(--green-bg), #e0f0e8);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .blog-card-img-placeholder {
-      width: 100%; aspect-ratio: 16/9;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
-    }
-    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .blog-card-cat {
-      position: absolute; top: .875rem; left: .875rem;
-      background: var(--green); color: white;
-      font-size: .6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
-      padding: .3rem .75rem; border-radius: 999px;
-    }
-    .blog-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .75rem; }
-    .blog-card-meta { display: flex; align-items: center; gap: .625rem; color: var(--green-light); font-size: .8125rem; }
-    .blog-card-meta svg { width: 14px; height: 14px; }
-    .blog-card-meta span + span::before { content: '·'; margin-right: .625rem; }
-    .blog-card-title { font-family: 'Playfair Display', serif; font-size: 1.125rem; color: var(--green); line-height: 1.35; }
-    .blog-card:hover .blog-card-title { color: var(--gold); }
-    .blog-card-excerpt { color: var(--green-light); font-size: .9rem; line-height: 1.65; flex: 1; }
-    .blog-card-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 1.5rem; border-top: 1px solid rgba(26,95,74,.06);
-    }
-    .blog-card-read {
-      display: inline-flex; align-items: center; gap: .375rem;
-      color: var(--green); font-size: .875rem; font-weight: 600;
-      transition: gap .2s;
-    }
-    .blog-card:hover .blog-card-read { gap: .625rem; }
-    .blog-card-read svg { width: 14px; height: 14px; }
-    .blog-card-actions { display: flex; gap: .375rem; }
-    .blog-card-action-btn {
-      width: 30px; height: 30px; border-radius: 50%; border: none;
-      background: rgba(26,95,74,.06); color: var(--green-light);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .2s; font-size: .75rem;
-    }
-    .blog-card-action-btn:hover { background: rgba(26,95,74,.12); color: var(--green); }
-    .blog-card-action-btn.del:hover { background: rgba(220,50,50,.1); color: #dc3232; }
-    .blog-card-action-btn svg { width: 14px; height: 14px; }
-
-    /* Estado vazio */
-    .blog-empty {
-      grid-column: 1/-1; text-align: center; padding: 5rem 2rem;
-      color: var(--green-light);
-    }
-    .blog-empty-icon {
-      width: 80px; height: 80px; border-radius: 50%;
-      background: var(--green-bg); margin: 0 auto 1.5rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .blog-empty-icon svg { width: 36px; height: 36px; color: var(--green); opacity: .4; }
-    .blog-empty h3 { font-size: 1.25rem; color: var(--green); margin-bottom: .5rem; }
-    .blog-empty p { font-size: .9375rem; margin-bottom: 1.5rem; }
-
-    /* Modal de criar/editar artigo */
-    .blog-modal-bg {
-      position: fixed; inset: 0; z-index: 600;
-      background: rgba(0,0,0,.5); backdrop-filter: blur(4px);
-      display: none; align-items: center; justify-content: center; padding: 1rem;
-    }
-    .blog-modal-bg.open { display: flex; }
-    .blog-modal {
-      background: white; border-radius: 1.75rem;
-      width: 100%; max-width: 680px; max-height: 92vh;
-      overflow-y: auto; box-shadow: 0 32px 80px rgba(0,0,0,.2);
-      animation: modalIn .35s cubic-bezier(.22,1,.36,1);
-    }
-    @keyframes modalIn {
-      from { transform: scale(.94) translateY(20px); opacity: 0; }
-      to   { transform: scale(1) translateY(0); opacity: 1; }
-    }
-    .blog-modal-header {
-      padding: 1.75rem 2rem 0;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .blog-modal-header h2 { font-size: 1.375rem; color: var(--green); }
-    .blog-modal-close {
-      width: 36px; height: 36px; border-radius: 50%; border: none;
-      background: rgba(26,95,74,.08); color: var(--green);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: background .2s; flex-shrink: 0;
-    }
-    .blog-modal-close:hover { background: rgba(26,95,74,.16); }
-    .blog-modal-close svg { width: 16px; height: 16px; }
-    .blog-modal-body { padding: 1.5rem 2rem 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
-
-    .form-group { display: flex; flex-direction: column; gap: .5rem; }
-    .form-label { font-size: .875rem; font-weight: 600; color: var(--green); }
-    .form-input, .form-select, .form-textarea {
-      width: 100%; padding: .75rem 1rem;
-      border: 1.5px solid rgba(26,95,74,.15);
-      border-radius: .875rem; outline: none;
-      font-family: 'DM Sans', sans-serif; font-size: .9375rem;
-      color: var(--green); background: white;
-      transition: border-color .2s;
-    }
-    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--green); }
-    .form-textarea { min-height: 140px; resize: vertical; line-height: 1.65; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media(max-width:500px) { .form-row { grid-template-columns: 1fr; } }
-    .form-hint { font-size: .8125rem; color: var(--green-light); }
-
-    /* Emoji picker */
-    .emoji-row { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .emoji-opt {
-      width: 40px; height: 40px; border-radius: .75rem; border: 1.5px solid rgba(26,95,74,.12);
-      background: white; font-size: 1.25rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: all .15s;
-    }
-    .emoji-opt:hover, .emoji-opt.selected { border-color: var(--green); background: var(--green-bg); }
-
-    .btn-submit {
-      display: flex; align-items: center; justify-content: center; gap: .625rem;
-      background: linear-gradient(135deg, var(--green), var(--green-mid));
-      color: white; padding: 1rem 2rem; border-radius: 999px;
-      font-size: 1rem; font-weight: 600; border: none; cursor: pointer;
-      transition: all .25s; box-shadow: 0 4px 16px rgba(26,95,74,.2);
-      width: 100%;
-    }
-    .btn-submit:hover { box-shadow: 0 8px 24px rgba(26,95,74,.3); transform: translateY(-1px); }
-    .btn-submit svg { width: 18px; height: 18px; }
-
-    /* Modal de leitura do artigo */
-    .blog-read-bg {
-      position: fixed; inset: 0; z-index: 600;
-      background: rgba(0,0,0,.55); backdrop-filter: blur(4px);
-      display: none; align-items: flex-start; justify-content: center;
-      padding: 2rem 1rem; overflow-y: auto;
-    }
-    .blog-read-bg.open { display: flex; }
-    .blog-read-modal {
-      background: white; border-radius: 1.75rem;
-      width: 100%; max-width: 780px;
-      box-shadow: 0 32px 80px rgba(0,0,0,.2);
-      animation: modalIn .35s cubic-bezier(.22,1,.36,1);
-      overflow: hidden; margin: auto;
-    }
-    .blog-read-cover {
-      width: 100%; aspect-ratio: 21/9; overflow: hidden;
-      background: linear-gradient(135deg, var(--green), var(--green-mid));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; position: relative;
-    }
-    .blog-read-cover img { width: 100%; height: 100%; object-fit: cover; }
-    .blog-read-cover-cat {
-      position: absolute; bottom: 1.25rem; left: 1.5rem;
-      background: rgba(0,0,0,.45); backdrop-filter: blur(8px);
-      color: white; font-size: .8125rem; font-weight: 700;
-      padding: .35rem .875rem; border-radius: 999px; letter-spacing: .05em; text-transform: uppercase;
-    }
-    .blog-read-body { padding: 2.5rem; }
-    .blog-read-meta { display: flex; align-items: center; gap: .75rem; color: var(--green-light); font-size: .875rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
-    .blog-read-meta svg { width: 15px; height: 15px; }
-    .blog-read-title { font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--green); line-height: 1.25; margin-bottom: 1.5rem; }
-    .blog-read-content { color: var(--green-light); font-size: 1.0625rem; line-height: 1.85; white-space: pre-wrap; }
-    .blog-read-footer {
-      padding: 1.5rem 2.5rem; border-top: 1px solid rgba(26,95,74,.08);
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    .blog-read-close-btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--green); color: white; padding: .75rem 1.5rem;
-      border-radius: 999px; font-weight: 600; font-size: .9375rem;
-      border: none; cursor: pointer; transition: all .2s;
-    }
-    .blog-read-close-btn:hover { background: var(--green-dark); }
-    .blog-share-wa {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: #25d366; color: white; padding: .75rem 1.5rem;
-      border-radius: 999px; font-weight: 600; font-size: .9375rem;
-      text-decoration: none; transition: all .2s;
-    }
-    .blog-share-wa:hover { background: #1db954; }
-    .blog-share-wa svg { width: 18px; height: 18px; }
-
-    /* Novo artigo FAB */
-    .blog-fab {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 550;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: white; border: none; cursor: pointer;
-      box-shadow: 0 8px 24px rgba(201,162,39,.4);
-      display: none; align-items: center; justify-content: center;
-      transition: all .25s;
-    }
-    .blog-fab.show { display: flex; }
-    .blog-fab:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(201,162,39,.5); }
-    .blog-fab svg { width: 24px; height: 24px; }
-  </style>
-</head>
-<body>
-
-<!-- Barra de progresso de scroll -->
-<div id="scroll-progress"></div>
-
-<!-- ═══ INTRO SCREEN ═══ -->
-<div id="intro-screen">
-  <div class="intro-particles" id="introParticles"></div>
-  <div class="intro-logo-wrap">
-    <div class="intro-logo-circle">
-      <img src="logo.png" alt="Jeane Leite" />
-      <div class="intro-ring"></div>
-      <div class="intro-ring-2"></div>
-    </div>
-    <div>
-      <div class="intro-name">Jeane Leite</div>
-      <div class="intro-sub">Fisioterapeuta</div>
-    </div>
-    <div class="intro-bar"><div class="intro-bar-fill"></div></div>
-  </div>
-</div>
-
-<!-- Marquee strip (abaixo do hero) -->
-<!-- ═══ HEADER ═══ -->
-<header id="header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="#inicio" class="logo" onclick="scrollTo('#inicio');return false;">
-        <div class="logo-img"><img src="logo.png" alt="Jeane Leite" /></div>
-        <div class="logo-text">
-          <div class="logo-name">Jeane Leite</div>
-          <div class="logo-sub">Fisioterapeuta</div>
-        </div>
-      </a>
-
-      <nav>
-        <a href="#inicio" onclick="scrollTo('#inicio');return false;">Início</a>
-        <a href="#servicos" onclick="scrollTo('#servicos');return false;">Serviços</a>
-        <a href="#galeria" onclick="scrollTo('#galeria');return false;">Galeria</a>
-        <a href="#sobre" onclick="scrollTo('#sobre');return false;">Sobre</a>
-        <a href="#faq" onclick="scrollTo('#faq');return false;">FAQ</a>
-        <a href="#blog" onclick="openBlog();return false;">Blog</a>
-        <a href="#contato" onclick="scrollTo('#contato');return false;">Contato</a>
-      </nav>
-
-      <div class="header-cta">
-        <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="btn-ig" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-        </a>
-        <a href="#contato" class="btn-primary" onclick="scrollTo('#contato');return false;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-          Agende sua Consulta
-        </a>
-      </div>
-
-      <button class="hamburger" id="menuBtn" aria-label="Menu">
-        <svg id="menuIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
-      </button>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <nav>
-        <a href="#inicio" onclick="scrollTo('#inicio');closeMobileMenu();return false;">Início</a>
-        <a href="#servicos" onclick="scrollTo('#servicos');closeMobileMenu();return false;">Serviços</a>
-        <a href="#galeria" onclick="scrollTo('#galeria');closeMobileMenu();return false;">Galeria</a>
-        <a href="#sobre" onclick="scrollTo('#sobre');closeMobileMenu();return false;">Sobre</a>
-        <a href="#faq" onclick="scrollTo('#faq');closeMobileMenu();return false;">FAQ</a>
-        <a href="#blog" onclick="openBlog();closeMobileMenu();return false;">Blog</a>
-        <a href="#contato" onclick="scrollTo('#contato');closeMobileMenu();return false;">Contato</a>
-        <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="ig-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-          @jeaneleite.fisio
-        </a>
-      </nav>
-      <a href="#contato" class="btn-primary" onclick="scrollTo('#contato');closeMobileMenu();return false;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-        Agende sua Consulta
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- ═══ HERO ═══ -->
-<section id="inicio">
-  <div class="hero-blob-1 orb" style="animation-duration:8s;"></div>
-  <div class="hero-blob-2 orb" style="animation-duration:11s;animation-delay:-4s;"></div>
-  <div class="hero-grid"></div>
-  <!-- Linhas decorativas animadas -->
-  <div class="hero-line hero-line-h" style="top:30%;animation-delay:.4s;"></div>
-  <div class="hero-line hero-line-h" style="top:70%;animation-delay:.6s;"></div>
-  <div class="hero-line hero-line-v" style="left:50%;animation-delay:.5s;display:none;" id="vline"></div>
-  <div class="container">
-    <div class="hero-inner">
-
-      <!-- Content -->
-      <div class="hero-content anim">
-        <div class="badge-crefito">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-          CREFITO 449534-F
-        </div>
-
-        <h1 id="heroTitle">
-          <span class="split-word"><span>Sua</span></span>
-          <span class="split-word"><span> saúde </span></span>
-          <span class="split-word"><span>em </span></span>
-          <span class="h1-highlight"><span class="split-word"><span>boas</span></span>
-          <span class="split-word"><span> mãos</span></span></span>
-        </h1>
-
-        <p class="hero-desc">
-          Atendimento fisioterapêutico domiciliar humanizado na <strong>Tijuca</strong> e <strong>Zona Sul do Rio</strong>. Especialista em tratamento de tonturas e vertigens.
-        </p>
-
-        <div class="hero-btns">
-          <a href="https://wa.me/5521965951820" target="_blank" class="btn-primary-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-            Agende sua Consulta
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="#galeria" class="btn-outline" onclick="scrollTo('#galeria');return false;">Conheça Meu Trabalho</a>
-        </div>
-
-        <div class="hero-tags">
-          <span class="hero-tag">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            Tijuca e Zona Sul
-          </span>
-          <span class="hero-tag">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-            Segunda a Sábado
-          </span>
-          <span class="hero-tag">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-            CREFITO 449534-F
-          </span>
-        </div>
-      </div>
-
-      <!-- Photo -->
-      <div class="hero-photo anim" style="animation-delay:.15s">
-        <div class="photo-wrapper">
-          <div class="photo-glow"></div>
-          <div class="photo-frame">
-            <img src="foto-jeane.jpg" alt="Jeane Leite – Fisioterapeuta" class="photo-parallax" id="heroImg" />
-            <div class="photo-overlay"></div>
-          </div>
-
-          <!-- Badge: dedicada 100% -->
-          <div class="float-badge badge-specialty">
-            <div class="float-badge-icon" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
-            </div>
-            <div class="float-badge-text">
-              <p style="font-size:1.5rem;font-weight:800;color:var(--green);line-height:1;">100%</p>
-              <p>Dedicada</p>
-            </div>
-          </div>
-
-          <!-- Badge: especialista -->
-          <div class="float-badge badge-formation">
-            <div class="float-badge-icon" style="background:var(--green);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-            </div>
-            <div class="float-badge-text">
-              <p>Especialista em</p>
-              <p>Reabilitação</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Marquee strip -->
-<div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><div class="marquee-dot"></div>Fisioterapia Domiciliar</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Reabilitação Vestibular</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Tratamento de Vertigens</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Fisioterapia Geriátrica</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Atendimento Humanizado</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Tijuca e Zona Sul – RJ</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>CREFITO 449534-F</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Fisioterapia Domiciliar</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Reabilitação Vestibular</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Tratamento de Vertigens</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Fisioterapia Geriátrica</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Atendimento Humanizado</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>Tijuca e Zona Sul – RJ</div>
-    <div class="marquee-item"><div class="marquee-dot"></div>CREFITO 449534-F</div>
-  </div>
-</div>
-
-<!-- ═══ SERVIÇOS ═══ -->
-<section id="servicos">
-  <div class="section-blob-1"></div>
-  <div class="section-blob-2"></div>
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="section-header anim">
-      <span class="section-pill">Nossos Serviços</span>
-      <h2 class="section-title">Cuidados especializados para sua recuperação</h2>
-      <p class="section-desc">Ofereço uma ampla gama de serviços fisioterapêuticos, todos realizados com dedicação, profissionalismo e foco no bem-estar do paciente.</p>
-    </div>
-
-    <div class="services-grid">
-
-      <div class="service-card anim" id="card1">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(26,95,74,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        </div>
-        <h3>Atendimento Domiciliar</h3>
-        <p>Fisioterapia no conforto da sua casa, com todo o equipamento necessário para um tratamento completo e eficaz.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)"></div>
-      </div>
-
-      <div class="service-card anim" style="animation-delay:.1s">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(201,162,39,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#c9a227,#d4b43a)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>
-        </div>
-        <h3>Tratamento de Tonturas e Vertigens</h3>
-        <p>Especialização em reabilitação vestibular para tratamento de tonturas, vertigens e problemas de equilíbrio.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#c9a227,#d4b43a)"></div>
-      </div>
-
-      <div class="service-card anim" style="animation-delay:.2s">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(26,95,74,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
-        </div>
-        <h3>Reabilitação Ortopédica</h3>
-        <p>Recuperação pós-cirúrgica e tratamento de lesões musculoesqueléticas para restaurar sua mobilidade.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)"></div>
-      </div>
-
-      <div class="service-card anim" style="animation-delay:.1s">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(201,162,39,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#c9a227,#d4b43a)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
-        </div>
-        <h3>Fisioterapia Geriátrica</h3>
-        <p>Cuidados especializados para idosos, promovendo qualidade de vida, autonomia e bem-estar.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#c9a227,#d4b43a)"></div>
-      </div>
-
-      <div class="service-card anim" style="animation-delay:.2s">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(26,95,74,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        </div>
-        <h3>Atendimento Humanizado</h3>
-        <p>Abordagem individualizada, com empatia e dedicação, respeitando as necessidades de cada paciente.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b)"></div>
-      </div>
-
-      <div class="service-card anim" style="animation-delay:.3s">
-        <div class="service-tilt-shine"></div>
-        <div class="service-card-bg" style="background:rgba(201,162,39,.04)"></div>
-        <div class="service-icon" style="background:linear-gradient(135deg,#c9a227,#d4b43a)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
-        </div>
-        <h3>Avaliação Especializada</h3>
-        <p>Avaliação física completa para diagnóstico preciso e elaboração do plano de tratamento ideal.</p>
-        <div class="service-corner" style="background:linear-gradient(135deg,#c9a227,#d4b43a)"></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ GALERIA ═══ -->
-<section id="galeria">
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="section-header anim">
-      <span class="section-pill" style="background:rgba(26,95,74,.08);color:var(--green);">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;margin-right:4px;"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        Galeria
-      </span>
-      <h2 class="section-title">Conheça meu trabalho</h2>
-      <p class="section-desc">Fotos do meu dia a dia, equipamentos utilizados e o cuidado dedicado a cada paciente no conforto do lar.</p>
-    </div>
-
-    <div class="gallery-grid">
-
-      <div class="gallery-item anim" onclick="openLightbox(0)">
-        <div class="gallery-item-img"><img src="foto-jeane.jpg" alt="Jeane Leite – Fisioterapeuta domiciliar no Rio de Janeiro" loading="lazy" /></div>
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-cat">Profissional</span>
-          <h3>Jeane Leite</h3>
-          <p>Fisioterapeuta dedicada ao cuidado da sua saúde</p>
-        </div>
-        <div class="gallery-zoom">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        </div>
-      </div>
-
-      <div class="gallery-item anim" style="animation-delay:.1s" onclick="openLightbox(1)">
-        <div class="gallery-item-img"><img src="materiais-fisio.jpg" alt="Equipamentos de fisioterapia domiciliar utilizados nos atendimentos" loading="lazy" /></div>
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-cat">Materiais</span>
-          <h3>Equipamentos</h3>
-          <p>Materiais modernos e de qualidade para seu tratamento</p>
-        </div>
-        <div class="gallery-zoom">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        </div>
-      </div>
-
-      <div class="gallery-item anim" style="animation-delay:.15s" onclick="openLightbox(2)">
-        <div class="gallery-item-img"><img src="atendimento-domiciliar.jpg" alt="Fisioterapia domiciliar na Tijuca e Zona Sul do Rio de Janeiro" loading="lazy" /></div>
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-cat">Atendimento</span>
-          <h3>Atendimento Domiciliar</h3>
-          <p>Cuidados no conforto da sua casa</p>
-        </div>
-        <div class="gallery-zoom">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        </div>
-      </div>
-
-      <div class="gallery-item anim" style="animation-delay:.2s" onclick="openLightbox(3)">
-        <div class="gallery-item-img"><img src="tratamento-vertigem.jpg" alt="Tratamento de vertigens e tonturas com reabilitação vestibular no RJ" loading="lazy" /></div>
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-cat">Especialidade</span>
-          <h3>Tratamento de Vertigens</h3>
-          <p>Reabilitação vestibular especializada</p>
-        </div>
-        <div class="gallery-zoom">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-  </button>
-  <button class="lightbox-prev" onclick="event.stopPropagation();prevImage()">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-  </button>
-  <button class="lightbox-next" onclick="event.stopPropagation();nextImage()">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-  </button>
-  <div class="lightbox-content" onclick="event.stopPropagation()">
-    <img id="lightboxImg" src="" alt="" />
-    <div class="lightbox-caption">
-      <h3 id="lightboxTitle"></h3>
-      <p id="lightboxDesc"></p>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ SOBRE ═══ -->
-<section id="sobre">
-  <div class="blob-tl"></div>
-  <div class="blob-br"></div>
-  <div class="container">
-    <div class="sobre-grid">
-
-      <!-- Photo -->
-      <div class="sobre-photo-wrap slide-in-left">
-        <div class="sobre-photo-inner">
-          <div class="sobre-photo-deco-1"></div>
-          <div class="sobre-photo-deco-2"></div>
-          <div class="sobre-frame">
-            <img src="foto-jeane.jpg" alt="Jeane Leite – Fisioterapeuta" />
-            <div class="sobre-frame-overlay"></div>
-          </div>
-
-          <!-- 100% Dedicada -->
-          <div class="float-badge sobre-badge-dedicada">
-            <div class="float-badge-icon" style="background:linear-gradient(135deg,#1a5f4a,#2d8b6b);">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
-            </div>
-            <div class="float-badge-text">
-              <p style="font-size:1.5rem;font-weight:800;color:var(--green);line-height:1;">100%</p>
-              <p>Dedicada</p>
-            </div>
-          </div>
-
-          <!-- Formação -->
-          <div class="float-badge sobre-badge-formacao">
-            <div class="float-badge-icon" style="background:var(--gold);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-            </div>
-            <div class="float-badge-text">
-              <p>Formação</p>
-              <p>Fisioterapia</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Content -->
-      <div class="slide-in-right" style="animation-delay:.15s">
-        <span class="sobre-pill">Sobre Mim</span>
-        <h2 class="sobre-name">Jeane Leite</h2>
-        <p class="sobre-role">Fisioterapeuta Domiciliar – CREFITO 449534-F</p>
-
-        <div class="sobre-text">
-          <p>Sou fisioterapeuta formada e dedicada a proporcionar cuidados de saúde de excelência no conforto do lar dos meus pacientes. Acredito que a recuperação acontece de forma mais eficaz quando o paciente se sente acolhido e confortável.</p>
-          <p>Minha especialização em reabilitação vestibular me permite oferecer tratamento especializado para tonturas e vertigens, ajudando pacientes a recuperarem sua qualidade de vida e bem-estar.</p>
-        </div>
-
-        <div class="diferenciais">
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Atendimento personalizado e humanizado</span></div>
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Horários flexíveis para sua conveniência</span></div>
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Equipamentos portáteis de qualidade</span></div>
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Acompanhamento contínuo do tratamento</span></div>
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Planos terapêuticos individualizados</span></div>
-          <div class="diferencial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Especialização em reabilitação vestibular</span></div>
-        </div>
-
-        <div class="sobre-tags">
-          <div class="sobre-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-            CREFITO 449534-F
-          </div>
-          <div class="sobre-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            Tijuca e Zona Sul – RJ
-          </div>
-          <div class="sobre-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-            Atendimento Domiciliar
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CONTATO ═══ -->
-<section id="contato">
-  <div class="container">
-    <div class="section-header anim">
-      <span class="section-pill">Entre em Contato</span>
-      <h2 class="section-title">Agende sua consulta</h2>
-      <p class="section-desc">Entre em contato para agendar sua avaliação ou tirar dúvidas sobre os serviços. Estou pronta para ajudar você a recuperar sua qualidade de vida.</p>
-    </div>
-
-    <div class="contato-grid">
-      <!-- Left column -->
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-
-        <!-- WhatsApp card -->
-        <div class="contact-card card-whatsapp anim">
-          <div class="contact-card-header">
-            <div class="contact-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-            </div>
-            <div>
-              <div class="contact-card-label">Telefone / WhatsApp</div>
-              <div class="contact-card-value">(21) 96595-1820</div>
-            </div>
-          </div>
-          <a href="https://wa.me/5521965951820" target="_blank" class="contact-card-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-            Chamar no WhatsApp
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Instagram card -->
-        <div class="contact-card card-instagram anim" style="animation-delay:.1s">
-          <div class="contact-card-header">
-            <div class="contact-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </div>
-            <div>
-              <div class="contact-card-label">Siga no Instagram</div>
-              <div class="contact-card-value">@jeaneleite.fisio</div>
-            </div>
-          </div>
-          <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="contact-card-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            Ver Perfil no Instagram
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Info cards -->
-        <div class="info-cards anim" style="animation-delay:.15s">
-          <div class="info-card">
-            <div class="info-card-icon" style="background:rgba(201,162,39,.1)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="info-card-label">Área de Atuação</div>
-            <div class="info-card-value">Tijuca – RJ</div>
-            <div class="info-card-value">Zona Sul – RJ</div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon" style="background:rgba(26,95,74,.08)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1a5f4a" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <div class="info-card-label">Horário</div>
-            <div class="info-card-value">Seg a Sex: 8h–18h</div>
-            <div style="color:var(--green-light);font-size:.875rem;">Sáb: 8h–12h</div>
-          </div>
-        </div>
-
-        <!-- CREFITO -->
-        <div class="crefito-card anim" style="animation-delay:.2s">
-          <div class="crefito-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-          </div>
-          <div>
-            <div class="crefito-label">Registro Profissional</div>
-            <div class="crefito-value">CREFITO 449534-F</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA card -->
-      <div class="cta-card anim" style="animation-delay:.1s">
-        <div class="cta-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
-        </div>
-        <h3>Pronto para começar sua recuperação?</h3>
-        <p>Não espere mais para cuidar da sua saúde. Agende sua consulta hoje mesmo e dê o primeiro passo rumo a uma vida mais saudável.</p>
-        <div class="cta-btns">
-          <a href="https://wa.me/5521965951820" target="_blank" class="cta-btn-wa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-            Agendar pelo WhatsApp
-          </a>
-          <a href="tel:5521965951820" class="cta-btn-phone">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-            Ligar Agora
-          </a>
-          <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="cta-btn-ig">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            Siga @jeaneleite.fisio
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FAQ ═══ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-header anim">
-      <span class="section-pill" style="background:rgba(26,95,74,.08);color:var(--green);">Perguntas Frequentes</span>
-      <h2 class="section-title">Dúvidas sobre o atendimento</h2>
-      <p class="section-desc">Respondendo as perguntas mais comuns sobre fisioterapia domiciliar e os serviços oferecidos.</p>
-    </div>
-
-    <div class="faq-grid">
-
-      <div class="faq-item anim" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">Quais bairros do Rio de Janeiro você atende?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            Atendo domiciliarmente na <strong>Tijuca</strong> e em toda a <strong>Zona Sul do Rio de Janeiro</strong>, incluindo Botafogo, Flamengo, Laranjeiras, Copacabana, Ipanema, Leblon, Lagoa, Jardim Botânico e Humaitá. Para bairros não listados, entre em contato para verificar disponibilidade.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.05s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">O que é reabilitação vestibular?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            A reabilitação vestibular é um tratamento fisioterapêutico especializado para quem sofre de <strong>tonturas, vertigens e desequilíbrio</strong>. Por meio de exercícios específicos e progressivos, ajuda o cérebro a se adaptar e a reduzir ou eliminar completamente esses sintomas, devolvendo qualidade de vida ao paciente.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.1s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">Como funciona o atendimento domiciliar?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            O atendimento é feito diretamente na sua casa, com todos os equipamentos necessários. Após o agendamento, a fisioterapeuta realiza uma <strong>avaliação física completa</strong> e elabora um plano de tratamento personalizado. Você tem todo o conforto do seu lar sem precisar se deslocar.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.15s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">Quantas sessões são necessárias para o tratamento?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            O número de sessões varia conforme o quadro clínico de cada paciente. Após a avaliação inicial, é elaborado um plano terapêutico individualizado com estimativa de duração. O acompanhamento é contínuo e ajustado ao longo do tratamento de acordo com a evolução do paciente.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.2s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">Como agendar uma consulta?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            O agendamento é feito pelo <strong>WhatsApp (21) 96595-1820</strong> ou pelo Instagram <strong>@jeaneleite.fisio</strong>. O atendimento acontece de segunda a sexta das 8h às 18h e aos sábados das 8h ao meio-dia. Resposta rápida garantida!
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.25s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">A fisioterapia domiciliar tem o mesmo resultado que a clínica?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            Sim! O atendimento domiciliar tem <strong>a mesma qualidade técnica</strong> do atendimento em clínica, com equipamentos portáteis de alta qualidade. Além disso, o ambiente familiar proporciona maior conforto e colabora positivamente com o processo de recuperação — muitos pacientes evoluem mais rápido em casa.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.3s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">Qual o valor de uma sessão de fisioterapia domiciliar?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            O valor de cada sessão varia conforme o tipo de tratamento, a frequência e a localização do atendimento na Tijuca ou Zona Sul do Rio de Janeiro. Para passar um orçamento preciso e personalizado para o seu caso, entre em contato pelo WhatsApp — o atendimento inicial é feito por avaliação, sem compromisso. Aceito pagamento em dinheiro, cartão de crédito e PIX.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item anim" style="animation-delay:.35s" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <h3 itemprop="name">O plano de saúde cobre a fisioterapia domiciliar?</h3>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            Depende do seu plano. Alguns convênios cobrem fisioterapia domiciliar mediante prescrição médica — mas a cobertura, o número de sessões e as condições variam muito. O melhor caminho é verificar diretamente com o seu plano. Caso não haja cobertura, o atendimento particular é realizado com pagamento em dinheiro, cartão ou PIX.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-grid">
-
-        <div>
-          <div class="footer-brand">
-            <div class="footer-logo"><img src="logo.png" alt="Jeane Leite Fisioterapeuta – Logo" loading="lazy" /></div>
-            <div>
-              <div class="footer-brand-name">Jeane Leite</div>
-              <div class="footer-brand-sub">Fisioterapeuta</div>
-            </div>
-          </div>
-          <p class="footer-tagline">Cuidando da sua saúde com dedicação e profissionalismo no conforto do seu lar.</p>
-        </div>
-
-        <div class="footer-section">
-          <h4>Informações</h4>
-          <ul class="footer-info-list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              Tijuca e Zona Sul – RJ
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-              CREFITO 449534-F
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-              (21) 96595-1820
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-social">
-          <h4>Contato</h4>
-          <div class="social-links">
-            <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="social-link-ig" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a href="https://wa.me/5521965951820" target="_blank" class="social-link-wa" aria-label="WhatsApp">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-divider">
-        <p class="footer-copy">© <span id="year"></span> Jeane Leite Fisioterapeuta. Todos os direitos reservados.</p>
-        <div class="footer-made">
-          Feito com
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
-          para cuidar de você
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  /* INTRO SCREEN */
-  (function() {
-    const container = document.getElementById('introParticles');
-    if (container) {
-      for (let i = 0; i < 18; i++) {
-        const p = document.createElement('div');
-        p.className = 'intro-particle';
-        const size = Math.random() * 120 + 40;
-        p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation:introFloat ${Math.random()*12+8}s linear infinite;animation-delay:${Math.random()*-10}s;`;
-        container.appendChild(p);
-      }
-    }
-    setTimeout(() => {
-      const screen = document.getElementById('intro-screen');
-      if (!screen) return;
-      screen.classList.add('hide');
-      setTimeout(() => { screen.style.display = 'none'; }, 1000);
-      triggerHeroAnimations();
-    }, 1800);
-  })();
-
-  function triggerHeroAnimations() {
-    const words = document.querySelectorAll('.split-word span');
-    words.forEach((w, i) => { setTimeout(() => w.classList.add('revealed'), 200 + i * 90); });
-    document.querySelectorAll('#inicio .anim').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), 400 + i * 150);
-    });
-  }
-
-  /* SCROLL PROGRESS */
-  const progressBar = document.getElementById('scroll-progress');
-  window.addEventListener('scroll', () => {
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    if (progressBar) {
-      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      progressBar.style.transform = `scaleX(${Math.min(scrolled,1)})`;
-    }
-  }, { passive: true });
-
-  /* PARALLAX HERO */
-  const heroImg = document.getElementById('heroImg');
-  window.addEventListener('scroll', () => {
-    if (heroImg) heroImg.style.transform = `translateY(${window.scrollY * 0.18}px)`;
-  }, { passive: true });
-
-  /* INTERSECTION OBSERVER */
-  let countersDone = false;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-        if (e.target.closest && e.target.closest('#sobre') && !countersDone) {
-          countersDone = true;
-          document.querySelectorAll('.count').forEach(el => {
-            const target = parseInt(el.dataset.target);
-            const start = performance.now();
-            const duration = 1600;
-            function update(now) {
-              const t = Math.min((now - start) / duration, 1);
-              const eased = 1 - Math.pow(1 - t, 3);
-              el.textContent = Math.floor(eased * target);
-              if (t < 1) requestAnimationFrame(update);
-              else el.textContent = target;
+        nav a {
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(168, 213, 186, 0.4);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 213, 186, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary-dark);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 40 5%;
+            background: url("https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/hero_bg.jpeg") center center / cover no-repeat;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.1) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            animation: fadeInUP 1s ease forwards;
+        }
+
+        @keyframes fadeInUP {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            requestAnimationFrame(update);
-          });
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.anim:not(#inicio .anim), .slide-in-left, .slide-in-right').forEach(el => observer.observe(el));
 
-  /* 3D TILT CARDS */
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width;
-      const y = (e.clientY - r.top) / r.height;
-      card.style.transform = `perspective(800px) rotateY(${(x-.5)*10}deg) rotateX(${(.5-y)*8}deg) translateY(-6px)`;
-      card.style.setProperty('--mx', `${x*100}%`);
-      card.style.setProperty('--my', `${y*100}%`);
-    });
-    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-  });
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
 
-  /* FAQ */
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
+        .hero h1 span {
+            color: var(--primary-dark);
+        }
 
-  /* MOBILE MENU */
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  function closeMobileMenu() { mobileMenu && mobileMenu.classList.remove('open'); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
 
-  /* SCROLL SUAVE */
-  function scrollTo(id) {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }
+        /* Sections */
+        section {
+            padding: 6rem 5%;
+        }
 
-  /* LIGHTBOX */
-  const gallery = [
-    { src: 'foto-jeane.jpg', title: 'Jeane Leite', desc: 'Fisioterapeuta dedicada ao cuidado da sua saúde' },
-    { src: 'materiais-fisio.jpg', title: 'Equipamentos', desc: 'Materiais modernos e de qualidade para seu tratamento' },
-    { src: 'atendimento-domiciliar.jpg', title: 'Atendimento Domiciliar', desc: 'Cuidados no conforto da sua casa' },
-    { src: 'tratamento-vertigem.jpg', title: 'Tratamento de Vertigens', desc: 'Reabilitação vestibular especializada' },
-  ];
-  let currentImg = 0;
-  function openLightbox(index) {
-    currentImg = index; updateLightbox();
-    document.getElementById('lightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function updateLightbox() {
-    const g = gallery[currentImg];
-    document.getElementById('lightboxImg').src = g.src;
-    document.getElementById('lightboxImg').alt = g.title;
-    document.getElementById('lightboxTitle').textContent = g.title;
-    document.getElementById('lightboxDesc').textContent = g.desc;
-  }
-  function nextImage() { currentImg = (currentImg+1) % gallery.length; updateLightbox(); }
-  function prevImage() { currentImg = (currentImg-1+gallery.length) % gallery.length; updateLightbox(); }
-  document.addEventListener('keydown', e => {
-    if (e.key==='Escape') closeLightbox();
-    if (e.key==='ArrowRight') nextImage();
-    if (e.key==='ArrowLeft') prevImage();
-  });
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
 
-  /* ANO */
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<!-- ═══════════════════════════════════════
-     BLOG – OVERLAY COMPLETO
-═══════════════════════════════════════ -->
-<div id="blog-overlay">
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
 
-  <!-- Topbar -->
-  <div class="blog-topbar">
-    <div class="blog-topbar-inner">
-      <button class="blog-back" onclick="closeBlog()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-        Voltar ao site
-      </button>
-      <span class="blog-topbar-title">Blog · Jeane Leite</span>
-      <div class="blog-topbar-actions">
-        <button class="btn-primary" onclick="openNewArticle()" style="padding:.5rem 1.25rem;font-size:.875rem;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-          Novo artigo
-        </button>
-      </div>
-    </div>
-  </div>
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
 
-  <!-- Hero do blog -->
-  <div class="blog-hero">
-    <div class="blog-hero-blob" style="width:400px;height:400px;top:-10%;right:-5%;"></div>
-    <div class="blog-hero-blob" style="width:300px;height:300px;bottom:-15%;left:-5%;"></div>
-    <div class="container blog-hero-content">
-      <div class="blog-hero-pill">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
-        Conteúdo & Saúde
-      </div>
-      <h2>Dicas e informações sobre saúde e fisioterapia</h2>
-      <p>Artigos sobre bem-estar, reabilitação, prevenção e qualidade de vida, escritos com cuidado para você e sua família.</p>
-    </div>
-  </div>
+        /* Specialties */
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
 
-  <!-- Filtros -->
-  <div class="blog-filters">
-    <div class="blog-cats" id="blogCats">
-      <button class="blog-cat-btn active" data-cat="todos" onclick="filterBlog('todos',this)">Todos</button>
-      <button class="blog-cat-btn" data-cat="Fisioterapia" onclick="filterBlog('Fisioterapia',this)">Fisioterapia</button>
-      <button class="blog-cat-btn" data-cat="Vertigens" onclick="filterBlog('Vertigens',this)">Vertigens</button>
-      <button class="blog-cat-btn" data-cat="Bem-estar" onclick="filterBlog('Bem-estar',this)">Bem-estar</button>
-      <button class="blog-cat-btn" data-cat="Geriátrico" onclick="filterBlog('Geriátrico',this)">Geriátrico</button>
-      <button class="blog-cat-btn" data-cat="Dicas" onclick="filterBlog('Dicas',this)">Dicas</button>
-    </div>
-    <div class="blog-search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" placeholder="Buscar artigos..." id="blogSearchInput" oninput="searchBlog(this.value)" />
-    </div>
-  </div>
+        .spec-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+            border: 1px solid var(--primary-light);
+        }
 
-  <!-- Grid de artigos -->
-  <div class="blog-grid-wrap">
-    <div class="blog-grid" id="blogGrid"></div>
-  </div>
-</div>
+        .spec-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(168, 213, 186, 0.2);
+            border-color: var(--primary);
+        }
 
-<!-- FAB novo artigo (visível no blog) -->
-<button class="blog-fab" id="blogFab" onclick="openNewArticle()">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-</button>
+        .spec-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
 
-<!-- ─── Modal: criar / editar artigo ─── -->
-<div class="blog-modal-bg" id="articleModalBg" onclick="if(event.target===this)closeArticleModal()">
-  <div class="blog-modal">
-    <div class="blog-modal-header">
-      <h2 id="modalTitle">Novo artigo</h2>
-      <button class="blog-modal-close" onclick="closeArticleModal()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="blog-modal-body">
+        .spec-card:hover .spec-icon {
+            background: var(--primary);
+            color: var(--white);
+        }
 
-      <div class="form-group">
-        <label class="form-label">Título do artigo *</label>
-        <input type="text" class="form-input" id="artTitle" placeholder="Ex: Como prevenir dores nas costas no dia a dia" />
-      </div>
+        .spec-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
 
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Categoria *</label>
-          <select class="form-select" id="artCat">
-            <option value="Fisioterapia">Fisioterapia</option>
-            <option value="Vertigens">Vertigens</option>
-            <option value="Bem-estar">Bem-estar</option>
-            <option value="Geriátrico">Geriátrico</option>
-            <option value="Dicas">Dicas</option>
-          </select>
+        .spec-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Services */
+        .services {
+            background: var(--primary-light);
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .service-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-img {
+            flex: 1;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .service-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 6rem 5%;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 16px;
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 14px 32px rgba(168, 213, 186, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .footer-col p {
+            color: #bdc3c7;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .service-row,
+            .service-row:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+            Clínica<span>Equilíbrio</span>
         </div>
-        <div class="form-group">
-          <label class="form-label">Tempo de leitura</label>
-          <input type="text" class="form-input" id="artTime" placeholder="Ex: 4 min" />
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/559293131266" class="btn" target="_blank">Agendar agora</a>
+    </header>
+
+    <!-- HERO: foto profissional da fisioterapeuta -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Recupere seu <span>Bem-estar</span> e Qualidade de Vida</h1>
+            <p>Especialistas em Fisioterapia e Pilates dedicados à sua recuperação. Tratamentos personalizados para
+                dores crônicas, reabilitação pós-cirúrgica e dificuldades de movimentação.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://wa.me/559293131266" class="btn" target="_blank">Fale pelo WhatsApp</a>
+                <a href="#servicos" class="btn btn-outline">Nossos Serviços</a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="form-group">
-        <label class="form-label">Resumo (aparece no card) *</label>
-        <input type="text" class="form-input" id="artExcerpt" placeholder="Uma frase curta que desperta interesse..." />
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Conteúdo completo *</label>
-        <textarea class="form-textarea" id="artContent" placeholder="Escreva o artigo completo aqui. Use linhas em branco para separar parágrafos..."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">URL da imagem de capa</label>
-        <input type="text" class="form-input" id="artImg" placeholder="https://... (deixe vazio para usar emoji)" />
-        <span class="form-hint">Cole o link de uma imagem do Google, Unsplash, etc.</span>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Ícone do card (se não tiver imagem)</label>
-        <div class="emoji-row" id="emojiRow">
-          <button class="emoji-opt selected" data-emoji="🦴" onclick="selectEmoji(this)">🦴</button>
-          <button class="emoji-opt" data-emoji="🧠" onclick="selectEmoji(this)">🧠</button>
-          <button class="emoji-opt" data-emoji="💚" onclick="selectEmoji(this)">💚</button>
-          <button class="emoji-opt" data-emoji="🏃" onclick="selectEmoji(this)">🏃</button>
-          <button class="emoji-opt" data-emoji="🧘" onclick="selectEmoji(this)">🧘</button>
-          <button class="emoji-opt" data-emoji="👴" onclick="selectEmoji(this)">👴</button>
-          <button class="emoji-opt" data-emoji="💊" onclick="selectEmoji(this)">💊</button>
-          <button class="emoji-opt" data-emoji="🩺" onclick="selectEmoji(this)">🩺</button>
-          <button class="emoji-opt" data-emoji="⚡" onclick="selectEmoji(this)">⚡</button>
-          <button class="emoji-opt" data-emoji="🌿" onclick="selectEmoji(this)">🌿</button>
+    <section class="specialties" id="especialidades">
+        <div class="section-header">
+            <h2>Nossas Especialidades</h2>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Cuidamos de você com tratamentos
+                focados nas suas necessidades específicas, promovendo alívio e qualidade de vida.</p>
         </div>
-      </div>
-
-      <input type="hidden" id="artEditId" value="" />
-      <button class="btn-submit" onclick="saveArticle()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-        Publicar artigo
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- ─── Modal: ler artigo ─── -->
-<div class="blog-read-bg" id="readModalBg" onclick="if(event.target===this)closeReadModal()">
-  <div class="blog-read-modal">
-    <div class="blog-read-cover" id="readCover"></div>
-    <div class="blog-read-body">
-      <div class="blog-read-meta" id="readMeta"></div>
-      <h2 class="blog-read-title" id="readTitle"></h2>
-      <div class="blog-read-content" id="readContent"></div>
-    </div>
-    <div class="blog-read-footer">
-      <button class="blog-read-close-btn" onclick="closeReadModal()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-        Voltar ao blog
-      </button>
-      <a id="readShareWa" href="#" target="_blank" class="blog-share-wa">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-        Compartilhar no WhatsApp
-      </a>
-    </div>
-  </div>
-</div>
-
-<script>
-  /* ═══ BLOG ENGINE ═══ */
-  const STORAGE_KEY = 'jl_blog_articles';
-  let blogArticles = [];
-  let currentFilter = 'todos';
-  let currentSearch = '';
-  let selectedEmoji = '🦴';
-
-  /* ─ Artigos padrão (aparecem na primeira visita) ─ */
-  const defaultArticles = [
-    {
-      id: 'preco-fisio-dom',
-      title: 'Qual o valor de uma sessão de fisioterapia domiciliar? Tudo o que você precisa saber',
-      cat: 'Fisioterapia',
-      excerpt: 'Entenda o que influencia o preço, se o convênio cobre e como avaliar se o investimento vale a pena para o seu caso.',
-      content: `Se você pesquisou "qual o valor de uma sessão de fisioterapia domiciliar", provavelmente já decidiu que quer o serviço — agora só precisa entender o que esperar financeiramente. Este artigo responde essa e outras perguntas relacionadas com transparência.
-
-POR QUE O PREÇO VARIA?
-
-O valor de uma sessão de fisioterapia domiciliar não é tabelado no Brasil. Ele varia por alguns fatores principais:
-
-Tipo de tratamento: uma sessão de reabilitação vestibular, por exemplo, tem complexidade diferente de uma sessão de fortalecimento muscular pós-cirúrgico. Tratamentos mais especializados podem ter valor diferente.
-
-Localização: o deslocamento do profissional é parte do serviço. Bairros mais distantes ou de difícil acesso podem impactar o valor final. Na Tijuca e Zona Sul do Rio de Janeiro, a logística é planejada para atender com eficiência.
-
-Frequência e pacote: muitos profissionais oferecem condições diferenciadas para pacotes com frequência semanal fixa — o que também é benéfico para a continuidade do tratamento.
-
-Duração da sessão: sessões de 45 minutos têm valor diferente de sessões de 1 hora de atendimento exclusivo.
-
-O QUE ESTÁ INCLUÍDO NO VALOR?
-
-Diferente do que muitos pensam, na fisioterapia domiciliar o valor da sessão geralmente já inclui:
-
-✔ O deslocamento do profissional até sua casa
-✔ Todos os equipamentos terapêuticos necessários
-✔ A avaliação e reavaliação contínua
-✔ O plano de tratamento personalizado
-✔ As orientações e exercícios para casa
-✔ O tempo integral de atendimento — sem divisão com outros pacientes
-
-Ou seja: quando você compara com o atendimento em clínica, é preciso considerar que na clínica você ainda paga pelo deslocamento, estacionamento ou transporte, e muitas vezes divide o tempo do profissional com outros pacientes.
-
-VALE MAIS A PENA DO QUE PARECE
-
-Veja a comparação prática:
-
-Clínica convencional:
-- Valor da sessão (aparentemente menor)
-- + Transporte (Uber, ônibus, gasolina, estacionamento)
-- + Tempo de deslocamento (ida e volta)
-- + Desgaste físico para quem está em recuperação
-- = Custo real frequentemente maior do que parece
-
-Fisioterapia domiciliar:
-- Valor da sessão (inclui deslocamento do profissional)
-- + Zero custo adicional de transporte
-- + Zero desgaste do deslocamento
-- + 100% do tempo do profissional dedicado a você
-- = Custo-benefício real muitas vezes superior
-
-O PLANO DE SAÚDE COBRE?
-
-Essa é uma das dúvidas mais frequentes. A resposta depende do seu plano:
-
-Planos que podem cobrir: alguns convênios cobrem fisioterapia domiciliar quando há prescrição médica e o paciente tem diagnóstico que justifica o atendimento em domicílio (limitação grave de mobilidade, pós-operatório imediato, etc.). A ANS determina cobertura mínima para fisioterapia, mas não especifica o formato domiciliar para todos os casos.
-
-O que fazer: ligue para a central do seu convênio e pergunte especificamente: "Meu plano cobre fisioterapia domiciliar? Quais os requisitos? Preciso de guia ou autorização prévia?" Tenha em mãos a CID (código do diagnóstico) do seu médico.
-
-Se o plano não cobrir: o atendimento particular é realizado com pagamento em dinheiro, cartão de crédito ou PIX, por sessão ou em pacote.
-
-COMO RECEBER UM ORÇAMENTO PERSONALIZADO?
-
-O valor exato depende da avaliação do seu caso — tipo de tratamento necessário, frequência recomendada e localização. Por isso, a melhor forma de saber é entrar em contato pelo WhatsApp.
-
-Na conversa inicial, você pode explicar sua situação e receber uma proposta clara, sem surpresas. Não há taxa para a consulta de orçamento.
-
-Atendo na Tijuca e Zona Sul do Rio de Janeiro.
-WhatsApp: (21) 96595-1820
-CREFITO 449534-F`,
-      emoji: '💰',
-      img: '',
-      date: new Date().toISOString(),
-      readTime: '6 min'
-    },
-    {
-      id: 'fisio-dom-1',
-      title: 'Como funciona a fisioterapia domiciliar: tudo o que você precisa saber antes de começar',
-      cat: 'Fisioterapia',
-      excerpt: 'Entenda como é uma sessão em casa, quais equipamentos são usados, quanto tempo dura e o que esperar do seu primeiro atendimento.',
-      content: `Você ouviu falar em fisioterapia domiciliar mas ainda tem dúvidas sobre como funciona na prática? Esse artigo responde as perguntas mais comuns de quem está considerando iniciar o tratamento em casa.
-
-O QUE É A FISIOTERAPIA DOMICILIAR?
-
-A fisioterapia domiciliar é a prestação de serviços fisioterapêuticos no próprio lar do paciente. Ela surgiu como alternativa para pessoas que, por mobilidade reduzida, dor intensa, idade avançada ou outras limitações, encontram dificuldades para se deslocar até uma clínica.
-
-Hoje, porém, muitas pessoas que poderiam ir à clínica optam pelo atendimento domiciliar pela comodidade, pela qualidade do atendimento individualizado e pelos resultados comprovados.
-
-COMO É UMA SESSÃO NA PRÁTICA?
-
-Cada sessão começa com uma avaliação rápida do estado do paciente naquele dia — como dormiu, se sentiu dor, se houve melhora ou piora desde o último atendimento. Essa escuta ativa é parte fundamental do tratamento.
-
-Em seguida, o fisioterapeuta realiza as técnicas e exercícios planejados para aquela sessão, que podem incluir:
-
-- Mobilização articular e alongamentos passivos
-- Exercícios de fortalecimento muscular com faixas elásticas ou halteres leves
-- Treino de equilíbrio e coordenação
-- Técnicas manuais para alívio de dor
-- Estimulação neurológica e funcional
-- Exercícios respiratórios (quando necessário)
-- Orientações para o paciente e para a família
-
-A sessão encerra com orientações para o período entre os atendimentos: o que fazer, o que evitar, exercícios simples que podem ser praticados sozinho.
-
-QUANTO TEMPO DURA UMA SESSÃO?
-
-Em geral, cada sessão tem duração entre 45 minutos e 1 hora. Diferente do atendimento em clínica, onde o tempo muitas vezes é dividido entre vários pacientes, na fisioterapia domiciliar o tempo é 100% dedicado a você.
-
-QUAIS EQUIPAMENTOS SÃO USADOS?
-
-O fisioterapeuta leva consigo um kit portátil com os principais recursos terapêuticos:
-
-- Faixas e bandas elásticas (Theraband)
-- Bola terapêutica e almofadas de equilíbrio
-- Aparelhos de eletroterapia portáteis (TENS, ultrassom)
-- Materiais para mobilização articular
-- Equipamentos de termoterapia (bolsas térmicas)
-
-Para tratamentos mais específicos, o profissional indica previamente o que será necessário ter em casa.
-
-QUANTAS SESSÕES SÃO NECESSÁRIAS?
-
-Isso varia muito de acordo com o diagnóstico, a evolução do paciente e os objetivos do tratamento. De modo geral:
-
-- Condições agudas (dor recente, pós-cirúrgico): 8 a 16 sessões
-- Condições crônicas (dores antigas, sequelas): tratamento contínuo com reavaliação periódica
-- Reabilitação vestibular (vertigem): em muitos casos, entre 6 e 12 sessões já trazem resultado significativo
-- Manutenção em idosos: atendimento contínuo para preservar mobilidade e prevenir quedas
-
-Após a avaliação inicial, o fisioterapeuta apresenta um plano de tratamento com estimativa de sessões e frequência recomendada.
-
-QUAL A DIFERENÇA PARA O ATENDIMENTO EM CLÍNICA?
-
-A fisioterapia domiciliar não é inferior à clínica — ela é diferente, e em muitos casos superior. As principais diferenças:
-
-✔ Atenção exclusiva: na clínica, o profissional muitas vezes atende mais de um paciente por vez. Em casa, você tem 100% do tempo e foco do fisioterapeuta.
-
-✔ Ambiente familiar: o conforto do próprio lar reduz ansiedade e tensão muscular, favorecendo a recuperação.
-
-✔ Funcionalidade real: os exercícios são adaptados ao seu espaço e rotina, tornando os resultados mais aplicáveis ao dia a dia.
-
-✔ Sem desgaste do deslocamento: para quem está em processo de recuperação, o esforço do transporte pode ser prejudicial ao tratamento.
-
-COMO AGENDAR?
-
-Se você mora na Tijuca ou Zona Sul do Rio de Janeiro e quer saber se a fisioterapia domiciliar é indicada para o seu caso, entre em contato pelo WhatsApp. Faço uma avaliação inicial e apresento um plano de tratamento personalizado.
-
-CREFITO 449534-F`,
-      emoji: '🏠',
-      img: '',
-      date: new Date(Date.now() - 10 * 86400000).toISOString(),
-      readTime: '7 min'
-    },
-    {
-      id: 'fisio-dom-2',
-      title: 'Para quem é indicada a fisioterapia domiciliar? Conheça os perfis que mais se beneficiam',
-      cat: 'Fisioterapia',
-      excerpt: 'Da reabilitação pós-cirúrgica ao cuidado com idosos: descubra se você ou alguém da sua família tem indicação para o atendimento em casa.',
-      content: `A fisioterapia domiciliar não é exclusiva para quem não consegue sair de casa. Ela é indicada para uma ampla variedade de situações clínicas e perfis de pacientes. Conheça os principais.
-
-1. PACIENTES EM PÓS-OPERATÓRIO
-
-Após cirurgias ortopédicas (joelho, quadril, coluna, ombro), neurológicas ou cardíacas, o paciente muitas vezes precisa iniciar a reabilitação ainda na fase de restrição de atividades. A fisioterapia domiciliar permite que o processo de recuperação comece cedo, no conforto da cama ou do sofá, sem o risco e o esforço do deslocamento.
-
-Condições comuns: pós-operatório de artroplastia de quadril e joelho, cirurgias de coluna, pós-AVC hospitalar.
-
-2. IDOSOS COM DIFICULDADE DE LOCOMOÇÃO
-
-O envelhecimento traz desafios específicos: perda de força muscular, redução do equilíbrio, maior risco de quedas, doenças crônicas como Parkinson e Alzheimer. Para esses pacientes, a fisioterapia domiciliar é muitas vezes a única forma viável de manter um tratamento regular.
-
-Além disso, o fisioterapeuta pode avaliar o ambiente doméstico e orientar adaptações que reduzem o risco de acidentes — algo impossível de fazer no consultório.
-
-Condições comuns: Parkinson, Alzheimer, sequelas de AVC, sarcopenia, artroses graves.
-
-3. PACIENTES COM VERTIGEM E TONTURA
-
-A reabilitação vestibular — tratamento para vertigens, tonturas e distúrbios do equilíbrio — é especialmente bem indicada para o ambiente domiciliar. Pacientes com vertigem severa muitas vezes têm crises ao se movimentar, o que torna o deslocamento até a clínica desgastante e até arriscado.
-
-Em casa, o tratamento pode ser iniciado de forma gradual, respeitando os limites do paciente, com progressão segura dos exercícios.
-
-4. ADULTOS COM DOR CRÔNICA
-
-Pessoas com lombalgia crônica, cervicalgia, fibromialgia ou outras condições dolorosas persistentes frequentemente encontram dificuldade em se deslocar nos dias de crise. O atendimento domiciliar garante a continuidade do tratamento mesmo nos momentos de maior limitação.
-
-5. PACIENTES NEUROLÓGICOS
-
-Sequelas de AVC, lesões medulares, esclerose múltipla, neuropatias periféricas — condições neurológicas demandam reabilitação intensiva e prolongada. A fisioterapia domiciliar permite frequência regular de atendimento e adaptação dos exercícios ao ambiente real onde o paciente vive e precisa funcionar.
-
-6. CRIANÇAS COM NECESSIDADES ESPECIAIS
-
-Para famílias com crianças com paralisia cerebral, atrasos no desenvolvimento neuromotor ou outras condições pediátricas, o atendimento domiciliar elimina o estresse do deslocamento e permite que a criança seja tratada num ambiente seguro e conhecido.
-
-7. PESSOAS COM ROTINA INTENSA
-
-Nem sempre a indicação é clínica. Muitos adultos em plena atividade escolhem a fisioterapia domiciliar pela praticidade: sem espera, sem deslocamento, atendimento no horário mais conveniente — antes do trabalho, no horário de almoço ou ao final do dia.
-
-COMO SABER SE É O MEU CASO?
-
-Se você se identificou com algum dos perfis acima, o próximo passo é uma avaliação fisioterapêutica. Nessa primeira consulta, analiso seu histórico, suas queixas, suas limitações e seus objetivos — e apresento um plano de tratamento personalizado.
-
-Atendo na Tijuca e Zona Sul do Rio de Janeiro. Entre em contato pelo WhatsApp e agende sua avaliação.
-
-CREFITO 449534-F`,
-      emoji: '🩺',
-      img: '',
-      date: new Date(Date.now() - 5 * 86400000).toISOString(),
-      readTime: '6 min'
-    },
-    {
-      id: 'fisio-dom-3',
-      title: 'O que esperar da sua primeira sessão de fisioterapia domiciliar',
-      cat: 'Fisioterapia',
-      excerpt: 'Da marcação até o final do atendimento: saiba exatamente o que acontece na primeira consulta e como se preparar para aproveitar ao máximo.',
-      content: `A primeira sessão de fisioterapia domiciliar costuma gerar dúvidas: o que vai acontecer? Preciso me preparar? Vai doer? Esse artigo detalha cada etapa para que você chegue tranquilo ao seu primeiro atendimento.
-
-ANTES DA SESSÃO: O QUE PREPARAR
-
-Você não precisa de muito. Algumas orientações práticas:
-
-- Vista roupas confortáveis que permitam movimentação — calça de malha, camiseta larga
-- Separe um espaço limpo para o atendimento: sala, quarto ou varanda, com espaço suficiente para deitar e se movimentar
-- Tenha em mãos seus exames recentes (se houver): ressonância, raio-x, laudos médicos
-- Anote as medicações que usa e há quanto tempo sente os sintomas
-- Se tiver receio de algum procedimento, fale antes — a comunicação aberta é fundamental
-
-A CHEGADA: ANAMNESE E AVALIAÇÃO INICIAL
-
-O primeiro momento da sessão é dedicado à escuta. O fisioterapeuta faz uma anamnese — uma conversa estruturada sobre sua saúde:
-
-- Qual é a queixa principal? Onde dói, quando dói, o que piora, o que melhora?
-- Há quanto tempo o problema existe?
-- Já realizou tratamentos anteriores? Quais e com quais resultados?
-- Tem diagnóstico médico? Usa medicamentos?
-- Quais são seus objetivos com o tratamento?
-
-Essa etapa pode durar de 15 a 20 minutos e é tão importante quanto os exercícios — é ela que define todo o planejamento do tratamento.
-
-A AVALIAÇÃO FÍSICA
-
-Após a anamnese, o fisioterapeuta realiza uma avaliação física específica para sua condição. Isso pode incluir:
-
-- Testes de amplitude de movimento articular
-- Avaliação de força muscular
-- Testes neurológicos e de sensibilidade
-- Avaliação de equilíbrio e marcha
-- Palpação de estruturas musculares e articulares
-- Testes específicos para a queixa (por exemplo: testes posicionais para vertigem)
-
-Essa avaliação é indolora na maioria dos casos. Pode haver leve desconforto em alguns testes de movimento — sempre dentro de limites seguros e com sua participação ativa.
-
-O PLANO DE TRATAMENTO
-
-Com base na anamnese e na avaliação, o fisioterapeuta apresenta o plano de tratamento:
-
-- Diagnóstico fisioterapêutico (a análise do profissional sobre sua condição)
-- Objetivos do tratamento (o que esperamos alcançar e em quanto tempo)
-- Frequência recomendada de sessões (quantas vezes por semana)
-- Estimativa de duração do tratamento
-- O que será trabalhado em cada fase
-
-Esse plano é uma proposta — você pode tirar dúvidas, ajustar expectativas e discutir o que faz mais sentido para sua realidade.
-
-O INÍCIO DO TRATAMENTO
-
-Muitas vezes, já na primeira sessão, algum procedimento terapêutico é iniciado. Pode ser uma mobilização articular, um exercício simples, uma técnica manual de alívio de dor ou um exercício de reeducação postural.
-
-O objetivo não é fazer muito de uma vez, mas dar o primeiro passo com segurança e avaliar como seu corpo responde.
-
-AO FINAL DA SESSÃO
-
-O fisioterapeuta orienta o que você pode fazer até a próxima sessão: exercícios simples em casa, cuidados posturais, o que evitar, sinais de alerta que merecem atenção.
-
-Também é nesse momento que combinamos a agenda das próximas sessões.
-
-VAI DOER?
-
-Essa é a pergunta mais comum. A resposta: depende da condição, mas o objetivo nunca é causar dor. Pode haver desconforto em alguns movimentos de avaliação ou em técnicas de mobilização de tecidos — sempre comunicado antecipadamente e dentro dos seus limites.
-
-Boa parte dos pacientes relata que a sessão foi mais tranquila do que esperavam.
-
-PRONTO PARA COMEÇAR?
-
-Se você mora na Tijuca ou Zona Sul do Rio de Janeiro, entre em contato pelo WhatsApp e agende sua primeira avaliação. Estou aqui para responder qualquer dúvida antes mesmo da primeira sessão.
-
-CREFITO 449534-F`,
-      emoji: '📋',
-      img: '',
-      date: new Date().toISOString(),
-      readTime: '8 min'
-    }
-  ];
-
-  /* ─ Carrega artigos do localStorage ─ */
-  function loadArticles() {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      blogArticles = stored ? JSON.parse(stored) : [...defaultArticles];
-    } catch(e) {
-      blogArticles = [...defaultArticles];
-    }
-  }
-
-  /* ─ Salva no localStorage ─ */
-  function persistArticles() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(blogArticles)); } catch(e) {}
-  }
-
-  /* ─ Formata data ─ */
-  function fmtDate(iso) {
-    return new Date(iso).toLocaleDateString('pt-BR', { day:'2-digit', month:'long', year:'numeric' });
-  }
-
-  /* ─ Renderiza grid ─ */
-  function renderBlog() {
-    const grid = document.getElementById('blogGrid');
-    let list = [...blogArticles].sort((a,b) => new Date(b.date) - new Date(a.date));
-
-    if (currentFilter !== 'todos') list = list.filter(a => a.cat === currentFilter);
-    if (currentSearch.trim()) {
-      const q = currentSearch.toLowerCase();
-      list = list.filter(a =>
-        a.title.toLowerCase().includes(q) ||
-        a.excerpt.toLowerCase().includes(q) ||
-        a.cat.toLowerCase().includes(q)
-      );
-    }
-
-    if (!list.length) {
-      grid.innerHTML = `
-        <div class="blog-empty">
-          <div class="blog-empty-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
-          </div>
-          <h3>Nenhum artigo encontrado</h3>
-          <p>Tente outra categoria ou clique em "Novo artigo" para publicar.</p>
-          <button class="btn-primary" onclick="openNewArticle()" style="width:auto;padding:.75rem 1.75rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-            Criar primeiro artigo
-          </button>
-        </div>`;
-      return;
-    }
-
-    grid.innerHTML = list.map(a => `
-      <div class="blog-card" onclick="readArticle('${a.id}')">
-        <div class="blog-card-img">
-          ${a.img
-            ? `<img src="${a.img}" alt="${a.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'blog-card-img-placeholder\\'>${a.emoji||'📄'}</div>'" />`
-            : `<div class="blog-card-img-placeholder">${a.emoji || '📄'}</div>`
-          }
-          <span class="blog-card-cat">${a.cat}</span>
+        <div class="specialties-grid">
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                        <line x1="16" y1="8" x2="2" y2="22" />
+                        <line x1="17.5" y1="15" x2="9" y2="6.5" />
+                    </svg>
+                </div>
+                <h3>Alívio da Dor</h3>
+                <p>Tratamentos especializados para dor crônica e aguda, identificando e tratando a causa raiz para um
+                    alívio duradouro.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v4l3 3" />
+                    </svg>
+                </div>
+                <h3>Pós-operatório</h3>
+                <p>Reabilitação cuidadosa e progressiva após cirurgias ortopédicas e gerais, garantindo uma recuperação
+                    segura.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                    </svg>
+                </div>
+                <h3>Pós-AVC</h3>
+                <p>Abordagem neurofuncional para pacientes pós-AVC, focando na recuperação motora e autonomia nas
+                    atividades diárias.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 2v4" />
+                        <path d="M16 2v4" />
+                        <path d="M4 10h16" />
+                        <path d="M21 8.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8.5C3 7.12 4.12 6 5.5 6h13C19.88 6 21 7.12 21 8.5z" />
+                    </svg>
+                </div>
+                <h3>Hérnia de Disco</h3>
+                <p>Programas de estabilização segmentar e reeducação postural, aliando Fisioterapia e Pilates para a
+                    saúde da coluna.</p>
+            </div>
         </div>
-        <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-            <span>${fmtDate(a.date)}</span>
-            ${a.readTime ? `<span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;width:13px;height:13px;margin-right:2px"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-              ${a.readTime}
-            </span>` : ''}
-          </div>
-          <h3 class="blog-card-title">${a.title}</h3>
-          <p class="blog-card-excerpt">${a.excerpt}</p>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="section-header">
+            <h2>Serviços que Transformam</h2>
         </div>
-        <div class="blog-card-footer">
-          <span class="blog-card-read">
-            Ler artigo
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-          <div class="blog-card-actions" onclick="event.stopPropagation()">
-            <button class="blog-card-action-btn" title="Editar" onclick="editArticle('${a.id}')">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
-            </button>
-            <button class="blog-card-action-btn del" title="Excluir" onclick="deleteArticle('${a.id}')">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
-            </button>
-          </div>
+
+        <!-- Fisioterapia: pilates antigravidade no aparelho -->
+        <div class="service-row">
+            <div class="service-img">
+                <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_00.jpeg"
+                    alt="Sessão de Fisioterapia">
+            </div>
+            <div class="service-content">
+                <h3>Fisioterapia Especializada</h3>
+                <p>Nossa equipe de fisioterapeutas utiliza as técnicas mais modernas para avaliar, diagnosticar e tratar
+                    disfunções do movimento humano. Seja para recuperar-se de uma lesão, tratar dores constantes ou
+                    reabilitar o corpo após um AVC, estamos preparados para cuidar de você com empatia e técnica de
+                    ponta.</p>
+                <ul style="list-style: none; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">✓ Terapia Manual</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Cinesioterapia Funcional</li>
+                    <li>✓ Reeducação Postural (RPG)</li>
+                </ul>
+                <a href="https://wa.me/559293131266" class="btn" target="_blank">Agendar Fisioterapia</a>
+            </div>
         </div>
-      </div>
-    `).join('');
-  }
 
-  /* ─ Abrir / fechar blog ─ */
-  function openBlog() {
-    loadArticles();
-    renderBlog();
-    document.getElementById('blog-overlay').classList.add('open');
-    document.getElementById('blogFab').classList.add('show');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeBlog() {
-    document.getElementById('blog-overlay').classList.remove('open');
-    document.getElementById('blogFab').classList.remove('show');
-    document.body.style.overflow = '';
-  }
+        <!-- Pilates: barrel/arco -->
+        <div class="service-row">
+            <div class="service-img">
+                <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_01.jpeg"
+                    alt="Aparelhos de Pilates">
+            </div>
+            <div class="service-content">
+                <h3>Pilates Clínico</h3>
+                <p>O Pilates na Clínica Equilíbrio vai muito além do condicionamento físico. Ele é aplicado como uma
+                    ferramenta terapêutica poderosa para correção postural, fortalecimento do core, melhora da
+                    flexibilidade e tratamento de condições como hérnias de disco. Orientado cuidadosamente por
+                    profissionais da saúde.</p>
+                <ul style="list-style: none; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">✓ Pilates em Aparelhos Modernos</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Pilates Solo (Mat)</li>
+                    <li>✓ Acompanhamento Personalizado</li>
+                </ul>
+                <a href="https://wa.me/559293131266" class="btn" target="_blank">Conhecer o Pilates</a>
+            </div>
+        </div>
 
-  /* ─ Filtros e busca ─ */
-  function filterBlog(cat, btn) {
-    currentFilter = cat;
-    document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderBlog();
-  }
-  function searchBlog(q) {
-    currentSearch = q;
-    renderBlog();
-  }
+        <!-- Estética: tratamento facial -->
+        <div class="service-row">
+            <div class="service-img">
+                <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_02.jpeg"
+                    alt="Estética Avançada">
+            </div>
+            <div class="service-content">
+                <h3>Estética Avançada</h3>
+                <p>Complemente seu bem-estar com nossos tratamentos de estética facial e corporal. Focamos em
+                    procedimentos que não só realçam a beleza, mas também cuidam da saúde da sua pele e contorno
+                    corporal, promovendo relaxamento contínuo e elevando a autoestima.</p>
+                <a href="https://wa.me/5592000000000" class="btn btn-outline" target="_blank">Consultar Procedimentos</a>
+            </div>
+        </div>
 
-  /* ─ Modal de artigo ─ */
-  function openNewArticle() {
-    document.getElementById('modalTitle').textContent = 'Novo artigo';
-    document.getElementById('artTitle').value = '';
-    document.getElementById('artExcerpt').value = '';
-    document.getElementById('artContent').value = '';
-    document.getElementById('artImg').value = '';
-    document.getElementById('artTime').value = '';
-    document.getElementById('artCat').value = 'Fisioterapia';
-    document.getElementById('artEditId').value = '';
-    selectEmoji(document.querySelector('.emoji-opt[data-emoji="🦴"]'));
-    document.getElementById('articleModalBg').classList.add('open');
-  }
-  function closeArticleModal() {
-    document.getElementById('articleModalBg').classList.remove('open');
-  }
-  function selectEmoji(btn) {
-    document.querySelectorAll('.emoji-opt').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    selectedEmoji = btn.dataset.emoji;
-  }
+    </section>
 
-  function saveArticle() {
-    const title   = document.getElementById('artTitle').value.trim();
-    const excerpt = document.getElementById('artExcerpt').value.trim();
-    const content = document.getElementById('artContent').value.trim();
-    const cat     = document.getElementById('artCat').value;
-    const img     = document.getElementById('artImg').value.trim();
-    const readTime= document.getElementById('artTime').value.trim();
-    const editId  = document.getElementById('artEditId').value;
+    <!-- GALERIA: todas as fotos reais da clínica -->
+    <section class="gallery" id="galeria">
+        <div class="section-header">
+            <h2>Nossa Clínica em Ação</h2>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Conheça nosso espaço e os
+                tratamentos que transformam a vida dos nossos pacientes.</p>
+        </div>
+        <div class="gallery-grid">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_55_59.jpeg" alt="Pilates antigravidade">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_00__1_.jpeg" alt="Exercício no aparelho">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_00__2_.jpeg" alt="Pilates clínico">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_00__3_.jpeg" alt="Movimento e equilíbrio">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_01__1_.jpeg" alt="Pilates barrel">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_01__2_.jpeg" alt="Treino funcional">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_01__3_.jpeg" alt="Tração cervical">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_02__1_.jpeg" alt="Equipamento cervical">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_02__2_.jpeg" alt="Exercícios de reabilitação">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_02__3_.jpeg" alt="Estética facial">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_03__1_.jpeg" alt="Fisioterapeuta especialista">
+            <img src="https://raw.githubusercontent.com/trexpant/site-clinica-equilibrio/main/images/WhatsApp_Image_2026-04-16_at_05_56_03__2_.jpeg" alt="Dra. na clínica">
+        </div>
+    </section>
 
-    if (!title || !excerpt || !content) {
-      alert('Por favor, preencha título, resumo e conteúdo.'); return;
-    }
-
-    if (editId) {
-      const idx = blogArticles.findIndex(a => a.id === editId);
-      if (idx > -1) {
-        blogArticles[idx] = { ...blogArticles[idx], title, excerpt, content, cat, img, readTime, emoji: selectedEmoji };
-      }
-    } else {
-      blogArticles.unshift({
-        id: 'art-' + Date.now(),
-        title, excerpt, content, cat, img, readTime,
-        emoji: selectedEmoji,
-        date: new Date().toISOString()
-      });
-    }
-
-    persistArticles();
-    renderBlog();
-    closeArticleModal();
-  }
-
-  /* ─ Editar artigo ─ */
-  function editArticle(id) {
-    const a = blogArticles.find(x => x.id === id);
-    if (!a) return;
-    document.getElementById('modalTitle').textContent = 'Editar artigo';
-    document.getElementById('artTitle').value   = a.title;
-    document.getElementById('artExcerpt').value = a.excerpt;
-    document.getElementById('artContent').value = a.content;
-    document.getElementById('artImg').value     = a.img || '';
-    document.getElementById('artTime').value    = a.readTime || '';
-    document.getElementById('artCat').value     = a.cat;
-    document.getElementById('artEditId').value  = a.id;
-    const emojiBtn = document.querySelector(`.emoji-opt[data-emoji="${a.emoji}"]`);
-    if (emojiBtn) selectEmoji(emojiBtn);
-    else { document.querySelectorAll('.emoji-opt').forEach(b => b.classList.remove('selected')); }
-    document.getElementById('articleModalBg').classList.add('open');
-  }
-
-  /* ─ Excluir artigo ─ */
-  function deleteArticle(id) {
-    if (!confirm('Excluir este artigo permanentemente?')) return;
-    blogArticles = blogArticles.filter(a => a.id !== id);
-    persistArticles();
-    renderBlog();
-  }
-
-  /* ─ Ler artigo completo ─ */
-  function readArticle(id) {
-    const a = blogArticles.find(x => x.id === id);
-    if (!a) return;
-
-    const cover = document.getElementById('readCover');
-    cover.innerHTML = a.img
-      ? `<img src="${a.img}" alt="${a.title}" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'>${a.emoji||'📄'}</span>'" />`
-      : `<span style="font-size:4rem">${a.emoji || '📄'}</span>`;
-    cover.insertAdjacentHTML('beforeend', `<span class="blog-read-cover-cat">${a.cat}</span>`);
-
-    document.getElementById('readMeta').innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-      <span>${fmtDate(a.date)}</span>
-      ${a.readTime ? `<span style="display:flex;align-items:center;gap:.3rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>${a.readTime} de leitura</span>` : ''}
-    `;
-    document.getElementById('readTitle').textContent   = a.title;
-    document.getElementById('readContent').textContent = a.content;
-
-    const waText = encodeURIComponent(`Olá! Encontrei esse artigo interessante sobre "${a.title}" no site da Jeane Leite Fisioterapeuta 🌿 https://jeaneleitefisioterapeuta.vercel.app`);
-    document.getElementById('readShareWa').href = `https://wa.me/?text=${waText}`;
-
-    document.getElementById('readModalBg').classList.add('open');
-  }
-  function closeReadModal() {
-    document.getElementById('readModalBg').classList.remove('open');
-  }
-
-  /* ─ Fechar modais com ESC ─ */
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      closeReadModal();
-      closeArticleModal();
-    }
-  });
-</script>
+    <footer id="contato">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem; color: var(--white);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    Clínica <span style="color: var(--primary);">Equilíbrio</span>
+                </div>
+                <p>Transformando o bem-estar através do movimento consciente e do cuidado especializado na saúde.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <a href="https://wa.me/559293131266" target="_blank">WhatsApp: (92) (Diga o número faltante)</a>
+                </p>
+                <p>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Rodovia Carlos Braga, Km 2,<br>Loteamento Amazonas I
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Horário de Funcionamento</h4>
+                <p>Segunda à Sexta, 08:00 - 18:00<br>Sábados mediante agendamento prévio.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clínica Equilíbrio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
-</html>
-<script>
-    // ... (Seu script original de Blog e Animações aqui) ...
-</script>
 
-</body>
 </html>
