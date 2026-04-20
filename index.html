@@ -1414,6 +1414,302 @@
     .blog-fab.show { display: flex; }
     .blog-fab:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(201,162,39,.5); }
     .blog-fab svg { width: 24px; height: 24px; }
+    /* ═══════════════════════════════════
+       PÁGINAS INTERNAS — roteamento por hash
+    ═══════════════════════════════════ */
+    .page-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: #f7faf9; overflow-y: auto;
+      display: none;
+    }
+    .page-overlay.open {
+      display: block;
+      animation: pageSlideIn .45s cubic-bezier(.22,1,.36,1);
+    }
+    @keyframes pageSlideIn {
+      from { transform: translateY(32px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    /* Topbar compartilhada */
+    .page-topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.97); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(26,95,74,.08);
+      padding: .875rem 0;
+    }
+    .page-topbar-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .page-back {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--green); font-weight: 600; font-size: .9375rem;
+      background: none; border: none; cursor: pointer;
+      padding: .5rem .75rem; border-radius: .75rem;
+      transition: background .2s;
+    }
+    .page-back:hover { background: var(--green-bg); }
+    .page-topbar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.125rem; font-weight: 700; color: var(--green);
+    }
+    .page-topbar-right { display: flex; align-items: center; gap: .75rem; }
+
+    /* ─── DRA. JEANE PAGE ─── */
+    .dj-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, var(--green-mid) 100%);
+      padding: 5rem 0 0; position: relative; overflow: hidden;
+    }
+    .dj-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 20% 50%, rgba(201,162,39,.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,.04) 0%, transparent 50%);
+    }
+    .dj-hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .dj-hero-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: grid; grid-template-columns: 1fr;
+      gap: 3rem; position: relative; z-index: 1;
+    }
+    @media(min-width:900px){ .dj-hero-inner { grid-template-columns: auto 1fr; align-items: end; } }
+
+    .dj-photo-wrap { flex-shrink: 0; }
+    .dj-photo {
+      width: 260px; height: 320px;
+      border-radius: 2rem 2rem 0 0;
+      object-fit: cover; object-position: top;
+      display: block;
+      box-shadow: 0 -8px 40px rgba(0,0,0,.3);
+      border: 3px solid rgba(255,255,255,.15);
+      border-bottom: none;
+    }
+    @media(max-width:899px){ .dj-photo { width: 180px; height: 220px; } }
+
+    .dj-hero-content { padding-bottom: 3rem; }
+    .dj-kicker {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.12); backdrop-filter: blur(8px);
+      color: rgba(255,255,255,.85); padding: .4rem 1rem;
+      border-radius: 999px; font-size: .8rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,.15); margin-bottom: 1.25rem;
+    }
+    .dj-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800;
+      color: white; line-height: 1.1; margin-bottom: .5rem;
+    }
+    .dj-title { color: var(--gold); font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; }
+    .dj-crefito {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.8);
+      padding: .5rem 1rem; border-radius: .75rem;
+      font-size: .875rem; font-weight: 500;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    /* Corpo da página Dra. Jeane */
+    .dj-body { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+    .dj-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media(min-width:900px){ .dj-grid { grid-template-columns: 2fr 1fr; gap: 3rem; } }
+
+    /* Cards de seção */
+    .dj-card {
+      background: white; border-radius: 1.5rem;
+      box-shadow: 0 2px 20px rgba(0,0,0,.06);
+      border: 1px solid rgba(26,95,74,.06);
+      overflow: hidden;
+    }
+    .dj-card-header {
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to right, var(--green-bg), white);
+      border-bottom: 1px solid rgba(26,95,74,.08);
+      display: flex; align-items: center; gap: .875rem;
+    }
+    .dj-card-icon {
+      width: 40px; height: 40px; border-radius: .875rem;
+      background: var(--green); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .dj-card-icon svg { width: 20px; height: 20px; color: white; }
+    .dj-card-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--green); font-weight: 700; }
+    .dj-card-body { padding: 2rem; }
+
+    /* Formação timeline */
+    .dj-timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+    .dj-tl-item { display: flex; gap: 1.25rem; }
+    .dj-tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .dj-tl-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--green); border: 3px solid var(--green-bg);
+      box-shadow: 0 0 0 2px var(--green);
+      flex-shrink: 0;
+    }
+    .dj-tl-line { width: 2px; flex: 1; background: linear-gradient(to bottom, var(--green), rgba(26,95,74,.1)); margin-top: 4px; }
+    .dj-tl-item:last-child .dj-tl-line { display: none; }
+    .dj-tl-year { font-size: .75rem; font-weight: 700; color: var(--gold); letter-spacing: .06em; margin-bottom: .25rem; }
+    .dj-tl-course { font-weight: 700; color: var(--green); font-size: 1rem; margin-bottom: .25rem; }
+    .dj-tl-inst { font-size: .9rem; color: var(--green-light); }
+
+    /* Especialidades chips */
+    .dj-chips { display: flex; flex-wrap: wrap; gap: .625rem; }
+    .dj-chip {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--green-bg); color: var(--green);
+      padding: .5rem 1rem; border-radius: 999px;
+      font-size: .875rem; font-weight: 600;
+      border: 1.5px solid rgba(26,95,74,.15);
+    }
+    .dj-chip-gold {
+      background: rgba(201,162,39,.1); color: #8a6e0a;
+      border-color: rgba(201,162,39,.3);
+    }
+
+    /* Filosofia quote */
+    .dj-quote {
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      border-radius: 1.25rem; padding: 2rem;
+      position: relative; overflow: hidden;
+    }
+    .dj-quote::before {
+      content: '"'; position: absolute; top: -1rem; left: 1rem;
+      font-size: 8rem; font-family: 'Playfair Display', serif;
+      color: rgba(255,255,255,.08); line-height: 1; pointer-events: none;
+    }
+    .dj-quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.125rem; color: white; line-height: 1.7;
+      font-style: italic; position: relative; z-index: 1;
+      margin-bottom: .75rem;
+    }
+    .dj-quote-author { color: var(--gold); font-size: .875rem; font-weight: 600; }
+
+    /* Valores cards */
+    .dj-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .dj-value {
+      background: var(--green-bg); border-radius: 1rem;
+      padding: 1.25rem; border: 1px solid rgba(26,95,74,.08);
+    }
+    .dj-value-icon { font-size: 1.75rem; margin-bottom: .625rem; }
+    .dj-value-title { font-weight: 700; color: var(--green); font-size: .9375rem; margin-bottom: .375rem; }
+    .dj-value-desc { font-size: .85rem; color: var(--green-light); line-height: 1.55; }
+
+    /* CTA sidebar */
+    .dj-cta {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      border-radius: 1.5rem; padding: 2rem; text-align: center;
+    }
+    .dj-cta h3 { font-family: 'Playfair Display', serif; color: white; font-size: 1.375rem; margin-bottom: .75rem; }
+    .dj-cta p { color: rgba(255,255,255,.75); font-size: .9375rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .dj-cta-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .625rem;
+      background: var(--gold); color: white; padding: .875rem 1.75rem;
+      border-radius: 999px; font-weight: 700; font-size: 1rem;
+      text-decoration: none; transition: all .25s; width: 100%;
+      box-shadow: 0 4px 16px rgba(201,162,39,.4);
+    }
+    .dj-cta-btn:hover { background: var(--gold-light); box-shadow: 0 8px 24px rgba(201,162,39,.5); transform: translateY(-1px); }
+
+    /* Sidebar info */
+    .dj-info-list { display: flex; flex-direction: column; gap: .875rem; }
+    .dj-info-item { display: flex; align-items: flex-start; gap: .875rem; }
+    .dj-info-icon {
+      width: 36px; height: 36px; border-radius: .75rem;
+      background: var(--green-bg); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .dj-info-icon svg { width: 17px; height: 17px; color: var(--green); }
+    .dj-info-label { font-size: .8rem; color: var(--green-light); font-weight: 500; }
+    .dj-info-value { font-size: .9375rem; color: var(--green); font-weight: 600; }
+
+    /* ─── BLOG: artigo como subpágina ─── */
+    .article-page {
+      position: fixed; inset: 0; z-index: 600;
+      background: white; overflow-y: auto;
+      display: none;
+    }
+    .article-page.open {
+      display: block;
+      animation: pageSlideIn .4s cubic-bezier(.22,1,.36,1);
+    }
+    .article-hero {
+      width: 100%; aspect-ratio: 21/8; min-height: 260px;
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .article-hero-emoji {
+      font-size: 5rem; position: relative; z-index: 1;
+    }
+    .article-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%);
+    }
+    .article-hero-meta {
+      position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%);
+      z-index: 2; width: 100%; max-width: 780px; padding: 0 1.5rem;
+      display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+    }
+    .article-hero-cat {
+      background: var(--green); color: white;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      padding: .35rem .875rem; border-radius: 999px;
+    }
+    .article-hero-date, .article-hero-time {
+      color: rgba(255,255,255,.85); font-size: .875rem;
+      display: flex; align-items: center; gap: .375rem;
+    }
+    .article-hero-date svg, .article-hero-time svg { width: 14px; height: 14px; }
+
+    .article-body { max-width: 780px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      color: var(--green); line-height: 1.2; margin-bottom: 2rem;
+    }
+    .article-content {
+      font-size: 1.0625rem; line-height: 1.9;
+      color: var(--green-light); white-space: pre-wrap;
+    }
+    .article-content-parsed h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--green);
+      margin: 2.5rem 0 1rem; font-weight: 700;
+    }
+    .article-content-parsed p { margin-bottom: 1.25rem; }
+    .article-content-parsed ul { margin: 1rem 0 1.25rem 1.5rem; }
+    .article-content-parsed li { margin-bottom: .5rem; }
+
+    .article-footer-bar {
+      border-top: 1px solid rgba(26,95,74,.1);
+      padding: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      max-width: 780px; margin: 0 auto;
+    }
+    .article-share-wa {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #25d366; color: white; padding: .75rem 1.5rem;
+      border-radius: 999px; font-weight: 600; font-size: .9375rem;
+      text-decoration: none; transition: all .2s;
+    }
+    .article-share-wa:hover { background: #1db954; }
+    .article-author {
+      display: flex; align-items: center; gap: .875rem;
+    }
+    .article-author img {
+      width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--green-bg);
+    }
+    .article-author-name { font-weight: 700; color: var(--green); font-size: .9375rem; }
+    .article-author-cred { font-size: .8125rem; color: var(--green-light); }
   </style>
 </head>
 <body>
@@ -1457,7 +1753,8 @@
         <a href="#galeria" onclick="scrollTo('#galeria');return false;">Galeria</a>
         <a href="#sobre" onclick="scrollTo('#sobre');return false;">Sobre</a>
         <a href="#faq" onclick="scrollTo('#faq');return false;">FAQ</a>
-        <a href="#blog" onclick="openBlog();return false;">Blog</a>
+        <a href="#dra-jeane" onclick="openPage('dra-jeane');return false;">Dra. Jeane</a>
+        <a href="#blog" onclick="openPage('blog');return false;">Blog</a>
         <a href="#contato" onclick="scrollTo('#contato');return false;">Contato</a>
       </nav>
 
@@ -1483,7 +1780,8 @@
         <a href="#galeria" onclick="scrollTo('#galeria');closeMobileMenu();return false;">Galeria</a>
         <a href="#sobre" onclick="scrollTo('#sobre');closeMobileMenu();return false;">Sobre</a>
         <a href="#faq" onclick="scrollTo('#faq');closeMobileMenu();return false;">FAQ</a>
-        <a href="#blog" onclick="openBlog();closeMobileMenu();return false;">Blog</a>
+        <a href="#dra-jeane" onclick="openPage('dra-jeane');closeMobileMenu();return false;">Dra. Jeane</a>
+        <a href="#blog" onclick="openPage('blog');closeMobileMenu();return false;">Blog</a>
         <a href="#contato" onclick="scrollTo('#contato');closeMobileMenu();return false;">Contato</a>
         <a href="https://instagram.com/jeaneleite.fisio" target="_blank" class="ig-link">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -2287,14 +2585,320 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <!-- ═══════════════════════════════════════
-     BLOG – OVERLAY COMPLETO
+     DRA. JEANE — PÁGINA INTERNA
 ═══════════════════════════════════════ -->
+<div id="dra-jeane-page" class="page-overlay">
+
+  <div class="page-topbar">
+    <div class="page-topbar-inner">
+      <button class="page-back" onclick="closePage('dra-jeane')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Voltar ao site
+      </button>
+      <span class="page-topbar-title">Dra. Jeane Leite</span>
+      <div class="page-topbar-right">
+        <a href="https://wa.me/5521965951820" target="_blank" class="btn-primary" style="padding:.5rem 1.25rem;font-size:.875rem;text-decoration:none;">
+          Agendar consulta
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="dj-hero">
+    <div class="dj-hero-grid"></div>
+    <div class="dj-hero-inner">
+      <div class="dj-photo-wrap">
+        <img src="foto-jeane.jpg" alt="Dra. Jeane Leite – Fisioterapeuta" class="dj-photo" />
+      </div>
+      <div class="dj-hero-content">
+        <div class="dj-kicker">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+          Fisioterapeuta Domiciliar
+        </div>
+        <h1 class="dj-name">Dra. Jeane<br>Leite</h1>
+        <p class="dj-title">Especialista em Reabilitação Vestibular & Fisioterapia Geriátrica</p>
+        <div class="dj-crefito">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          CREFITO 449534-F · Rio de Janeiro
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corpo -->
+  <div class="dj-body">
+    <div class="dj-grid">
+
+      <!-- Coluna principal -->
+      <div style="display:flex;flex-direction:column;gap:2rem;">
+
+        <!-- Sobre -->
+        <div class="dj-card">
+          <div class="dj-card-header">
+            <div class="dj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <h2 class="dj-card-title">Quem sou eu</h2>
+          </div>
+          <div class="dj-card-body">
+            <p style="color:var(--green-light);font-size:1.0625rem;line-height:1.8;margin-bottom:1.25rem;">Sou fisioterapeuta graduada, com atuação especializada em atendimento domiciliar na Tijuca e Zona Sul do Rio de Janeiro. Acredito que o cuidado verdadeiro começa quando o profissional vai até o paciente — respeitando seu espaço, sua rotina e seus limites.</p>
+            <p style="color:var(--green-light);font-size:1.0625rem;line-height:1.8;margin-bottom:1.25rem;">Minha trajetória é marcada pela dedicação à reabilitação vestibular — especialidade que trata tonturas, vertigens e distúrbios do equilíbrio — e à fisioterapia geriátrica, voltada para a manutenção da independência e qualidade de vida de pessoas idosas.</p>
+            <p style="color:var(--green-light);font-size:1.0625rem;line-height:1.8;">Cada paciente é único. Por isso, construo planos de tratamento personalizados, baseados em evidência científica e no respeito profundo pela história de vida de cada pessoa que cuido.</p>
+          </div>
+        </div>
+
+        <!-- Formação -->
+        <div class="dj-card">
+          <div class="dj-card-header">
+            <div class="dj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            </div>
+            <h2 class="dj-card-title">Formação & Especialização</h2>
+          </div>
+          <div class="dj-card-body">
+            <div class="dj-timeline">
+              <div class="dj-tl-item">
+                <div class="dj-tl-left">
+                  <div class="dj-tl-dot"></div>
+                  <div class="dj-tl-line"></div>
+                </div>
+                <div>
+                  <div class="dj-tl-year">GRADUAÇÃO</div>
+                  <div class="dj-tl-course">Bacharelado em Fisioterapia</div>
+                  <div class="dj-tl-inst">Formação completa com habilitação plena para exercício profissional · CREFITO 449534-F</div>
+                </div>
+              </div>
+              <div class="dj-tl-item">
+                <div class="dj-tl-left">
+                  <div class="dj-tl-dot"></div>
+                  <div class="dj-tl-line"></div>
+                </div>
+                <div>
+                  <div class="dj-tl-year">ESPECIALIZAÇÃO</div>
+                  <div class="dj-tl-course">Reabilitação Vestibular</div>
+                  <div class="dj-tl-inst">Tratamento de tonturas, vertigens posicionais (VPPB), labirintite e distúrbios do equilíbrio</div>
+                </div>
+              </div>
+              <div class="dj-tl-item">
+                <div class="dj-tl-left">
+                  <div class="dj-tl-dot"></div>
+                  <div class="dj-tl-line"></div>
+                </div>
+                <div>
+                  <div class="dj-tl-year">ÁREA DE ATUAÇÃO</div>
+                  <div class="dj-tl-course">Fisioterapia Geriátrica</div>
+                  <div class="dj-tl-inst">Prevenção de quedas, manutenção da mobilidade, reabilitação em Parkinson, sequelas de AVC e sarcopenia</div>
+                </div>
+              </div>
+              <div class="dj-tl-item">
+                <div class="dj-tl-left">
+                  <div class="dj-tl-dot"></div>
+                </div>
+                <div>
+                  <div class="dj-tl-year">ATUALIZAÇÃO CONTÍNUA</div>
+                  <div class="dj-tl-course">Formação Continuada em Fisioterapia</div>
+                  <div class="dj-tl-inst">Participação regular em congressos, cursos e eventos científicos da área</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Especialidades -->
+        <div class="dj-card">
+          <div class="dj-card-header">
+            <div class="dj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>
+            </div>
+            <h2 class="dj-card-title">Áreas de Atuação</h2>
+          </div>
+          <div class="dj-card-body">
+            <div class="dj-chips" style="margin-bottom:1.5rem;">
+              <span class="dj-chip dj-chip-gold">🧠 Reabilitação Vestibular</span>
+              <span class="dj-chip dj-chip-gold">🌀 Tratamento de Vertigens (VPPB)</span>
+              <span class="dj-chip dj-chip-gold">😵 Tonturas e Desequilíbrio</span>
+            </div>
+            <div class="dj-chips" style="margin-bottom:1.5rem;">
+              <span class="dj-chip">👴 Fisioterapia Geriátrica</span>
+              <span class="dj-chip">🦴 Reabilitação Ortopédica</span>
+              <span class="dj-chip">🧠 Fisioterapia Neurológica</span>
+            </div>
+            <div class="dj-chips">
+              <span class="dj-chip">🏠 Pós-operatório Domiciliar</span>
+              <span class="dj-chip">⚖️ Prevenção de Quedas</span>
+              <span class="dj-chip">💪 Reabilitação Funcional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filosofia -->
+        <div class="dj-card">
+          <div class="dj-card-header">
+            <div class="dj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+            </div>
+            <h2 class="dj-card-title">Filosofia de Cuidado</h2>
+          </div>
+          <div class="dj-card-body" style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div class="dj-quote">
+              <p class="dj-quote-text">A recuperação não acontece apenas no músculo ou na articulação — acontece quando o paciente se sente visto, acolhido e seguro para evoluir no seu próprio ritmo.</p>
+              <p class="dj-quote-author">— Jeane Leite, Fisioterapeuta</p>
+            </div>
+            <div class="dj-values">
+              <div class="dj-value">
+                <div class="dj-value-icon">🤝</div>
+                <div class="dj-value-title">Humanização</div>
+                <div class="dj-value-desc">Cada pessoa merece atenção integral — não apenas o sintoma, mas o contexto de vida.</div>
+              </div>
+              <div class="dj-value">
+                <div class="dj-value-icon">🔬</div>
+                <div class="dj-value-title">Evidência Científica</div>
+                <div class="dj-value-desc">Técnicas baseadas em pesquisa atual, aplicadas de forma segura e eficaz.</div>
+              </div>
+              <div class="dj-value">
+                <div class="dj-value-icon">🏠</div>
+                <div class="dj-value-title">Atendimento Domiciliar</div>
+                <div class="dj-value-desc">O ambiente familiar favorece a recuperação e elimina barreiras de acesso ao cuidado.</div>
+              </div>
+              <div class="dj-value">
+                <div class="dj-value-icon">🌿</div>
+                <div class="dj-value-title">Cuidado Contínuo</div>
+                <div class="dj-value-desc">Acompanhamento próximo em todas as fases do tratamento, com reavaliação constante.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+        <!-- CTA -->
+        <div class="dj-cta">
+          <h3>Pronta para te atender</h3>
+          <p>Agende sua avaliação domiciliar na Tijuca ou Zona Sul do Rio de Janeiro.</p>
+          <a href="https://wa.me/5521965951820?text=Olá%20Dra.%20Jeane!%20Gostaria%20de%20agendar%20uma%20avaliação%20fisioterapêutica%20domiciliar." target="_blank" class="dj-cta-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+
+        <!-- Informações -->
+        <div class="dj-card">
+          <div class="dj-card-header">
+            <div class="dj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h2 class="dj-card-title">Informações</h2>
+          </div>
+          <div class="dj-card-body">
+            <div class="dj-info-list">
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <div>
+                  <div class="dj-info-label">Registro profissional</div>
+                  <div class="dj-info-value">CREFITO 449534-F</div>
+                </div>
+              </div>
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div>
+                  <div class="dj-info-label">Área de atendimento</div>
+                  <div class="dj-info-value">Tijuca e Zona Sul – RJ</div>
+                </div>
+              </div>
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
+                <div>
+                  <div class="dj-info-label">Horário de atendimento</div>
+                  <div class="dj-info-value">Seg–Sex 8h–18h · Sáb 8h–12h</div>
+                </div>
+              </div>
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+                <div>
+                  <div class="dj-info-label">WhatsApp</div>
+                  <div class="dj-info-value">(21) 96595-1820</div>
+                </div>
+              </div>
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></div>
+                <div>
+                  <div class="dj-info-label">Instagram</div>
+                  <div class="dj-info-value">@jeaneleite.fisio</div>
+                </div>
+              </div>
+              <div class="dj-info-item">
+                <div class="dj-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V7h-5a8 8 0 0 0-5 2 8 8 0 0 0-5-2H2z"/></svg></div>
+                <div>
+                  <div class="dj-info-label">Formas de pagamento</div>
+                  <div class="dj-info-value">Dinheiro · Cartão · PIX</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram link -->
+        <a href="https://instagram.com/jeaneleite.fisio" target="_blank" style="display:flex;align-items:center;gap:.875rem;background:white;border-radius:1.25rem;padding:1.25rem 1.5rem;text-decoration:none;border:1px solid rgba(26,95,74,.08);box-shadow:0 2px 12px rgba(0,0,0,.05);transition:all .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--green);font-size:.9375rem;">@jeaneleite.fisio</div>
+            <div style="font-size:.8125rem;color:var(--green-light);">Siga no Instagram</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:auto;color:var(--green-light);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ARTIGO — SUBPÁGINA
+═══════════════════════════════════════ -->
+<div id="article-page" class="article-page">
+  <div class="page-topbar">
+    <div class="page-topbar-inner">
+      <button class="page-back" onclick="closeArticlePage()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Voltar ao blog
+      </button>
+      <span class="page-topbar-title" id="articlePageTopTitle"></span>
+      <div></div>
+    </div>
+  </div>
+  <div class="article-hero" id="articleHero"></div>
+  <div class="article-body">
+    <h1 class="article-title" id="articlePageTitle"></h1>
+    <div class="article-content" id="articlePageContent"></div>
+  </div>
+  <div class="article-footer-bar">
+    <div class="article-author">
+      <img src="foto-jeane.jpg" alt="Jeane Leite" onerror="this.style.display='none'" />
+      <div>
+        <div class="article-author-name">Jeane Leite</div>
+        <div class="article-author-cred">Fisioterapeuta · CREFITO 449534-F</div>
+      </div>
+    </div>
+    <a id="articleShareWa" href="#" target="_blank" class="article-share-wa">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+      Compartilhar
+    </a>
+  </div>
+</div>
+
+
 <div id="blog-overlay">
 
   <!-- Topbar -->
   <div class="blog-topbar">
     <div class="blog-topbar-inner">
-      <button class="blog-back" onclick="closeBlog()">
+      <button class="blog-back" onclick="closePage('blog')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
         Voltar ao site
       </button>
@@ -2837,18 +3441,45 @@ CREFITO 449534-F`,
   }
 
   /* ─ Abrir / fechar blog ─ */
-  function openBlog() {
-    loadArticles();
-    renderBlog();
-    document.getElementById('blog-overlay').classList.add('open');
-    document.getElementById('blogFab').classList.add('show');
+  /* ═══ ROTEAMENTO DE PÁGINAS ═══ */
+  function openPage(name) {
+    // fecha outras páginas abertas
+    document.querySelectorAll('.page-overlay, .article-page').forEach(el => {
+      el.classList.remove('open');
+    });
+    if (name === 'blog') {
+      loadArticles();
+      renderBlog();
+      document.getElementById('blog-overlay').classList.add('open');
+      document.getElementById('blogFab').classList.add('show');
+    } else if (name === 'dra-jeane') {
+      document.getElementById('dra-jeane-page').classList.add('open');
+    }
     document.body.style.overflow = 'hidden';
+    window.history.pushState({ page: name }, '', '#' + name);
   }
-  function closeBlog() {
-    document.getElementById('blog-overlay').classList.remove('open');
+
+  function closePage(name) {
+    if (name === 'blog') {
+      document.getElementById('blog-overlay').classList.remove('open');
+      document.getElementById('blogFab').classList.remove('show');
+    } else {
+      document.getElementById(name + '-page').classList.remove('open');
+    }
+    document.body.style.overflow = '';
+    window.history.pushState({}, '', '#inicio');
+  }
+
+  // Compatibilidade retroativa
+  function openBlog() { openPage('blog'); }
+  function closeBlog() { closePage('blog'); }
+
+  // Voltar com botão do navegador
+  window.addEventListener('popstate', () => {
+    document.querySelectorAll('.page-overlay, .article-page').forEach(el => el.classList.remove('open'));
     document.getElementById('blogFab').classList.remove('show');
     document.body.style.overflow = '';
-  }
+  });
 
   /* ─ Filtros e busca ─ */
   function filterBlog(cat, btn) {
@@ -2942,38 +3573,71 @@ CREFITO 449534-F`,
     renderBlog();
   }
 
-  /* ─ Ler artigo completo ─ */
+  /* ─ Abrir artigo como subpágina ─ */
   function readArticle(id) {
     const a = blogArticles.find(x => x.id === id);
     if (!a) return;
 
-    const cover = document.getElementById('readCover');
-    cover.innerHTML = a.img
-      ? `<img src="${a.img}" alt="${a.title}" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'>${a.emoji||'📄'}</span>'" />`
-      : `<span style="font-size:4rem">${a.emoji || '📄'}</span>`;
-    cover.insertAdjacentHTML('beforeend', `<span class="blog-read-cover-cat">${a.cat}</span>`);
+    // Hero
+    const hero = document.getElementById('articleHero');
+    if (a.img) {
+      hero.innerHTML = `<img src="${a.img}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.innerHTML='<div class=\\'article-hero-emoji\\'>${a.emoji||'📄'}</div>'" />`;
+    } else {
+      hero.innerHTML = `<div class="article-hero-emoji">${a.emoji || '📄'}</div>`;
+    }
+    hero.insertAdjacentHTML('beforeend', `
+      <div class="article-hero-meta">
+        <span class="article-hero-cat">${a.cat}</span>
+        <span class="article-hero-date">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          ${fmtDate(a.date)}
+        </span>
+        ${a.readTime ? `<span class="article-hero-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>${a.readTime} de leitura</span>` : ''}
+      </div>
+    `);
 
-    document.getElementById('readMeta').innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-      <span>${fmtDate(a.date)}</span>
-      ${a.readTime ? `<span style="display:flex;align-items:center;gap:.3rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>${a.readTime} de leitura</span>` : ''}
-    `;
-    document.getElementById('readTitle').textContent   = a.title;
-    document.getElementById('readContent').textContent = a.content;
+    // Conteúdo
+    document.getElementById('articlePageTopTitle').textContent = a.cat;
+    document.getElementById('articlePageTitle').textContent = a.title;
 
-    const waText = encodeURIComponent(`Olá! Encontrei esse artigo interessante sobre "${a.title}" no site da Jeane Leite Fisioterapeuta 🌿 https://jeaneleitefisioterapeuta.vercel.app`);
-    document.getElementById('readShareWa').href = `https://wa.me/?text=${waText}`;
+    // Renderiza conteúdo com formatação básica
+    const contentEl = document.getElementById('articlePageContent');
+    contentEl.className = 'article-content-parsed';
+    const lines = a.content.split('\n');
+    let html = '';
+    for (const line of lines) {
+      const t = line.trim();
+      if (!t) { html += '<br>'; continue; }
+      // Linhas em caixa alta viram subtítulos
+      if (t === t.toUpperCase() && t.length > 4 && !t.startsWith('✔') && !t.startsWith('✅') && !t.startsWith('→')) {
+        html += `<h2>${t}</h2>`;
+      } else if (t.startsWith('- ') || t.startsWith('✔ ') || t.startsWith('✅ ') || t.startsWith('→ ')) {
+        html += `<li>${t.replace(/^[-✔✅→]\s*/, '')}</li>`;
+      } else {
+        html += `<p>${t}</p>`;
+      }
+    }
+    contentEl.innerHTML = html;
 
-    document.getElementById('readModalBg').classList.add('open');
+    // WhatsApp share
+    const waText = encodeURIComponent(`Olá! Achei esse artigo interessante sobre "${a.title}" no site da Jeane Leite Fisioterapeuta 🌿 https://jeaneleitefisioterapeuta.vercel.app`);
+    document.getElementById('articleShareWa').href = `https://wa.me/?text=${waText}`;
+
+    // Abre a subpágina
+    document.getElementById('article-page').classList.add('open');
+    document.getElementById('article-page').scrollTop = 0;
+    window.history.pushState({ page: 'article', id }, '', '#blog/' + id);
   }
-  function closeReadModal() {
-    document.getElementById('readModalBg').classList.remove('open');
+
+  function closeArticlePage() {
+    document.getElementById('article-page').classList.remove('open');
+    window.history.pushState({ page: 'blog' }, '', '#blog');
   }
 
-  /* ─ Fechar modais com ESC ─ */
+  /* ─ Fechar com ESC ─ */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      closeReadModal();
+      closeArticlePage();
       closeArticleModal();
     }
   });
