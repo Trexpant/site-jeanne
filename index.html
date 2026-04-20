@@ -3573,8 +3573,22 @@ CREFITO 449534-F`,
     renderBlog();
   }
 
-  /* ─ Abrir artigo como subpágina ─ */
+  /* ─ Mapeamento de artigos externos ─ */
+  const externalArticles = {
+    'preco-fisio-dom': 'https://jeaneleitefisioterapeuta.vercel.app/blog/valor-sessao-fisioterapia-domiciliar.html',
+    'fisio-dom-1': 'https://jeaneleitefisioterapeuta.vercel.app/blog/fisioterapia-domiciliar-como-funciona.html',
+    'fisio-dom-2': 'https://jeaneleitefisioterapeuta.vercel.app/blog/para-quem-e-indicada-fisioterapia-domiciliar.html',
+    'fisio-dom-3': 'https://jeaneleitefisioterapeuta.vercel.app/blog/primeira-sessao-fisioterapia-domiciliar.html'
+  };
+
+  /* ─ Abrir artigo (subpágina externa ou modal) ─ */
   function readArticle(id) {
+    // Verifica se é artigo externo
+    if (externalArticles[id]) {
+      window.open(externalArticles[id], '_blank');
+      return;
+    }
+
     const a = blogArticles.find(x => x.id === id);
     if (!a) return;
 
