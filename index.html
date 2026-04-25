@@ -1710,6 +1710,29 @@
     }
     .article-author-name { font-weight: 700; color: var(--green); font-size: .9375rem; }
     .article-author-cred { font-size: .8125rem; color: var(--green-light); }
+    .img-upload-area {
+      width: 100%; height: 160px; border-radius: 1rem;
+      border: 2px dashed rgba(26,95,74,.25);
+      background: var(--green-bg); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      transition: border-color .2s, background .2s;
+    }
+    .img-upload-area:hover { border-color: var(--green); background: rgba(26,95,74,.08); }
+    .img-upload-area.has-img { border-style: solid; border-color: var(--green); }
+    .img-upload-preview {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: .25rem; pointer-events: none;
+    }
+    .img-upload-label { font-size: .9rem; font-weight: 600; color: var(--green); }
+    .img-upload-hint  { font-size: .8rem; color: var(--green-light); }
+
+    /* Capa do hero do blog — imagem real */
+    .blog-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: .18; pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -2914,6 +2937,7 @@
 
   <!-- Hero do blog -->
   <div class="blog-hero">
+    <img src="blog-capa.jpg" alt="" class="blog-hero-img" onerror="this.style.display='none'" />
     <div class="blog-hero-blob" style="width:400px;height:400px;top:-10%;right:-5%;"></div>
     <div class="blog-hero-blob" style="width:300px;height:300px;bottom:-15%;left:-5%;"></div>
     <div class="container blog-hero-content">
@@ -2997,9 +3021,18 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label">URL da imagem de capa</label>
-        <input type="text" class="form-input" id="artImg" placeholder="https://... (deixe vazio para usar emoji)" />
-        <span class="form-hint">Cole o link de uma imagem do Google, Unsplash, etc.</span>
+        <label class="form-label">Imagem de capa</label>
+        <div class="img-upload-area" id="imgUploadArea" onclick="document.getElementById('artImgFile').click()">
+          <div class="img-upload-preview" id="imgUploadPreview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:36px;height:36px;color:var(--green);opacity:.4;margin-bottom:.75rem;"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="m16 5 3 3-8.5 8.5-3.5.5.5-3.5Z"/></svg>
+            <span class="img-upload-label">Clique para escolher uma imagem</span>
+            <span class="img-upload-hint">JPG, PNG ou WebP · máx. 2MB</span>
+          </div>
+          <img id="imgUploadThumb" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:inherit;" />
+        </div>
+        <input type="file" id="artImgFile" accept="image/*" style="display:none" onchange="handleImgUpload(this)" />
+        <button type="button" id="imgClearBtn" onclick="clearImgUpload()" style="display:none;margin-top:.5rem;background:none;border:none;color:var(--green-light);font-size:.8125rem;cursor:pointer;text-decoration:underline;">Remover imagem</button>
+        <input type="hidden" id="artImg" value="" />
       </div>
 
       <div class="form-group">
@@ -3493,16 +3526,62 @@ CREFITO 449534-F`,
     renderBlog();
   }
 
+  /* ═══ UPLOAD DE IMAGEM (base64) ═══ */
+  function handleImgUpload(input) {
+    const file = input.files[0];
+    if (!file) return;
+    if (file.size > 2 * 1024 * 1024) {
+      alert('A imagem é maior que 2MB. Por favor, escolha uma imagem menor ou comprima no squoosh.app antes de subir.');
+      input.value = '';
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const base64 = e.target.result;
+      document.getElementById('artImg').value = base64;
+      const thumb = document.getElementById('imgUploadThumb');
+      thumb.src = base64;
+      thumb.style.display = 'block';
+      document.getElementById('imgUploadPreview').style.display = 'none';
+      document.getElementById('imgUploadArea').classList.add('has-img');
+      document.getElementById('imgClearBtn').style.display = 'inline-block';
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function clearImgUpload() {
+    document.getElementById('artImg').value = '';
+    document.getElementById('artImgFile').value = '';
+    document.getElementById('imgUploadThumb').style.display = 'none';
+    document.getElementById('imgUploadThumb').src = '';
+    document.getElementById('imgUploadPreview').style.display = 'flex';
+    document.getElementById('imgUploadArea').classList.remove('has-img');
+    document.getElementById('imgClearBtn').style.display = 'none';
+  }
+
+  function setImgPreview(src) {
+    if (src) {
+      const thumb = document.getElementById('imgUploadThumb');
+      thumb.src = src;
+      thumb.style.display = 'block';
+      document.getElementById('imgUploadPreview').style.display = 'none';
+      document.getElementById('imgUploadArea').classList.add('has-img');
+      document.getElementById('imgClearBtn').style.display = 'inline-block';
+    } else {
+      clearImgUpload();
+    }
+  }
+
   /* ─ Modal de artigo ─ */
   function openNewArticle() {
     document.getElementById('modalTitle').textContent = 'Novo artigo';
     document.getElementById('artTitle').value = '';
     document.getElementById('artExcerpt').value = '';
     document.getElementById('artContent').value = '';
-    document.getElementById('artImg').value = '';
     document.getElementById('artTime').value = '';
     document.getElementById('artCat').value = 'Fisioterapia';
     document.getElementById('artEditId').value = '';
+    clearImgUpload();
     selectEmoji(document.querySelector('.emoji-opt[data-emoji="🦴"]'));
     document.getElementById('articleModalBg').classList.add('open');
   }
@@ -3555,10 +3634,10 @@ CREFITO 449534-F`,
     document.getElementById('artTitle').value   = a.title;
     document.getElementById('artExcerpt').value = a.excerpt;
     document.getElementById('artContent').value = a.content;
-    document.getElementById('artImg').value     = a.img || '';
     document.getElementById('artTime').value    = a.readTime || '';
     document.getElementById('artCat').value     = a.cat;
     document.getElementById('artEditId').value  = a.id;
+    setImgPreview(a.img || '');
     const emojiBtn = document.querySelector(`.emoji-opt[data-emoji="${a.emoji}"]`);
     if (emojiBtn) selectEmoji(emojiBtn);
     else { document.querySelectorAll('.emoji-opt').forEach(b => b.classList.remove('selected')); }
@@ -3573,22 +3652,8 @@ CREFITO 449534-F`,
     renderBlog();
   }
 
-  /* ─ Mapeamento de artigos externos ─ */
-  const externalArticles = {
-    'preco-fisio-dom': 'blog/valor-sessao-fisioterapia-domiciliar.html',
-    'fisio-dom-1': 'blog/fisioterapia-domiciliar-como-funciona.html',
-    'fisio-dom-2': 'blog/para-quem-e-indicada-fisioterapia-domiciliar.html',
-    'fisio-dom-3': 'blog/primeira-sessao-fisioterapia-domiciliar.html'
-  };
-
-  /* ─ Abrir artigo (subpágina externa ou modal) ─ */
+  /* ─ Abrir artigo como subpágina ─ */
   function readArticle(id) {
-    // Verifica se é artigo externo
-    if (externalArticles[id]) {
-      window.open(externalArticles[id], '_blank');
-      return;
-    }
-
     const a = blogArticles.find(x => x.id === id);
     if (!a) return;
 
